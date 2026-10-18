@@ -4,8 +4,8 @@ package com.synexia.m3.eclipse;
 
 import com.m3.collections.M3ObjectStream;
 import java.util.Objects;
-import org.eclipse.collections.api.RichIterable;
-import org.eclipse.collections.api.list.MutableList;
+import com.m3.collections.eclipse.api.RichIterable;
+import com.m3.collections.eclipse.api.list.MutableList;
 /** Opt-in RichIterable/MutableList gateway into M3JDK21 operations. */
 public final class M3EclipseStreams {
     private M3EclipseStreams() {}

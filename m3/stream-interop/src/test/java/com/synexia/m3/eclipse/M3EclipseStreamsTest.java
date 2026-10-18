@@ -4,7 +4,7 @@ package com.synexia.m3.eclipse;
 
 import java.util.List;
 import java.util.stream.Collectors;
-import org.eclipse.collections.impl.list.mutable.FastList;
+import com.m3.collections.eclipse.impl.list.mutable.FastList;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 class M3EclipseStreamsTest {
