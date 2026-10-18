@@ -1,6 +1,6 @@
 import "copyright.stg"
 
-targetPath() ::= "org/eclipse/collections/impl/factory/primitive"
+targetPath() ::= "com/m3/collections/eclipse/impl/factory/primitive"
 
 fileName(primitive) ::= "Object<primitive.name>Maps"
 
@@ -11,12 +11,12 @@ class(primitive) ::= <<
 body(type, name) ::= <<
 <copyright()>
 
-package org.eclipse.collections.impl.factory.primitive;
+package com.m3.collections.eclipse.impl.factory.primitive;
 
-import org.eclipse.collections.api.factory.map.primitive.ImmutableObject<name>MapFactory;
-import org.eclipse.collections.api.factory.map.primitive.MutableObject<name>MapFactory;
-import org.eclipse.collections.impl.map.immutable.primitive.ImmutableObject<name>MapFactoryImpl;
-import org.eclipse.collections.impl.map.mutable.primitive.MutableObject<name>MapFactoryImpl;
+import com.m3.collections.eclipse.api.factory.map.primitive.ImmutableObject<name>MapFactory;
+import com.m3.collections.eclipse.api.factory.map.primitive.MutableObject<name>MapFactory;
+import com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableObject<name>MapFactoryImpl;
+import com.m3.collections.eclipse.impl.map.mutable.primitive.MutableObject<name>MapFactoryImpl;
 
 /**
  * Object<name>Maps is a static utility for creating {@link ImmutableObject<name>MapFactory} and {@link MutableObject<name>MapFactory}.

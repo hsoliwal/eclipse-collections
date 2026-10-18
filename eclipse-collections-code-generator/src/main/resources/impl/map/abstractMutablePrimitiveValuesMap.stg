@@ -3,7 +3,7 @@ import "primitiveEquals.stg"
 import "primitiveHashCode.stg"
 import "primitiveLiteral.stg"
 
-targetPath() ::= "org/eclipse/collections/impl/map/mutable/primitive"
+targetPath() ::= "com/m3/collections/eclipse/impl/map/mutable/primitive"
 
 skipBoolean() ::= "true"
 
@@ -16,38 +16,38 @@ class(primitive) ::= <<
 body(type, name) ::= <<
 <copyrightAndOthers()>
 
-package org.eclipse.collections.impl.map.mutable.primitive;
+package com.m3.collections.eclipse.impl.map.mutable.primitive;
 
 import java.io.IOException;
 import java.util.NoSuchElementException;
 
-import org.eclipse.collections.api.<name>Iterable;
-import org.eclipse.collections.api.Lazy<name>Iterable;
-import org.eclipse.collections.api.RichIterable;
-import org.eclipse.collections.api.bag.MutableBag;
-import org.eclipse.collections.api.bag.primitive.Mutable<name>Bag;
-import org.eclipse.collections.api.block.function.primitive.<name>ToObjectFunction;
-import org.eclipse.collections.api.block.function.primitive.Object<name>ToObjectFunction;
-import org.eclipse.collections.api.block.predicate.primitive.<name>Predicate;
-import org.eclipse.collections.api.block.procedure.primitive.<name>Procedure;
-import org.eclipse.collections.api.collection.MutableCollection;
-import org.eclipse.collections.api.collection.primitive.Immutable<name>Collection;
-import org.eclipse.collections.api.collection.primitive.Mutable<name>Collection;
-import org.eclipse.collections.api.factory.Bags;
-import org.eclipse.collections.api.iterator.<name>Iterator;
-import org.eclipse.collections.api.list.MutableList;
-import org.eclipse.collections.api.list.primitive.Mutable<name>List;
-import org.eclipse.collections.api.map.primitive.Mutable<name>ValuesMap;
-import org.eclipse.collections.api.set.primitive.Mutable<name>Set;
-import org.eclipse.collections.impl.bag.mutable.primitive.<name>HashBag;
-import org.eclipse.collections.impl.collection.mutable.primitive.Synchronized<name>Collection;
-import org.eclipse.collections.impl.collection.mutable.primitive.Unmodifiable<name>Collection;
-import org.eclipse.collections.impl.factory.Lists;
-import org.eclipse.collections.impl.factory.primitive.<name>Bags;
-import org.eclipse.collections.impl.factory.primitive.<name>Lists;
-import org.eclipse.collections.impl.lazy.primitive.Lazy<name>IterableAdapter;
-import org.eclipse.collections.impl.primitive.Abstract<name>Iterable;
-import org.eclipse.collections.impl.set.mutable.primitive.<name>HashSet;
+import com.m3.collections.eclipse.api.<name>Iterable;
+import com.m3.collections.eclipse.api.Lazy<name>Iterable;
+import com.m3.collections.eclipse.api.RichIterable;
+import com.m3.collections.eclipse.api.bag.MutableBag;
+import com.m3.collections.eclipse.api.bag.primitive.Mutable<name>Bag;
+import com.m3.collections.eclipse.api.block.function.primitive.<name>ToObjectFunction;
+import com.m3.collections.eclipse.api.block.function.primitive.Object<name>ToObjectFunction;
+import com.m3.collections.eclipse.api.block.predicate.primitive.<name>Predicate;
+import com.m3.collections.eclipse.api.block.procedure.primitive.<name>Procedure;
+import com.m3.collections.eclipse.api.collection.MutableCollection;
+import com.m3.collections.eclipse.api.collection.primitive.Immutable<name>Collection;
+import com.m3.collections.eclipse.api.collection.primitive.Mutable<name>Collection;
+import com.m3.collections.eclipse.api.factory.Bags;
+import com.m3.collections.eclipse.api.iterator.<name>Iterator;
+import com.m3.collections.eclipse.api.list.MutableList;
+import com.m3.collections.eclipse.api.list.primitive.Mutable<name>List;
+import com.m3.collections.eclipse.api.map.primitive.Mutable<name>ValuesMap;
+import com.m3.collections.eclipse.api.set.primitive.Mutable<name>Set;
+import com.m3.collections.eclipse.impl.bag.mutable.primitive.<name>HashBag;
+import com.m3.collections.eclipse.impl.collection.mutable.primitive.Synchronized<name>Collection;
+import com.m3.collections.eclipse.impl.collection.mutable.primitive.Unmodifiable<name>Collection;
+import com.m3.collections.eclipse.impl.factory.Lists;
+import com.m3.collections.eclipse.impl.factory.primitive.<name>Bags;
+import com.m3.collections.eclipse.impl.factory.primitive.<name>Lists;
+import com.m3.collections.eclipse.impl.lazy.primitive.Lazy<name>IterableAdapter;
+import com.m3.collections.eclipse.impl.primitive.Abstract<name>Iterable;
+import com.m3.collections.eclipse.impl.set.mutable.primitive.<name>HashSet;
 
 /**
  * This file was automatically generated from template file abstractMutablePrimitiveValuesMap.stg.

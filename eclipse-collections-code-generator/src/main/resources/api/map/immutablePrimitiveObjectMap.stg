@@ -2,7 +2,7 @@ import "copyright.stg"
 
 skipBoolean() ::= "true"
 
-targetPath() ::= "org/eclipse/collections/api/map/primitive"
+targetPath() ::= "com/m3/collections/eclipse/api/map/primitive"
 
 fileName(primitive) ::= "Immutable<primitive.name>ObjectMap"
 
@@ -13,11 +13,11 @@ class(primitive) ::= <<
 body(type, name) ::= <<
 <copyright()>
 
-package org.eclipse.collections.api.map.primitive;
+package com.m3.collections.eclipse.api.map.primitive;
 
-import org.eclipse.collections.api.<name>Iterable;
-import org.eclipse.collections.api.block.procedure.Procedure;
-import org.eclipse.collections.api.block.predicate.primitive.<name>ObjectPredicate;
+import com.m3.collections.eclipse.api.<name>Iterable;
+import com.m3.collections.eclipse.api.block.procedure.Procedure;
+import com.m3.collections.eclipse.api.block.predicate.primitive.<name>ObjectPredicate;
 
 /**
  * This file was automatically generated from template file immutablePrimitiveObjectMap.stg.

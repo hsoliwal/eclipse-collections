@@ -5,7 +5,7 @@ isTest() ::= "true"
 
 skipBoolean() ::= "true"
 
-targetPath() ::= "org/eclipse/collections/impl/map/mutable/primitive"
+targetPath() ::= "com/m3/collections/eclipse/impl/map/mutable/primitive"
 
 fileName(primitive) ::= "Immutable<primitive.name>MapKeySetTest"
 
@@ -16,11 +16,11 @@ class(primitive) ::= <<
 body(type, wrapperName, name) ::= <<
 <copyright()>
 
-package org.eclipse.collections.impl.map.mutable.primitive;
+package com.m3.collections.eclipse.impl.map.mutable.primitive;
 
-import org.eclipse.collections.api.set.primitive.<name>Set;
-import org.eclipse.collections.api.set.primitive.Immutable<name>Set;
-import org.eclipse.collections.impl.set.mutable.primitive.AbstractImmutable<name>HashSetTestCase;
+import com.m3.collections.eclipse.api.set.primitive.<name>Set;
+import com.m3.collections.eclipse.api.set.primitive.Immutable<name>Set;
+import com.m3.collections.eclipse.impl.set.mutable.primitive.AbstractImmutable<name>HashSetTestCase;
 import org.junit.Assert;
 
 /**

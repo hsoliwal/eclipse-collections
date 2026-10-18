@@ -1,7 +1,7 @@
 import "copyrightAndOthers.stg"
 import "primitiveAPI.stg"
 
-targetPath() ::= "org/eclipse/collections/api/collection/primitive"
+targetPath() ::= "com/m3/collections/eclipse/api/collection/primitive"
 
 fileName(primitive) ::= "Immutable<primitive.name>Collection"
 
@@ -12,13 +12,13 @@ class(primitive) ::= <<
 body(type, name) ::= <<
 <copyrightAndOthers()>
 
-package org.eclipse.collections.api.collection.primitive;
+package com.m3.collections.eclipse.api.collection.primitive;
 
-import org.eclipse.collections.api.<name>Iterable;
-import org.eclipse.collections.api.block.function.primitive.<name>ToObjectFunction;
-import org.eclipse.collections.api.block.predicate.primitive.<name>Predicate;
-import org.eclipse.collections.api.block.procedure.primitive.<name>Procedure;
-import org.eclipse.collections.api.collection.ImmutableCollection;
+import com.m3.collections.eclipse.api.<name>Iterable;
+import com.m3.collections.eclipse.api.block.function.primitive.<name>ToObjectFunction;
+import com.m3.collections.eclipse.api.block.predicate.primitive.<name>Predicate;
+import com.m3.collections.eclipse.api.block.procedure.primitive.<name>Procedure;
+import com.m3.collections.eclipse.api.collection.ImmutableCollection;
 
 /**
  * This file was automatically generated from template file immutablePrimitiveCollection.stg.

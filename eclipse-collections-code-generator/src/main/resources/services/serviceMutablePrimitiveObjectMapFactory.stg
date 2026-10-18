@@ -1,6 +1,6 @@
 targetPath() ::= ""
 
-fileName(primitive) ::= "org.eclipse.collections.api.factory.map.primitive.Mutable<primitive.name>ObjectMapFactory"
+fileName(primitive) ::= "com.m3.collections.eclipse.api.factory.map.primitive.Mutable<primitive.name>ObjectMapFactory"
 
 skipBoolean() ::= "true"
 
@@ -9,5 +9,5 @@ class(primitive) ::= <<
 >>
 
 body(type, name, wrapperName) ::= <<
-org.eclipse.collections.impl.map.mutable.primitive.Mutable<primitive.name>ObjectMapFactoryImpl
+com.m3.collections.eclipse.impl.map.mutable.primitive.Mutable<primitive.name>ObjectMapFactoryImpl
 >>

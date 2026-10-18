@@ -14,7 +14,7 @@
       <module fileurl="file://$PROJECT_DIR$/jmh-scala-tests/jmh-scala-tests.iml" filepath="$PROJECT_DIR$/jmh-scala-tests/jmh-scala-tests.iml" />
       <module fileurl="file://$PROJECT_DIR$/jmh-tests/jmh-tests.iml" filepath="$PROJECT_DIR$/jmh-tests/jmh-tests.iml" />
       <module fileurl="file://$PROJECT_DIR$/junit-trait-runner/junit-trait-runner.iml" filepath="$PROJECT_DIR$/junit-trait-runner/junit-trait-runner.iml" />
-      <module fileurl="file://$PROJECT_DIR$/p2-repository/org.eclipse.collections/org.eclipse.collections.iml" filepath="$PROJECT_DIR$/p2-repository/org.eclipse.collections/org.eclipse.collections.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2-repository/com.m3.collections.eclipse/com.m3.collections.eclipse.iml" filepath="$PROJECT_DIR$/p2-repository/com.m3.collections.eclipse/com.m3.collections.eclipse.iml" />
       <module fileurl="file://$PROJECT_DIR$/p2-repository/p2-repository.iml" filepath="$PROJECT_DIR$/p2-repository/p2-repository.iml" />
       <module fileurl="file://$PROJECT_DIR$/performance-tests/performance-tests.iml" filepath="$PROJECT_DIR$/performance-tests/performance-tests.iml" />
       <module fileurl="file://$PROJECT_DIR$/scala-unit-tests/scala-unit-tests.iml" filepath="$PROJECT_DIR$/scala-unit-tests/scala-unit-tests.iml" />

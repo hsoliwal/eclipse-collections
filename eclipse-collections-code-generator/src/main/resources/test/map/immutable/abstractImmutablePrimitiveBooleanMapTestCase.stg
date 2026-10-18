@@ -7,7 +7,7 @@ isTest() ::= "true"
 
 skipBoolean() ::= "true"
 
-targetPath() ::= "org/eclipse/collections/impl/map/immutable/primitive"
+targetPath() ::= "com/m3/collections/eclipse/impl/map/immutable/primitive"
 
 fileName(primitive) ::= "AbstractImmutable<primitive.name>BooleanMapTestCase"
 
@@ -18,14 +18,14 @@ class(primitive) ::= <<
 body(type, name) ::= <<
 <copyright()>
 
-package org.eclipse.collections.impl.map.immutable.primitive;
+package com.m3.collections.eclipse.impl.map.immutable.primitive;
 
-import org.eclipse.collections.api.map.primitive.<name>BooleanMap;
-import org.eclipse.collections.api.map.primitive.Immutable<name>BooleanMap;
-import org.eclipse.collections.impl.factory.primitive.<name>BooleanMaps;
-import org.eclipse.collections.impl.map.mutable.primitive.<name>BooleanHashMap;
-import org.eclipse.collections.impl.map.primitive.Abstract<name>BooleanMapTestCase;
-import org.eclipse.collections.impl.test.Verify;
+import com.m3.collections.eclipse.api.map.primitive.<name>BooleanMap;
+import com.m3.collections.eclipse.api.map.primitive.Immutable<name>BooleanMap;
+import com.m3.collections.eclipse.impl.factory.primitive.<name>BooleanMaps;
+import com.m3.collections.eclipse.impl.map.mutable.primitive.<name>BooleanHashMap;
+import com.m3.collections.eclipse.impl.map.primitive.Abstract<name>BooleanMapTestCase;
+import com.m3.collections.eclipse.impl.test.Verify;
 import org.junit.Assert;
 import org.junit.Test;
 

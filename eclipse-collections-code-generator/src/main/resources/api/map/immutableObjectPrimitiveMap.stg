@@ -1,6 +1,6 @@
 import "copyrightAndOthers.stg"
 
-targetPath() ::= "org/eclipse/collections/api/map/primitive"
+targetPath() ::= "com/m3/collections/eclipse/api/map/primitive"
 
 fileName(primitive) ::= "ImmutableObject<primitive.name>Map"
 
@@ -11,14 +11,14 @@ class(primitive) ::= <<
 body(type, name) ::= <<
 <copyrightAndOthers()>
 
-package org.eclipse.collections.api.map.primitive;
+package com.m3.collections.eclipse.api.map.primitive;
 
-import org.eclipse.collections.api.block.function.primitive.<name>ToObjectFunction;
-import org.eclipse.collections.api.block.predicate.primitive.Object<name>Predicate;
-import org.eclipse.collections.api.block.predicate.primitive.<name>Predicate;
-import org.eclipse.collections.api.block.procedure.primitive.<name>Procedure;
-import org.eclipse.collections.api.collection.ImmutableCollection;
-import org.eclipse.collections.api.collection.primitive.Immutable<name>Collection;
+import com.m3.collections.eclipse.api.block.function.primitive.<name>ToObjectFunction;
+import com.m3.collections.eclipse.api.block.predicate.primitive.Object<name>Predicate;
+import com.m3.collections.eclipse.api.block.predicate.primitive.<name>Predicate;
+import com.m3.collections.eclipse.api.block.procedure.primitive.<name>Procedure;
+import com.m3.collections.eclipse.api.collection.ImmutableCollection;
+import com.m3.collections.eclipse.api.collection.primitive.Immutable<name>Collection;
 
 /**
  * This file was automatically generated from template file immutableObjectPrimitiveMap.stg.

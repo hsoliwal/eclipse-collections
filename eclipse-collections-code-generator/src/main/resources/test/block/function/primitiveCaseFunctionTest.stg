@@ -6,7 +6,7 @@ import "primitiveEquals.stg"
 skipBoolean() ::= "true"
 isTest() ::= "true"
 
-targetPath() ::= "org/eclipse/collections/impl/block/function/primitive"
+targetPath() ::= "com/m3/collections/eclipse/impl/block/function/primitive"
 
 fileName(primitive) ::= "<primitive.name>CaseFunctionTest"
 
@@ -17,11 +17,11 @@ class(primitive) ::= <<
 body(type, wrapperName, name) ::= <<
 <copyright()>
 
-package org.eclipse.collections.impl.block.function.primitive;
+package com.m3.collections.eclipse.impl.block.function.primitive;
 
-import org.eclipse.collections.impl.factory.primitive.<name>Lists;
-import org.eclipse.collections.impl.list.primitive.IntInterval;
-import org.eclipse.collections.impl.test.Verify;
+import com.m3.collections.eclipse.impl.factory.primitive.<name>Lists;
+import com.m3.collections.eclipse.impl.list.primitive.IntInterval;
+import com.m3.collections.eclipse.impl.test.Verify;
 import org.junit.Assert;
 import org.junit.Test;
 
