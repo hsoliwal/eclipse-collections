@@ -1,11 +1,11 @@
 package-version=${versionmask;===;${Bundle-Version}}
 
--jpms-module-info: org.eclipse.collections.impl;version="${package-version}"
-Bundle-SymbolicName: org.eclipse.collections.impl
+-jpms-module-info: com.m3.collections.eclipse.impl;version="${package-version}"
+Bundle-SymbolicName: com.m3.collections.eclipse.impl
 Bundle-ActivationPolicy: lazy
 
 Export-Package: \
-	org.eclipse.collections.impl.*;version="${package-version}"
+	com.m3.collections.eclipse.impl.*;version="${package-version}"
 
 Import-Package: \
  sun.misc.*;resolution:=optional, \

@@ -1,6 +1,6 @@
 import "copyrightOf.stg"
 
-targetPath() ::= "org/eclipse/collections/impl/set/mutable/primitive"
+targetPath() ::= "com/m3/collections/eclipse/impl/set/mutable/primitive"
 
 fileName(primitive) ::= "BoxedMutable<primitive.name>Set"
 
@@ -11,19 +11,19 @@ class(primitive) ::= <<
 body(type, name, wrapperName) ::= <<
 <copyrightOf("The Bank of New York Mellon")>
 
-package org.eclipse.collections.impl.set.mutable.primitive;
+package com.m3.collections.eclipse.impl.set.mutable.primitive;
 
 import java.util.Iterator;
 import java.util.Objects;
 import java.util.Set;
 import java.util.concurrent.ExecutorService;
 
-import org.eclipse.collections.api.block.procedure.Procedure;
-import org.eclipse.collections.api.iterator.Mutable<name>Iterator;
-import org.eclipse.collections.api.set.MutableSet;
-import org.eclipse.collections.api.set.ParallelUnsortedSetIterable;
-import org.eclipse.collections.api.set.primitive.Mutable<name>Set;
-import org.eclipse.collections.impl.set.mutable.AbstractMutableSet;
+import com.m3.collections.eclipse.api.block.procedure.Procedure;
+import com.m3.collections.eclipse.api.iterator.Mutable<name>Iterator;
+import com.m3.collections.eclipse.api.set.MutableSet;
+import com.m3.collections.eclipse.api.set.ParallelUnsortedSetIterable;
+import com.m3.collections.eclipse.api.set.primitive.Mutable<name>Set;
+import com.m3.collections.eclipse.impl.set.mutable.AbstractMutableSet;
 
 /**
  * A boxed view of a {@link Mutable<name>Set}.

@@ -8,7 +8,7 @@
  * http://www.eclipse.org/org/documents/edl-v10.php.
  */
 
-package org.eclipse.collections.impl.jmh.map
+package com.m3.collections.eclipse.impl.jmh.map
 
 class PresizableHashMap[K, V](val _initialSize: Int) extends scala.collection.mutable.HashMap[K, V]
 {

@@ -6,24 +6,24 @@ import "primitiveLiteral.stg"
 primitiveKeySetBody(className, type, name, keyArray, increment, sameTwoPrimitiveMapKeySet, calledFrom) ::= <<
 <copyright()>
 
-package org.eclipse.collections.impl.map.mutable.primitive;
+package com.m3.collections.eclipse.impl.map.mutable.primitive;
 
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.NoSuchElementException;
-<if(!primitive.bytePrimitive)>import org.eclipse.collections.impl.SpreadFunctions;<endif>
-import org.eclipse.collections.api.block.function.primitive.<name>ToObjectFunction;
-import org.eclipse.collections.api.block.function.primitive.Object<name>ToObjectFunction;
-import org.eclipse.collections.api.block.predicate.primitive.<name>Predicate;
-import org.eclipse.collections.api.block.procedure.primitive.<name>Procedure;
-import org.eclipse.collections.api.iterator.<name>Iterator;
-import org.eclipse.collections.api.set.ImmutableSet;
-import org.eclipse.collections.api.set.MutableSet;
-import org.eclipse.collections.api.set.primitive.Immutable<name>Set;
-import org.eclipse.collections.impl.set.immutable.primitive.Immutable<name>SetSerializationProxy;
-import org.eclipse.collections.impl.set.immutable.primitive.AbstractImmutable<name>Set;
-import org.eclipse.collections.impl.set.mutable.UnifiedSet;
-import org.eclipse.collections.impl.set.mutable.primitive.<name>HashSet;
+<if(!primitive.bytePrimitive)>import com.m3.collections.eclipse.impl.SpreadFunctions;<endif>
+import com.m3.collections.eclipse.api.block.function.primitive.<name>ToObjectFunction;
+import com.m3.collections.eclipse.api.block.function.primitive.Object<name>ToObjectFunction;
+import com.m3.collections.eclipse.api.block.predicate.primitive.<name>Predicate;
+import com.m3.collections.eclipse.api.block.procedure.primitive.<name>Procedure;
+import com.m3.collections.eclipse.api.iterator.<name>Iterator;
+import com.m3.collections.eclipse.api.set.ImmutableSet;
+import com.m3.collections.eclipse.api.set.MutableSet;
+import com.m3.collections.eclipse.api.set.primitive.Immutable<name>Set;
+import com.m3.collections.eclipse.impl.set.immutable.primitive.Immutable<name>SetSerializationProxy;
+import com.m3.collections.eclipse.impl.set.immutable.primitive.AbstractImmutable<name>Set;
+import com.m3.collections.eclipse.impl.set.mutable.UnifiedSet;
+import com.m3.collections.eclipse.impl.set.mutable.primitive.<name>HashSet;
 
 /**
  * This file was automatically generated from template file <calledFrom>

@@ -1,0 +1,323 @@
+/*
+ * Copyright (c) 2022 Goldman Sachs and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * and Eclipse Distribution License v. 1.0 which accompany this distribution.
+ * The Eclipse Public License is available at http://www.eclipse.org/legal/epl-v10.html
+ * and the Eclipse Distribution License is available at
+ * http://www.eclipse.org/org/documents/edl-v10.php.
+ */
+
+package com.m3.collections.eclipse.api.list;
+
+import java.util.List;
+
+import com.m3.collections.eclipse.api.annotation.category.Converting;
+import com.m3.collections.eclipse.api.annotation.category.Filtering;
+import com.m3.collections.eclipse.api.annotation.category.Grouping;
+import com.m3.collections.eclipse.api.annotation.category.Iterating;
+import com.m3.collections.eclipse.api.annotation.category.Transforming;
+import com.m3.collections.eclipse.api.block.HashingStrategy;
+import com.m3.collections.eclipse.api.block.function.Function;
+import com.m3.collections.eclipse.api.block.function.Function2;
+import com.m3.collections.eclipse.api.block.function.primitive.BooleanFunction;
+import com.m3.collections.eclipse.api.block.function.primitive.ByteFunction;
+import com.m3.collections.eclipse.api.block.function.primitive.CharFunction;
+import com.m3.collections.eclipse.api.block.function.primitive.DoubleFunction;
+import com.m3.collections.eclipse.api.block.function.primitive.FloatFunction;
+import com.m3.collections.eclipse.api.block.function.primitive.IntFunction;
+import com.m3.collections.eclipse.api.block.function.primitive.LongFunction;
+import com.m3.collections.eclipse.api.block.function.primitive.ObjectIntToObjectFunction;
+import com.m3.collections.eclipse.api.block.function.primitive.ShortFunction;
+import com.m3.collections.eclipse.api.block.predicate.Predicate;
+import com.m3.collections.eclipse.api.block.predicate.Predicate2;
+import com.m3.collections.eclipse.api.block.predicate.primitive.ObjectIntPredicate;
+import com.m3.collections.eclipse.api.block.procedure.Procedure;
+import com.m3.collections.eclipse.api.collection.ImmutableCollection;
+import com.m3.collections.eclipse.api.list.primitive.ImmutableBooleanList;
+import com.m3.collections.eclipse.api.list.primitive.ImmutableByteList;
+import com.m3.collections.eclipse.api.list.primitive.ImmutableCharList;
+import com.m3.collections.eclipse.api.list.primitive.ImmutableDoubleList;
+import com.m3.collections.eclipse.api.list.primitive.ImmutableFloatList;
+import com.m3.collections.eclipse.api.list.primitive.ImmutableIntList;
+import com.m3.collections.eclipse.api.list.primitive.ImmutableLongList;
+import com.m3.collections.eclipse.api.list.primitive.ImmutableShortList;
+import com.m3.collections.eclipse.api.multimap.list.ImmutableListMultimap;
+import com.m3.collections.eclipse.api.partition.list.PartitionImmutableList;
+import com.m3.collections.eclipse.api.tuple.Pair;
+
+/**
+ * ImmutableList is the non-modifiable equivalent interface to {@link MutableList}. {@link MutableList#toImmutable()}
+ * will give you an appropriately trimmed implementation of ImmutableList. All ImmutableList implementations must
+ * implement the java.util.List interface in order to satisfy the equals() contract and be compared against other list
+ * structures like FastList or ArrayList.
+ * <p>
+ * The methods in ImmutableList are organized into method categories via category annotations.
+ * Links are provided below as a convenience to help discover specific methods in Javadoc.
+ *
+ * <ul>
+ * <li><b>Converting 🔌</b>
+ * <ul><li>
+ * {@link #castToList()}, {@link #newWith(Object)}, {@link #newWithAll(Iterable)}, {@link #newWithout(Object)},
+ * {@link #newWithoutAll(Iterable)}, {@link #toImmutableList()}, {@link #toReversed()}
+ * </li></ul>
+ * <li><b>Filtering 🚰</b>
+ * <ul><li>
+ * {@link #distinct()}, {@link #distinct(HashingStrategy)}, {@link #distinctBy(Function)}, {@link #drop(int)},
+ * {@link #dropWhile(Predicate)}, {@link #partition(Predicate)}, {@link #partitionWhile(Predicate)},
+ * {@link #partitionWith(Predicate2, Object)}, {@link #reject(Predicate)}, {@link #rejectWith(Predicate2, Object)},
+ * {@link #rejectWithIndex(ObjectIntPredicate)}, {@link #select(Predicate)}, {@link #selectInstancesOf(Class)},
+ * {@link #selectWith(Predicate2, Object)}, {@link #selectWithIndex(ObjectIntPredicate)}, {@link #subList(int, int)},
+ * {@link #take(int)}, {@link #takeWhile(Predicate)}
+ * </li></ul>
+ * <li><b>Grouping 🏘️</b>
+ * <ul><li>
+ * {@link #groupBy(Function)}, {@link #groupByEach(Function)}
+ * </li></ul>
+ * <li><b>Iterating 🔄</b>
+ * <ul><li>
+ * {@link #reversed()}, {@link #tap(Procedure)}
+ * </li></ul>
+ * <li><b>Transforming 🦋</b>
+ * <ul><li>
+ * {@link #collect(Function)}, {@link #collectBoolean(BooleanFunction)}, {@link #collectByte(ByteFunction)},
+ * {@link #collectChar(CharFunction)}, {@link #collectDouble(DoubleFunction)}, {@link #collectFloat(FloatFunction)},
+ * {@link #collectIf(Predicate, Function)}, {@link #collectInt(IntFunction)}, {@link #collectLong(LongFunction)},
+ * {@link #collectShort(ShortFunction)}, {@link #collectWith(Function2, Object)},
+ * {@link #collectWithIndex(ObjectIntToObjectFunction)}, {@link #flatCollect(Function)},
+ * {@link #flatCollectWith(Function2, Object)}, {@link #zip(Iterable)}, {@link #zipWithIndex()}
+ * </li></ul>
+ * </ul>
+ */
+public interface ImmutableList<T>
+        extends ImmutableCollection<T>, ListIterable<T>
+{
+    @Override
+    @Converting
+    ImmutableList<T> newWith(T element);
+
+    @Override
+    @Converting
+    ImmutableList<T> newWithout(T element);
+
+    @Override
+    @Converting
+    ImmutableList<T> newWithAll(Iterable<? extends T> elements);
+
+    @Override
+    @Converting
+    ImmutableList<T> newWithoutAll(Iterable<? extends T> elements);
+
+    @Override
+    @Iterating
+    ImmutableList<T> tap(Procedure<? super T> procedure);
+
+    @Override
+    @Filtering
+    ImmutableList<T> select(Predicate<? super T> predicate);
+
+    @Override
+    @Filtering
+    <P> ImmutableList<T> selectWith(Predicate2<? super T, ? super P> predicate, P parameter);
+
+    @Override
+    @Filtering
+    ImmutableList<T> reject(Predicate<? super T> predicate);
+
+    @Override
+    @Filtering
+    <P> ImmutableList<T> rejectWith(Predicate2<? super T, ? super P> predicate, P parameter);
+
+    @Override
+    @Filtering
+    PartitionImmutableList<T> partition(Predicate<? super T> predicate);
+
+    @Override
+    @Filtering
+    <P> PartitionImmutableList<T> partitionWith(Predicate2<? super T, ? super P> predicate, P parameter);
+
+    @Override
+    @Filtering
+    <S> ImmutableList<S> selectInstancesOf(Class<S> clazz);
+
+    @Override
+    @Transforming
+    <V> ImmutableList<V> collect(Function<? super T, ? extends V> function);
+
+    /**
+     * @since 9.1.
+     */
+    @Override
+    @Transforming
+    default <V> ImmutableList<V> collectWithIndex(ObjectIntToObjectFunction<? super T, ? extends V> function)
+    {
+        int[] index = {0};
+        return this.collect(each -> function.valueOf(each, index[0]++));
+    }
+
+    /**
+     * Returns a new ImmutableList with all elements of the collection that return true when evaluating the specified
+     * predicate which is supplied each element and its relative index.
+     *
+     * @since 11.0
+     */
+    @Override
+    @Filtering
+    default ImmutableList<T> selectWithIndex(ObjectIntPredicate<? super T> predicate)
+    {
+        int[] index = {0};
+        return this.select(each -> predicate.accept(each, index[0]++));
+    }
+
+    /**
+     * Returns a new ImmutableList with all elements of the collection that return false when evaluating the specified
+     * predicate which is supplied each element and its relative index.
+     *
+     * @since 11.0
+     */
+    @Override
+    @Filtering
+    default ImmutableList<T> rejectWithIndex(ObjectIntPredicate<? super T> predicate)
+    {
+        int[] index = {0};
+        return this.reject(each -> predicate.accept(each, index[0]++));
+    }
+
+    @Override
+    @Transforming
+    ImmutableBooleanList collectBoolean(BooleanFunction<? super T> booleanFunction);
+
+    @Override
+    @Transforming
+    ImmutableByteList collectByte(ByteFunction<? super T> byteFunction);
+
+    @Override
+    @Transforming
+    ImmutableCharList collectChar(CharFunction<? super T> charFunction);
+
+    @Override
+    @Transforming
+    ImmutableDoubleList collectDouble(DoubleFunction<? super T> doubleFunction);
+
+    @Override
+    @Transforming
+    ImmutableFloatList collectFloat(FloatFunction<? super T> floatFunction);
+
+    @Override
+    @Transforming
+    ImmutableIntList collectInt(IntFunction<? super T> intFunction);
+
+    @Override
+    @Transforming
+    ImmutableLongList collectLong(LongFunction<? super T> longFunction);
+
+    @Override
+    @Transforming
+    ImmutableShortList collectShort(ShortFunction<? super T> shortFunction);
+
+    @Override
+    @Transforming
+    <P, V> ImmutableList<V> collectWith(Function2<? super T, ? super P, ? extends V> function, P parameter);
+
+    @Override
+    @Transforming
+    <V> ImmutableList<V> collectIf(Predicate<? super T> predicate, Function<? super T, ? extends V> function);
+
+    @Override
+    @Transforming
+    <V> ImmutableList<V> flatCollect(Function<? super T, ? extends Iterable<V>> function);
+
+    /**
+     * @since 9.2
+     */
+    @Override
+    @Transforming
+    default <P, V> ImmutableList<V> flatCollectWith(Function2<? super T, ? super P, ? extends Iterable<V>> function, P parameter)
+    {
+        return this.flatCollect(each -> function.apply(each, parameter));
+    }
+
+    @Override
+    @Grouping
+    <V> ImmutableListMultimap<V, T> groupBy(Function<? super T, ? extends V> function);
+
+    @Override
+    @Grouping
+    <V> ImmutableListMultimap<V, T> groupByEach(Function<? super T, ? extends Iterable<V>> function);
+
+    @Override
+    @Filtering
+    ImmutableList<T> distinct();
+
+    @Override
+    @Filtering
+    ImmutableList<T> distinct(HashingStrategy<? super T> hashingStrategy);
+
+    /**
+     * @since 9.0
+     */
+    @Override
+    @Filtering
+    <V> ImmutableList<T> distinctBy(Function<? super T, ? extends V> function);
+
+    @Override
+    @Transforming
+    <S> ImmutableList<Pair<T, S>> zip(Iterable<S> that);
+
+    @Override
+    @Transforming
+    ImmutableList<Pair<T, Integer>> zipWithIndex();
+
+    @Override
+    @Filtering
+    ImmutableList<T> take(int count);
+
+    @Override
+    @Filtering
+    ImmutableList<T> takeWhile(Predicate<? super T> predicate);
+
+    @Override
+    @Filtering
+    ImmutableList<T> drop(int count);
+
+    @Override
+    @Filtering
+    ImmutableList<T> dropWhile(Predicate<? super T> predicate);
+
+    @Override
+    @Filtering
+    PartitionImmutableList<T> partitionWhile(Predicate<? super T> predicate);
+
+    @Converting
+    List<T> castToList();
+
+    /**
+     * @see List#subList(int, int)
+     * @since 6.0
+     */
+    @Override
+    @Filtering
+    ImmutableList<T> subList(int fromIndex, int toIndex);
+
+    /**
+     * Returns a reverse-order view of this list.
+     */
+    @Iterating
+    ImmutableList<T> reversed();
+
+    @Override
+    @Converting
+    ImmutableList<T> toReversed();
+
+    /**
+     * Overrides toImmutableList in RichIterable to return this.
+     *
+     * @since 11.0
+     */
+    @Override
+    @Converting
+    default ImmutableList<T> toImmutableList()
+    {
+        return this;
+    }
+}

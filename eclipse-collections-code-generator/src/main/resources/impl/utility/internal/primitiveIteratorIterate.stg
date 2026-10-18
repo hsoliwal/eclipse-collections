@@ -2,7 +2,7 @@ import "copyright.stg"
 import "primitiveLiteral.stg"
 import "primitiveEquals.stg"
 
-targetPath() ::= "org/eclipse/collections/impl/utility/internal/primitive"
+targetPath() ::= "com/m3/collections/eclipse/impl/utility/internal/primitive"
 
 fileName(primitive) ::= "<primitive.name>IteratorIterate"
 
@@ -13,16 +13,16 @@ class(primitive) ::= <<
 body(type, name) ::= <<
 <copyright()>
 
-package org.eclipse.collections.impl.utility.internal.primitive;
+package com.m3.collections.eclipse.impl.utility.internal.primitive;
 
 import java.util.Collection;
 
-import org.eclipse.collections.api.block.function.primitive.<name>ToObjectFunction;
-import org.eclipse.collections.api.block.function.primitive.Object<name>ToObjectFunction;
-import org.eclipse.collections.api.block.predicate.primitive.<name>Predicate;
-import org.eclipse.collections.api.block.procedure.primitive.<name>Procedure;
-import org.eclipse.collections.api.collection.primitive.Mutable<name>Collection;
-import org.eclipse.collections.api.iterator.<name>Iterator;
+import com.m3.collections.eclipse.api.block.function.primitive.<name>ToObjectFunction;
+import com.m3.collections.eclipse.api.block.function.primitive.Object<name>ToObjectFunction;
+import com.m3.collections.eclipse.api.block.predicate.primitive.<name>Predicate;
+import com.m3.collections.eclipse.api.block.procedure.primitive.<name>Procedure;
+import com.m3.collections.eclipse.api.collection.primitive.Mutable<name>Collection;
+import com.m3.collections.eclipse.api.iterator.<name>Iterator;
 
 /**
  * The <name>IteratorIterate class provides implementations of the various iteration patterns for use with the {@link <name>Iterator}.

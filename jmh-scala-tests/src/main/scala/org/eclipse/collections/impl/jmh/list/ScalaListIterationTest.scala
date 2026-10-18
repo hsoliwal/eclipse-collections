@@ -8,7 +8,7 @@
  * http://www.eclipse.org/org/documents/edl-v10.php.
  */
 
-package org.eclipse.collections.impl.jmh.list
+package com.m3.collections.eclipse.impl.jmh.list
 
 import scala.collection.mutable
 import scala.collection.parallel.CollectionConverters._

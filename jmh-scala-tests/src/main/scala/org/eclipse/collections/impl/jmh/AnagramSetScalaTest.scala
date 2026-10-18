@@ -8,7 +8,7 @@
  * http://www.eclipse.org/org/documents/edl-v10.php.
  */
 
-package org.eclipse.collections.impl.jmh
+package com.m3.collections.eclipse.impl.jmh
 
 import java.util
 import java.util.concurrent.{ExecutorService, Executors, TimeUnit}

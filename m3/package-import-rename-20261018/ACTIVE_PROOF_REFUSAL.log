@@ -1,0 +1,3 @@
+PASS final active standalone proof refuses same-class differential
+Exception in thread "main" java.lang.IllegalStateException: Independent donor classes required; use the pinned original CI oracle
+	at com.m3.collections.eclipse.impl.M3EclipsePackageRelocationProof.main(M3EclipsePackageRelocationProof.java:64)

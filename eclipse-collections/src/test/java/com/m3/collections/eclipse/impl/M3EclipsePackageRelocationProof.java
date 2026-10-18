@@ -20,31 +20,31 @@ public final class M3EclipsePackageRelocationProof {
         catch (Throwable error) {return error.getClass().getName() + ":" + error.getMessage();}
     }
     private static void interval(long from, long to, long step, long point, int index) {
-        eq(failure(() -> org.eclipse.collections.impl.list.IntervalUtils.checkArguments(from, to, step)),
+        eq(failure(() -> com.m3.collections.eclipse.impl.list.IntervalUtils.checkArguments(from, to, step)),
                 failure(() -> com.m3.collections.eclipse.impl.list.IntervalUtils.checkArguments(from, to, step)),
                 "step/range contract");
         if (step == 0) return;
-        eq(org.eclipse.collections.impl.list.IntervalUtils.intSize(from, to, step),
+        eq(com.m3.collections.eclipse.impl.list.IntervalUtils.intSize(from, to, step),
                 com.m3.collections.eclipse.impl.list.IntervalUtils.intSize(from, to, step), "intSize");
-        eq(org.eclipse.collections.impl.list.IntervalUtils.contains(point, from, to, step),
+        eq(com.m3.collections.eclipse.impl.list.IntervalUtils.contains(point, from, to, step),
                 com.m3.collections.eclipse.impl.list.IntervalUtils.contains(point, from, to, step), "contains");
-        eq(org.eclipse.collections.impl.list.IntervalUtils.isWithinBoundaries(point, from, to, step),
+        eq(com.m3.collections.eclipse.impl.list.IntervalUtils.isWithinBoundaries(point, from, to, step),
                 com.m3.collections.eclipse.impl.list.IntervalUtils.isWithinBoundaries(point, from, to, step),
                 "within boundaries");
-        eq(org.eclipse.collections.impl.list.IntervalUtils.indexOf(point, from, to, step),
+        eq(com.m3.collections.eclipse.impl.list.IntervalUtils.indexOf(point, from, to, step),
                 com.m3.collections.eclipse.impl.list.IntervalUtils.indexOf(point, from, to, step), "logical index");
-        eq(org.eclipse.collections.impl.list.IntervalUtils.valueAtIndex(index, from, to, step),
+        eq(com.m3.collections.eclipse.impl.list.IntervalUtils.valueAtIndex(index, from, to, step),
                 com.m3.collections.eclipse.impl.list.IntervalUtils.valueAtIndex(index, from, to, step),
                 "physical value");
-        eq(org.eclipse.collections.impl.list.IntervalUtils.binarySearch(point, from, to, step),
+        eq(com.m3.collections.eclipse.impl.list.IntervalUtils.binarySearch(point, from, to, step),
                 com.m3.collections.eclipse.impl.list.IntervalUtils.binarySearch(point, from, to, step),
                 "binary search");
-        eq(org.eclipse.collections.impl.list.IntervalUtils.calculateAdjustedStep((int)from,(int)to,(int)step),
+        eq(com.m3.collections.eclipse.impl.list.IntervalUtils.calculateAdjustedStep((int)from,(int)to,(int)step),
                 com.m3.collections.eclipse.impl.list.IntervalUtils.calculateAdjustedStep(
                         (int)from,(int)to,(int)step), "direction");
     }
     private static void emptyIterator() {
-        var donor = org.eclipse.collections.impl.EmptyIterator.<Integer>getInstance();
+        var donor = com.m3.collections.eclipse.impl.EmptyIterator.<Integer>getInstance();
         var moved = com.m3.collections.eclipse.impl.EmptyIterator.<Integer>getInstance();
         eq(donor.hasNext(), moved.hasNext(), "hasNext");
         eq(donor.hasPrevious(), moved.hasPrevious(), "hasPrevious");
@@ -58,6 +58,11 @@ public final class M3EclipsePackageRelocationProof {
     }
     public static void main(String[] args) {
         if (args.length != 0) throw new IllegalArgumentException("no args");
+        if (com.m3.collections.eclipse.impl.list.IntervalUtils.class.getName().equals(
+                com.m3.collections.eclipse.impl.list.IntervalUtils.class.getName()))
+        {
+            throw new IllegalStateException("Independent donor classes required; use the pinned original CI oracle");
+        }
         emptyIterator();
         long[] extrema = {Long.MIN_VALUE, Long.MIN_VALUE + 1, -100, -1, 0,
                 1, 100, Long.MAX_VALUE - 1, Long.MAX_VALUE};

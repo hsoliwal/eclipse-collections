@@ -1,0 +1,7 @@
+gate	files	status
+receipt_hash_readback	3195	PASS
+java_namespace_only_byte_identity	2806	PASS
+resources_namespace_only_byte_identity	389	PASS
+old_java_package_import_declarations	0	PASS
+old_generator_namespace_refs	0	PASS
+maven_coordinates_and_versions	1	PASS

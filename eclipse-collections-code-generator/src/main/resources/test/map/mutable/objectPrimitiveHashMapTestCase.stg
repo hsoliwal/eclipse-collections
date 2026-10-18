@@ -7,7 +7,7 @@ skipBoolean() ::= "true"
 
 isTest() ::= "true"
 
-targetPath() ::= "org/eclipse/collections/impl/map/mutable/primitive"
+targetPath() ::= "com/m3/collections/eclipse/impl/map/mutable/primitive"
 
 fileName(primitive) ::= "Object<primitive.name>HashMapTestCase"
 
@@ -18,17 +18,17 @@ class(primitive) ::= <<
 body(type, name, wrapperName) ::= <<
 <copyright()>
 
-package org.eclipse.collections.impl.map.mutable.primitive;
+package com.m3.collections.eclipse.impl.map.mutable.primitive;
 
 import java.lang.reflect.Field;
 import java.util.Iterator;
 
-import org.eclipse.collections.api.block.function.primitive.<name>Function;
-import org.eclipse.collections.api.block.function.primitive.<name>Function0;
-import org.eclipse.collections.api.block.function.primitive.<name>To<name>Function;
-import org.eclipse.collections.api.map.primitive.MutableObject<name>Map;
-import org.eclipse.collections.impl.factory.primitive.Object<name>Maps;
-import org.eclipse.collections.impl.test.Verify;
+import com.m3.collections.eclipse.api.block.function.primitive.<name>Function;
+import com.m3.collections.eclipse.api.block.function.primitive.<name>Function0;
+import com.m3.collections.eclipse.api.block.function.primitive.<name>To<name>Function;
+import com.m3.collections.eclipse.api.map.primitive.MutableObject<name>Map;
+import com.m3.collections.eclipse.impl.factory.primitive.Object<name>Maps;
+import com.m3.collections.eclipse.impl.test.Verify;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;

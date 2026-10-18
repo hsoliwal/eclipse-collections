@@ -1,0 +1,232 @@
+Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+Maven home: /workspace/scratch/39a960e13a39/toolchain/apache-maven-3.9.11
+Java version: 21.0.12.1, vendor: Eclipse Adoptium, runtime: /workspace/scratch/39a960e13a39/toolchain/jdk-21.0.12.1+1
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "6.18.55", arch: "amd64", family: "unix"
+00:37:21:125 [INFO] Error stacktraces are turned on.
+00:37:21:222 [INFO] Scanning for projects...
+00:37:23:874 [WARNING] 
+00:37:23:874 [WARNING] Some problems were encountered while building the effective model for org.eclipse.collections:unit-tests-thread-safety:jar:14.0.0-SNAPSHOT
+00:37:23:882 [WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-enforcer-plugin is missing. @ line 80, column 21
+00:37:23:882 [WARNING] 
+00:37:23:882 [WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+00:37:23:882 [WARNING] 
+00:37:23:882 [WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+00:37:23:882 [WARNING] 
+00:37:23:929 [INFO] ------------------------------------------------------------------------
+00:37:23:930 [INFO] Reactor Build Order:
+00:37:23:930 [INFO] 
+00:37:23:931 [INFO] Eclipse Collections Parent Project                                 [pom]
+00:37:23:931 [INFO] Eclipse Collections Code Generator                                 [jar]
+00:37:23:931 [INFO] Eclipse Collections Code Generator Maven Plugin           [maven-plugin]
+00:37:23:931 [INFO] Eclipse Collections API                                            [jar]
+00:37:23:931 [INFO] Eclipse Collections Main Library                                   [jar]
+00:37:23:953 [INFO] 
+00:37:23:953 [INFO] ---------< org.eclipse.collections:eclipse-collections-parent >---------
+00:37:23:953 [INFO] Building Eclipse Collections Parent Project 14.0.0-SNAPSHOT        [1/5]
+00:37:23:953 [INFO]   from pom.xml
+00:37:23:953 [INFO] --------------------------------[ pom ]---------------------------------
+00:37:23:955 [INFO] 
+00:37:23:955 [INFO] -----< org.eclipse.collections:eclipse-collections-code-generator >-----
+00:37:23:955 [INFO] Building Eclipse Collections Code Generator 14.0.0-SNAPSHOT        [2/5]
+00:37:23:955 [INFO]   from eclipse-collections-code-generator/pom.xml
+00:37:23:955 [INFO] --------------------------------[ jar ]---------------------------------
+00:37:24:102 [INFO] 
+00:37:24:102 [INFO] --- resources:3.3.1:resources (default-resources) @ eclipse-collections-code-generator ---
+00:37:24:288 [INFO] Copying 383 resources from src/main/resources to target/classes
+00:37:24:307 [INFO] 
+00:37:24:308 [INFO] --- compiler:3.13.0:compile (default-compile) @ eclipse-collections-code-generator ---
+00:37:24:710 [INFO] Recompiling the module because of added or removed source files.
+00:37:24:786 [INFO] Compiling 9 source files with javac [forked debug release 17] to target/classes
+00:37:27:861 [INFO] 
+00:37:27:862 [INFO] --- resources:3.3.1:testResources (default-testResources) @ eclipse-collections-code-generator ---
+00:37:27:870 [INFO] skip non existing resourceDirectory /dev/shm/m3-package-rename-39a960e13a39/repos/eclipse-collections/eclipse-collections-code-generator/src/test/resources
+00:37:27:870 [INFO] 
+00:37:27:871 [INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ eclipse-collections-code-generator ---
+00:37:27:897 [INFO] Recompiling the module because of changed dependency.
+00:37:27:898 [INFO] Compiling 1 source file with javac [forked debug release 17] to target/test-classes
+00:37:30:141 [INFO] 
+00:37:30:143 [INFO] --- surefire:3.6.0:test (default-test) @ eclipse-collections-code-generator ---
+00:37:30:528 [INFO] Tests will run in random order. To reproduce ordering use flag -Dsurefire.runOrder.random.seed=15508711971948
+00:37:30:548 [INFO] 
+00:37:30:549 [INFO] --< org.eclipse.collections:eclipse-collections-code-generator-maven-plugin >--
+00:37:30:549 [INFO] Building Eclipse Collections Code Generator Maven Plugin 14.0.0-SNAPSHOT [3/5]
+00:37:30:549 [INFO]   from eclipse-collections-code-generator-maven-plugin/pom.xml
+00:37:30:549 [INFO] ----------------------------[ maven-plugin ]----------------------------
+00:37:31:098 [INFO] 
+00:37:31:099 [INFO] --- plugin:3.15.0:helpmojo (help-goal) @ eclipse-collections-code-generator-maven-plugin ---
+00:37:32:295 [INFO] 
+00:37:32:296 [INFO] --- resources:3.3.1:resources (default-resources) @ eclipse-collections-code-generator-maven-plugin ---
+00:37:32:307 [INFO] skip non existing resourceDirectory /dev/shm/m3-package-rename-39a960e13a39/repos/eclipse-collections/eclipse-collections-code-generator-maven-plugin/src/main/resources
+00:37:32:319 [INFO] 
+00:37:32:319 [INFO] --- compiler:3.13.0:compile (default-compile) @ eclipse-collections-code-generator-maven-plugin ---
+00:37:32:362 [INFO] Recompiling the module because of changed dependency.
+00:37:32:367 [INFO] Compiling 5 source files with javac [forked debug release 17] to target/classes
+00:37:35:105 [INFO] 
+00:37:35:105 [INFO] --- plugin:3.15.0:descriptor (default-descriptor) @ eclipse-collections-code-generator-maven-plugin ---
+00:37:35:115 [INFO] Using 'UTF-8' encoding to read mojo source files.
+00:37:36:441 [INFO] java-annotations mojo extractor found 3 mojo descriptors.
+00:37:36:467 [INFO] java-javadoc mojo extractor found 0 mojo descriptor.
+00:37:36:479 [INFO] ant mojo extractor found 0 mojo descriptor.
+00:37:36:479 [INFO] bsh mojo extractor found 0 mojo descriptor.
+00:37:36:634 [INFO] 
+00:37:36:635 [INFO] --- plugin:3.15.0:descriptor (mojo-descriptor) @ eclipse-collections-code-generator-maven-plugin ---
+00:37:36:639 [INFO] Using 'UTF-8' encoding to read mojo source files.
+00:37:37:080 [INFO] java-annotations mojo extractor found 3 mojo descriptors.
+00:37:37:089 [INFO] java-javadoc mojo extractor found 0 mojo descriptor.
+00:37:37:089 [INFO] ant mojo extractor found 0 mojo descriptor.
+00:37:37:089 [INFO] bsh mojo extractor found 0 mojo descriptor.
+00:37:37:099 [INFO] 
+00:37:37:099 [INFO] --- resources:3.3.1:testResources (default-testResources) @ eclipse-collections-code-generator-maven-plugin ---
+00:37:37:103 [INFO] skip non existing resourceDirectory /dev/shm/m3-package-rename-39a960e13a39/repos/eclipse-collections/eclipse-collections-code-generator-maven-plugin/src/test/resources
+00:37:37:104 [INFO] 
+00:37:37:104 [INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ eclipse-collections-code-generator-maven-plugin ---
+00:37:37:107 [INFO] No sources to compile
+00:37:37:107 [INFO] 
+00:37:37:107 [INFO] --- surefire:3.6.0:test (default-test) @ eclipse-collections-code-generator-maven-plugin ---
+00:37:37:113 [INFO] No tests to run.
+00:37:37:114 [INFO] 
+00:37:37:114 [INFO] ----------< org.eclipse.collections:eclipse-collections-api >-----------
+00:37:37:115 [INFO] Building Eclipse Collections API 14.0.0-SNAPSHOT                   [4/5]
+00:37:37:115 [INFO]   from eclipse-collections-api/pom.xml
+00:37:37:115 [INFO] --------------------------------[ jar ]---------------------------------
+00:37:37:131 [INFO] 
+00:37:37:131 [INFO] --- eclipse-collections-code-generator:14.0.0-SNAPSHOT:generate-sources (default) @ eclipse-collections-api ---
+00:37:37:159 [INFO] Generating sources in eclipse-collections-api to /dev/shm/m3-package-rename-39a960e13a39/repos/eclipse-collections/eclipse-collections-api/target/generated-sources/java
+00:37:39:309 [INFO] Generated 16 files
+00:37:39:310 [INFO] 
+00:37:39:310 [INFO] --- resources:3.3.1:resources (default-resources) @ eclipse-collections-api ---
+00:37:39:315 [INFO] Copying 3 resources from src/main/resources to target/classes
+00:37:39:316 [INFO] 
+00:37:39:316 [INFO] --- compiler:3.13.0:compile (default-compile) @ eclipse-collections-api ---
+00:37:39:501 [INFO] Recompiling the module because of changed source code.
+00:37:39:522 [INFO] Compiling 1607 source files with javac [forked debug release 17] to target/classes
+00:37:55:038 [INFO] 
+00:37:55:039 [INFO] --- resources:3.3.1:testResources (default-testResources) @ eclipse-collections-api ---
+00:37:55:053 [INFO] skip non existing resourceDirectory /dev/shm/m3-package-rename-39a960e13a39/repos/eclipse-collections/eclipse-collections-api/src/test/resources
+00:37:55:053 [INFO] 
+00:37:55:053 [INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ eclipse-collections-api ---
+00:37:55:063 [INFO] No sources to compile
+00:37:55:063 [INFO] 
+00:37:55:063 [INFO] --- surefire:3.6.0:test (default-test) @ eclipse-collections-api ---
+00:37:55:084 [INFO] No tests to run.
+00:37:55:089 [INFO] 
+00:37:55:089 [INFO] ------------< org.eclipse.collections:eclipse-collections >-------------
+00:37:55:089 [INFO] Building Eclipse Collections Main Library 14.0.0-SNAPSHOT          [5/5]
+00:37:55:089 [INFO]   from eclipse-collections/pom.xml
+00:37:55:089 [INFO] --------------------------------[ jar ]---------------------------------
+00:37:55:106 [INFO] 
+00:37:55:106 [INFO] --- eclipse-collections-code-generator:14.0.0-SNAPSHOT:generate-sources (generate-sources) @ eclipse-collections ---
+00:37:55:108 [INFO] Generating sources in eclipse-collections to /dev/shm/m3-package-rename-39a960e13a39/repos/eclipse-collections/eclipse-collections/target/generated-sources/java
+00:38:02:495 [INFO] Generated 0 files
+00:38:02:495 [INFO] 
+00:38:02:495 [INFO] --- resources:3.3.1:resources (default-resources) @ eclipse-collections ---
+00:38:02:550 [INFO] Copying 3 resources from src/main/resources to target/classes
+00:38:02:551 [INFO] 
+00:38:02:560 [INFO] --- compiler:3.13.0:compile (default-compile) @ eclipse-collections ---
+00:38:03:128 [INFO] Recompiling the module because of changed dependency.
+00:38:03:140 [INFO] Compiling 2145 source files with javac [forked debug release 17] to target/classes
+00:42:44:308 [INFO] -------------------------------------------------------------
+00:42:44:344 [WARNING] COMPILATION WARNING : 
+00:42:44:345 [INFO] -------------------------------------------------------------
+00:42:44:345 [WARNING] /dev/shm/m3-package-rename-39a960e13a39/repos/eclipse-collections/eclipse-collections/src/main/java/org/eclipse/collections/impl/map/mutable/ConcurrentHashMapUnsafe.java:[57,15] Unsafe is internal proprietary API and may be removed in a future release
+00:42:44:345 [WARNING] /dev/shm/m3-package-rename-39a960e13a39/repos/eclipse-collections/eclipse-collections/src/main/java/org/eclipse/collections/impl/map/mutable/ConcurrentHashMapUnsafe.java:[82,25] Unsafe is internal proprietary API and may be removed in a future release
+00:42:44:345 [WARNING] /dev/shm/m3-package-rename-39a960e13a39/repos/eclipse-collections/eclipse-collections/src/main/java/org/eclipse/collections/impl/map/mutable/ConcurrentHashMapUnsafe.java:[2333,19] Unsafe is internal proprietary API and may be removed in a future release
+00:42:44:345 [WARNING] /dev/shm/m3-package-rename-39a960e13a39/repos/eclipse-collections/eclipse-collections/src/main/java/org/eclipse/collections/impl/map/mutable/ConcurrentHashMapUnsafe.java:[2337,19] Unsafe is internal proprietary API and may be removed in a future release
+00:42:44:345 [WARNING] /dev/shm/m3-package-rename-39a960e13a39/repos/eclipse-collections/eclipse-collections/src/main/java/org/eclipse/collections/impl/map/mutable/ConcurrentHashMapUnsafe.java:[2343,83] Unsafe is internal proprietary API and may be removed in a future release
+00:42:44:345 [WARNING] /dev/shm/m3-package-rename-39a960e13a39/repos/eclipse-collections/eclipse-collections/src/main/java/org/eclipse/collections/impl/map/mutable/ConcurrentHashMapUnsafe.java:[2346,27] Unsafe is internal proprietary API and may be removed in a future release
+00:42:44:345 [WARNING] /dev/shm/m3-package-rename-39a960e13a39/repos/eclipse-collections/eclipse-collections/src/main/java/org/eclipse/collections/impl/map/mutable/ConcurrentHashMapUnsafe.java:[2348,34] Unsafe is internal proprietary API and may be removed in a future release
+00:42:44:345 [WARNING] /dev/shm/m3-package-rename-39a960e13a39/repos/eclipse-collections/eclipse-collections/src/main/java/org/eclipse/collections/impl/map/mutable/ConcurrentHashMapUnsafe.java:[2350,32] Unsafe is internal proprietary API and may be removed in a future release
+00:42:44:345 [WARNING] /dev/shm/m3-package-rename-39a960e13a39/repos/eclipse-collections/eclipse-collections/src/main/java/org/eclipse/collections/impl/map/mutable/ConcurrentHashMapUnsafe.java:[2343,23] [removal] AccessController in java.security has been deprecated and marked for removal
+00:42:44:345 [WARNING] /dev/shm/m3-package-rename-39a960e13a39/repos/eclipse-collections/eclipse-collections/src/main/java/org/eclipse/collections/impl/parallel/CollectionsThreadFactory.java:[27,8] [removal] SecurityManager in java.lang has been deprecated and marked for removal
+00:42:44:345 [WARNING] /dev/shm/m3-package-rename-39a960e13a39/repos/eclipse-collections/eclipse-collections/src/main/java/org/eclipse/collections/impl/parallel/CollectionsThreadFactory.java:[27,48] [removal] getSecurityManager() in System has been deprecated and marked for removal
+00:42:44:345 [INFO] 11 warnings 
+00:42:44:345 [INFO] -------------------------------------------------------------
+00:42:44:429 [INFO] ------------------------------------------------------------------------
+00:42:44:451 [INFO] Reactor Summary for Eclipse Collections Parent Project 14.0.0-SNAPSHOT:
+00:42:44:451 [INFO] 
+00:42:44:454 [INFO] Eclipse Collections Parent Project ................. SUCCESS [  0.002 s]
+00:42:44:455 [INFO] Eclipse Collections Code Generator ................. SUCCESS [  6.593 s]
+00:42:44:455 [INFO] Eclipse Collections Code Generator Maven Plugin .... SUCCESS [  6.566 s]
+00:42:44:455 [INFO] Eclipse Collections API ............................ SUCCESS [ 17.975 s]
+00:42:44:455 [INFO] Eclipse Collections Main Library ................... FAILURE [04:49 min]
+00:42:44:455 [INFO] ------------------------------------------------------------------------
+00:42:44:455 [INFO] BUILD FAILURE
+00:42:44:455 [INFO] ------------------------------------------------------------------------
+00:42:44:492 [INFO] Total time:  05:23 min
+00:42:44:516 [INFO] Finished at: 2026-10-18T00:42:44-07:00
+00:42:44:516 [INFO] ------------------------------------------------------------------------
+00:42:44:622 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.13.0:compile (default-compile) on project eclipse-collections: Compilation failure: Compilation failure: 
+00:42:44:623 [ERROR] /dev/shm/m3-package-rename-39a960e13a39/repos/eclipse-collections/eclipse-collections/src/main/java/org/eclipse/collections/impl/map/mutable/ConcurrentHashMapUnsafe.java:[57,15] Unsafe is internal proprietary API and may be removed in a future release
+00:42:44:623 [ERROR] /dev/shm/m3-package-rename-39a960e13a39/repos/eclipse-collections/eclipse-collections/src/main/java/org/eclipse/collections/impl/map/mutable/ConcurrentHashMapUnsafe.java:[82,25] Unsafe is internal proprietary API and may be removed in a future release
+00:42:44:623 [ERROR] /dev/shm/m3-package-rename-39a960e13a39/repos/eclipse-collections/eclipse-collections/src/main/java/org/eclipse/collections/impl/map/mutable/ConcurrentHashMapUnsafe.java:[2333,19] Unsafe is internal proprietary API and may be removed in a future release
+00:42:44:623 [ERROR] /dev/shm/m3-package-rename-39a960e13a39/repos/eclipse-collections/eclipse-collections/src/main/java/org/eclipse/collections/impl/map/mutable/ConcurrentHashMapUnsafe.java:[2337,19] Unsafe is internal proprietary API and may be removed in a future release
+00:42:44:623 [ERROR] /dev/shm/m3-package-rename-39a960e13a39/repos/eclipse-collections/eclipse-collections/src/main/java/org/eclipse/collections/impl/map/mutable/ConcurrentHashMapUnsafe.java:[2343,83] Unsafe is internal proprietary API and may be removed in a future release
+00:42:44:623 [ERROR] /dev/shm/m3-package-rename-39a960e13a39/repos/eclipse-collections/eclipse-collections/src/main/java/org/eclipse/collections/impl/map/mutable/ConcurrentHashMapUnsafe.java:[2346,27] Unsafe is internal proprietary API and may be removed in a future release
+00:42:44:623 [ERROR] /dev/shm/m3-package-rename-39a960e13a39/repos/eclipse-collections/eclipse-collections/src/main/java/org/eclipse/collections/impl/map/mutable/ConcurrentHashMapUnsafe.java:[2348,34] Unsafe is internal proprietary API and may be removed in a future release
+00:42:44:623 [ERROR] /dev/shm/m3-package-rename-39a960e13a39/repos/eclipse-collections/eclipse-collections/src/main/java/org/eclipse/collections/impl/map/mutable/ConcurrentHashMapUnsafe.java:[2350,32] Unsafe is internal proprietary API and may be removed in a future release
+00:42:44:623 [ERROR] /dev/shm/m3-package-rename-39a960e13a39/repos/eclipse-collections/eclipse-collections/src/main/java/org/eclipse/collections/impl/map/mutable/ConcurrentHashMapUnsafe.java:[2343,23] [removal] AccessController in java.security has been deprecated and marked for removal
+00:42:44:623 [ERROR] /dev/shm/m3-package-rename-39a960e13a39/repos/eclipse-collections/eclipse-collections/src/main/java/org/eclipse/collections/impl/parallel/CollectionsThreadFactory.java:[27,8] [removal] SecurityManager in java.lang has been deprecated and marked for removal
+00:42:44:623 [ERROR] /dev/shm/m3-package-rename-39a960e13a39/repos/eclipse-collections/eclipse-collections/src/main/java/org/eclipse/collections/impl/parallel/CollectionsThreadFactory.java:[27,48] [removal] getSecurityManager() in System has been deprecated and marked for removal
+00:42:44:623 [ERROR] -> [Help 1]
+org.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.13.0:compile (default-compile) on project eclipse-collections: Compilation failure
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:333)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:316)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:212)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:174)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.access$000 (MojoExecutor.java:75)
+    at org.apache.maven.lifecycle.internal.MojoExecutor$1.run (MojoExecutor.java:162)
+    at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute (DefaultMojosExecutionStrategy.java:39)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:159)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:105)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:73)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:53)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:118)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:261)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:173)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:101)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:906)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:283)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:206)
+    at jdk.internal.reflect.DirectMethodHandleAccessor.invoke (DirectMethodHandleAccessor.java:103)
+    at java.lang.reflect.Method.invoke (Method.java:580)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:255)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:201)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:361)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:314)
+Caused by: org.apache.maven.plugin.compiler.CompilationFailureException: Compilation failure
+    at org.apache.maven.plugin.compiler.AbstractCompilerMojo.execute (AbstractCompilerMojo.java:1311)
+    at org.apache.maven.plugin.compiler.CompilerMojo.execute (CompilerMojo.java:215)
+    at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:126)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:328)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:316)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:212)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:174)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.access$000 (MojoExecutor.java:75)
+    at org.apache.maven.lifecycle.internal.MojoExecutor$1.run (MojoExecutor.java:162)
+    at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute (DefaultMojosExecutionStrategy.java:39)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:159)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:105)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:73)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:53)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:118)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:261)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:173)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:101)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:906)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:283)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:206)
+    at jdk.internal.reflect.DirectMethodHandleAccessor.invoke (DirectMethodHandleAccessor.java:103)
+    at java.lang.reflect.Method.invoke (Method.java:580)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:255)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:201)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:361)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:314)
+00:42:44:658 [ERROR] 
+00:42:44:658 [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+00:42:44:658 [ERROR] 
+00:42:44:658 [ERROR] For more information about the errors and possible solutions, please read the following articles:
+00:42:44:658 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+00:42:44:659 [ERROR] 
+00:42:44:659 [ERROR] After correcting the problems, you can resume the build with the command
+00:42:44:659 [ERROR]   mvn <args> -rf :eclipse-collections

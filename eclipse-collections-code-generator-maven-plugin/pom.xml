@@ -84,6 +84,7 @@
                 <artifactId>maven-plugin-plugin</artifactId>
                 <configuration>
                     <goalPrefix>eclipse-collections-code-generator</goalPrefix>
+                    <helpPackageName>com.m3.collections.eclipse.eclipse_collections_code_generator_maven_plugin</helpPackageName>
                     <skipErrorNoDescriptorsFound>true</skipErrorNoDescriptorsFound>
                 </configuration>
                 <executions>

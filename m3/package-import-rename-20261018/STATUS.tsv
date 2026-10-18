@@ -1,0 +1,11 @@
+sequence	gate	status	evidence
+1	diff_integrity	PASS	FINAL_SOURCE_HASHES.tsv
+2	linter	FAILED_BASELINE	BASELINE_PROOF_LINT_COMPARISON.txt: 88 inherited findings
+3	compile	PASS_DIAGNOSTIC_LINT_SKIP	CORE_DIAGNOSTIC_BUILD.log
+4	selected_consumer_tests	PASS_DIAGNOSTIC_LINT_SKIP	CONSUMER_DIAGNOSTIC_TESTS.log: 198 tests, zero failures/errors/skips
+5	factory_runtime	PASS	FACTORY_RUNTIME_CORRECTED.log: 255 mappings, 239 instantiated, 16 pinned absences
+6	independent_original_differential	PASS	ORIGINAL_DIFFERENTIAL.log: 97402 checks
+7	active_proof_same_class_refusal	PASS	ACTIVE_PROOF_REFUSAL.log
+8	review_snapshot	PASS	REVIEW_SNAPSHOT.tsv; PROOF_GUARD_FORMAT.tsv
+9	corrected_symbolic_javadoc	PASS	REVIEW_JAVADOC.log: JDK21 javadoc exit0
+10	retired_metadata_review	PASS	RETIRED_METADATA_SNAPSHOT.tsv; RETIRED_METADATA_VERIFICATION.txt

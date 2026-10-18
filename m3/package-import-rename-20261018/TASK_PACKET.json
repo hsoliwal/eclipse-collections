@@ -1,0 +1,83 @@
+{
+  "task_packet": "active",
+  "source_doc": "M3Scale(20261018-065446).txt",
+  "invariant_id": "ECLIPSE_NAMESPACE_ONLY_20261018",
+  "run": {
+    "mode": "apply",
+    "profile": "bounded",
+    "workers": 1,
+    "shard_count": 1,
+    "shard_index": 0
+  },
+  "targets": {
+    "modules": [
+      "all checked-in Java consumer and generator modules",
+      "STG templates",
+      "Scala benchmarks",
+      "bnd and package-pattern metadata"
+    ]
+  },
+  "mapping": {
+    "old": "org.eclipse.collections",
+    "new": "com.m3.collections.eclipse",
+    "recursive": true
+  },
+  "invariant_locks": {
+    "CLASS_METHOD_NAMES": "LOCKED",
+    "IMPLEMENTATION_BEHAVIOR": "LOCKED",
+    "LICENSE_NOTICES": "LOCKED",
+    "MAVEN_COORDINATES": "LOCKED",
+    "HISTORICAL_RECEIPTS": "LOCKED"
+  },
+  "allowed_delta": [
+    "package declarations",
+    "imports and qualified type references",
+    "source directory relocation",
+    "generated package metadata and reflection FQCN literals"
+  ],
+  "forbidden": [
+    "behavior edits",
+    "Maven groupId changes",
+    "unrelated formatting",
+    "remote writes"
+  ],
+  "verify_order": [
+    "diff",
+    "linter",
+    "compile",
+    "tests",
+    "runtime"
+  ],
+  "output_contract": [
+    "STATUS.tsv",
+    "FINAL_REPORT.md",
+    "RUN_CONTEXT.tsv",
+    "PROVENANCE.tsv",
+    "VERIFY_CONTRACT.tsv",
+    "OUTPUT_CONTRACT.tsv"
+  ],
+  "stop_conditions": [
+    "unresolved differing destination collision",
+    "non-namespace source-body delta",
+    "verification failure recorded as blocker"
+  ],
+  "authorized_closure": [
+    "namespace source and generator metadata",
+    "import-order-only SDK repair in 15 owners",
+    "incumbent CI exact snapshot with immutable differential",
+    "plugin HelpMojo explicit namespace",
+    "465 symbolic Javadoc links in 114 files",
+    "first-party standalone proof refuses same-class comparison",
+    "metadata-only retirement of superseded relocation workflow and current README guidance"
+  ],
+  "retired_metadata_review": {
+    "changed_paths": [
+      ".github/workflows/m3-source-relocation.yml",
+      ".m3-relocation/README.md"
+    ],
+    "historical_recipe_preserved": ".m3-relocation/rewrite.yml",
+    "receipt": "RETIRED_METADATA_SNAPSHOT.tsv",
+    "java_sources_changed": false,
+    "active_verification_workflow_unchanged": true
+  }
+}

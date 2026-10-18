@@ -7,7 +7,7 @@ isTest() ::= "true"
 
 skipBoolean() ::= "true"
 
-targetPath() ::= "org/eclipse/collections/impl/lazy/primitive"
+targetPath() ::= "com/m3/collections/eclipse/impl/lazy/primitive"
 
 fileName(primitive) ::= "AbstractLazy<primitive.name>IterableTestCase"
 
@@ -18,36 +18,36 @@ class(primitive) ::= <<
 body(type, name) ::= <<
 <copyrightAndOthers()>
 
-package org.eclipse.collections.impl.lazy.primitive;
+package com.m3.collections.eclipse.impl.lazy.primitive;
 
 import java.util.Arrays;
 import java.util.NoSuchElementException;
 import java.util.function.BooleanSupplier;
 
-import org.eclipse.collections.api.Lazy<name>Iterable;
-import org.eclipse.collections.api.iterator.BooleanIterator;
-import org.eclipse.collections.api.iterator.ByteIterator;
-import org.eclipse.collections.api.iterator.CharIterator;
-import org.eclipse.collections.api.iterator.FloatIterator;
-import org.eclipse.collections.api.iterator.IntIterator;
-import org.eclipse.collections.api.iterator.LongIterator;
-import org.eclipse.collections.api.iterator.ShortIterator;
-import org.eclipse.collections.api.iterator.DoubleIterator;
-import org.eclipse.collections.impl.bag.mutable.primitive.<name>HashBag;
-import org.eclipse.collections.impl.block.factory.primitive.<name>Predicates;
-import org.eclipse.collections.impl.factory.Lists;
-import org.eclipse.collections.impl.factory.primitive.BooleanLists;
-import org.eclipse.collections.impl.factory.primitive.ByteLists;
-import org.eclipse.collections.impl.factory.primitive.CharLists;
-import org.eclipse.collections.impl.factory.primitive.DoubleLists;
-import org.eclipse.collections.impl.factory.primitive.FloatLists;
-import org.eclipse.collections.impl.factory.primitive.IntLists;
-import org.eclipse.collections.impl.factory.primitive.LongLists;
-import org.eclipse.collections.impl.factory.primitive.ShortLists;
-import org.eclipse.collections.impl.list.mutable.primitive.<name>ArrayList;
-import org.eclipse.collections.impl.set.mutable.primitive.<name>HashSet;
-import org.eclipse.collections.impl.string.immutable.CharAdapter;
-import org.eclipse.collections.impl.test.Verify;
+import com.m3.collections.eclipse.api.Lazy<name>Iterable;
+import com.m3.collections.eclipse.api.iterator.BooleanIterator;
+import com.m3.collections.eclipse.api.iterator.ByteIterator;
+import com.m3.collections.eclipse.api.iterator.CharIterator;
+import com.m3.collections.eclipse.api.iterator.FloatIterator;
+import com.m3.collections.eclipse.api.iterator.IntIterator;
+import com.m3.collections.eclipse.api.iterator.LongIterator;
+import com.m3.collections.eclipse.api.iterator.ShortIterator;
+import com.m3.collections.eclipse.api.iterator.DoubleIterator;
+import com.m3.collections.eclipse.impl.bag.mutable.primitive.<name>HashBag;
+import com.m3.collections.eclipse.impl.block.factory.primitive.<name>Predicates;
+import com.m3.collections.eclipse.impl.factory.Lists;
+import com.m3.collections.eclipse.impl.factory.primitive.BooleanLists;
+import com.m3.collections.eclipse.impl.factory.primitive.ByteLists;
+import com.m3.collections.eclipse.impl.factory.primitive.CharLists;
+import com.m3.collections.eclipse.impl.factory.primitive.DoubleLists;
+import com.m3.collections.eclipse.impl.factory.primitive.FloatLists;
+import com.m3.collections.eclipse.impl.factory.primitive.IntLists;
+import com.m3.collections.eclipse.impl.factory.primitive.LongLists;
+import com.m3.collections.eclipse.impl.factory.primitive.ShortLists;
+import com.m3.collections.eclipse.impl.list.mutable.primitive.<name>ArrayList;
+import com.m3.collections.eclipse.impl.set.mutable.primitive.<name>HashSet;
+import com.m3.collections.eclipse.impl.string.immutable.CharAdapter;
+import com.m3.collections.eclipse.impl.test.Verify;
 
 import org.junit.jupiter.api.Test;
 
