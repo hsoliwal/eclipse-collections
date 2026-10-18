@@ -1,0 +1,5 @@
+# SPDX-License-Identifier: Apache-2.0
+# Fork: hsoliwal/eclipse-collections; EPL-1.0 and EDL-1.0 unchanged
+Original file	Original SHA256	Relocated SHA256	Only permitted change
+impl/EmptyIterator.java	07211ec940a28f1d2cd06eeb2607347e836d7a997a7e3f49c479e253e264699f	8aad364bdfcda9759875a30e5542053efd2cdc6f4b4e85b350934036a252ecfd	package only
+impl/list/IntervalUtils.java	5a95f6e00c0cdb464c931dc4ab5debb16208dbd71340f4b77255005065b41eda	b23c4ea7132388d1728638995c9e012f1860a103ecc3a0d840e365d7f7c0cb71	package only

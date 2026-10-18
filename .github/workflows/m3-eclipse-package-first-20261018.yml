@@ -1,0 +1,52 @@
+# SPDX-License-Identifier: Apache-2.0
+name: M3 package-first Eclipse intervals and iterators Java21
+on:
+  pull_request:
+    paths:
+      - 'eclipse-collections/src/main/java/com/m3/collections/eclipse/**'
+      - 'eclipse-collections/src/test/java/com/m3/collections/eclipse/**'
+      - 'm3/package-first/eclipse-20261018/**'
+      - '.github/workflows/m3-eclipse-package-first-20261018.yml'
+  workflow_dispatch:
+jobs:
+  source-exactness-and-differential:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - name: Check full source package-only relocation, original Eclipse attribution and postimage SHA
+        run: |
+          set -eu
+          Q=m3/package-first/eclipse-20261018/recipe
+          awk -F '\t' '{print $3 "  " $1}' "$Q/manifest.tsv" | sha256sum -c -
+          awk -F '\t' -v q="$Q" '{print $3 "  " q "/" $4}' "$Q/manifest.tsv" | sha256sum -c -
+          python3 - <<'PY'
+          from pathlib import Path
+          root=Path('eclipse-collections/src/main/java')
+          a=(root/'org/eclipse/collections/impl/EmptyIterator.java').read_text()
+          b=(root/'com/m3/collections/eclipse/impl/EmptyIterator.java').read_text()
+          assert b == a.replace('package org.eclipse.collections.impl;',
+                                'package com.m3.collections.eclipse.impl;')
+          a=(root/'org/eclipse/collections/impl/list/IntervalUtils.java').read_text()
+          b=(root/'com/m3/collections/eclipse/impl/list/IntervalUtils.java').read_text()
+          assert b == a.replace('package org.eclipse.collections.impl.list;',
+                                'package com.m3.collections.eclipse.impl.list;')
+          print('PASS both complete Eclipse code bodies unchanged; package-only relocation')
+          PY
+      - name: Real strict JDK21 original and relocated Java compile and differential
+        run: |
+          set -eu
+          SRC=eclipse-collections/src/main/java
+          TST=eclipse-collections/src/test/java/com/m3/collections/eclipse/impl
+          OUT="$RUNNER_TEMP/m3-eclipse-source/classes"
+          mkdir -p "$OUT"
+          javac --release 21 -proc:none -Xlint:all,-unchecked -Werror -d "$OUT" \
+            "$SRC/org/eclipse/collections/impl/EmptyIterator.java" \
+            "$SRC/org/eclipse/collections/impl/list/IntervalUtils.java" \
+            "$SRC/com/m3/collections/eclipse/impl/EmptyIterator.java" \
+            "$SRC/com/m3/collections/eclipse/impl/list/IntervalUtils.java" \
+            "$TST/M3EclipsePackageRelocationProof.java"
+          java -ea -cp "$OUT" com.m3.collections.eclipse.impl.M3EclipsePackageRelocationProof
