@@ -1,0 +1,2 @@
+provider	upstream_file	preimage_git_blob	license	recipe_only
+hsoliwal/eclipse-collections	eclipse-collections-api/src/main/java/org/eclipse/collections/api/list/MutableList.java	bf40b978a7f9ce822faf5210c0d4a32d61b73f72	EPL-1.0 and EDL-1.0	YES
