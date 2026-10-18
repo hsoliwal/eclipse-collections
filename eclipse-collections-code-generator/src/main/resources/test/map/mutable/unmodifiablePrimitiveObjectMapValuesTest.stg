@@ -7,7 +7,7 @@ skipBoolean() ::= "true"
 
 isTest() ::= "true"
 
-targetPath() ::= "org/eclipse/collections/impl/map/mutable/primitive"
+targetPath() ::= "com/m3/collections/eclipse/impl/map/mutable/primitive"
 
 fileName(primitive) ::= "Unmodifiable<primitive.name>ObjectMapValuesTest"
 
@@ -18,18 +18,18 @@ class(primitive) ::= <<
 body(type, name, wrapperName) ::= <<
 <copyright()>
 
-package org.eclipse.collections.impl.map.mutable.primitive;
+package com.m3.collections.eclipse.impl.map.mutable.primitive;
 
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-import org.eclipse.collections.api.bag.MutableBag;
-import org.eclipse.collections.api.set.MutableSet;
-import org.eclipse.collections.impl.bag.mutable.HashBag;
-import org.eclipse.collections.impl.list.mutable.FastList;
-import org.eclipse.collections.impl.set.mutable.UnifiedSet;
-import org.eclipse.collections.impl.test.Verify;
+import com.m3.collections.eclipse.api.bag.MutableBag;
+import com.m3.collections.eclipse.api.set.MutableSet;
+import com.m3.collections.eclipse.impl.bag.mutable.HashBag;
+import com.m3.collections.eclipse.impl.list.mutable.FastList;
+import com.m3.collections.eclipse.impl.set.mutable.UnifiedSet;
+import com.m3.collections.eclipse.impl.test.Verify;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;

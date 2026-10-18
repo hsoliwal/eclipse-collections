@@ -1,0 +1,70 @@
+/*
+ * Copyright (c) 2021 Goldman Sachs.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * and Eclipse Distribution License v. 1.0 which accompany this distribution.
+ * The Eclipse Public License is available at http://www.eclipse.org/legal/epl-v10.html
+ * and the Eclipse Distribution License is available at
+ * http://www.eclipse.org/org/documents/edl-v10.php.
+ */
+
+package com.m3.collections.eclipse.test.map.mutable.sorted;
+
+import com.m3.collections.eclipse.api.map.sorted.MutableSortedMap;
+import com.m3.collections.eclipse.test.MutableSortedIterableTestCase;
+import com.m3.collections.eclipse.test.map.SortedMapIterableTestCase;
+import org.junit.jupiter.api.Test;
+
+public interface MutableSortedMapIterableTestCase extends SortedMapIterableTestCase, SortedMapTestCase, MutableSortedIterableTestCase
+{
+    @Override
+    <T> MutableSortedMap<Object, T> newWith(T... elements);
+
+    @Override
+    <K, V> MutableSortedMap<K, V> newWithKeysValues(Object... elements);
+
+    @Override
+    default boolean supportsNullKeys()
+    {
+        return false;
+    }
+
+    @Override
+    default boolean supportsNullValues()
+    {
+        return true;
+    }
+
+    @Override
+    default boolean allowsPut()
+    {
+        return true;
+    }
+
+    @Override
+    default boolean supportsNonComparableKeys()
+    {
+        return false;
+    }
+
+    @Override
+    @Test
+    default void Iterable_toString()
+    {
+        SortedMapTestCase.super.Iterable_toString();
+    }
+
+    @Override
+    @Test
+    default void Object_equalsAndHashCode()
+    {
+        SortedMapIterableTestCase.super.Object_equalsAndHashCode();
+        SortedMapTestCase.super.Object_equalsAndHashCode();
+    }
+
+    @Override
+    default void Iterable_remove()
+    {
+        SortedMapIterableTestCase.super.Iterable_remove();
+    }
+}

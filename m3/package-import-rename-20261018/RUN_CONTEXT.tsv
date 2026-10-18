@@ -1,0 +1,11 @@
+key	value
+source_head	fbaa8605dad1a84900fd38a1f6954de31b733f07
+branch	m3/package-import-rename-20261018
+java	21.0.12.1
+sdk	org.openrewrite:rewrite-java:8.17.1
+heap	768m
+workers	1
+batch_size	32
+inputs	2808
+latest_base_head	2f348a9c6d8b132a066094aa5e9897f744d0fe39
+nonoverlapping_master_additions	3

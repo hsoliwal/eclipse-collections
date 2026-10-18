@@ -1,6 +1,6 @@
 import "copyright.stg"
 
-targetPath() ::= "org/eclipse/collections/impl/map/immutable/primitive"
+targetPath() ::= "com/m3/collections/eclipse/impl/map/immutable/primitive"
 
 fileName(primitive) ::= "ImmutableObject<primitive.name>MapFactoryImpl"
 
@@ -11,15 +11,15 @@ class(primitive) ::= <<
 body(type, name) ::= <<
 <copyright()>
 
-package org.eclipse.collections.impl.map.immutable.primitive;
+package com.m3.collections.eclipse.impl.map.immutable.primitive;
 
-import org.eclipse.collections.api.block.function.Function;
-import org.eclipse.collections.api.block.function.primitive.<name>Function;
-import org.eclipse.collections.api.factory.map.primitive.ImmutableObject<name>MapFactory;
-import org.eclipse.collections.api.map.primitive.ImmutableObject<name>Map;
-import org.eclipse.collections.api.map.primitive.MutableObject<name>Map;
-import org.eclipse.collections.api.map.primitive.Object<name>Map;
-import org.eclipse.collections.impl.factory.primitive.Object<name>Maps;
+import com.m3.collections.eclipse.api.block.function.Function;
+import com.m3.collections.eclipse.api.block.function.primitive.<name>Function;
+import com.m3.collections.eclipse.api.factory.map.primitive.ImmutableObject<name>MapFactory;
+import com.m3.collections.eclipse.api.map.primitive.ImmutableObject<name>Map;
+import com.m3.collections.eclipse.api.map.primitive.MutableObject<name>Map;
+import com.m3.collections.eclipse.api.map.primitive.Object<name>Map;
+import com.m3.collections.eclipse.impl.factory.primitive.Object<name>Maps;
 
 /**
  * ImmutableObject<name>MapFactoryImpl is a factory implementation which creates instances of type {@link ImmutableObject<name>Map}.

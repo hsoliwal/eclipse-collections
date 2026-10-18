@@ -4,7 +4,7 @@ skipBoolean() ::= "true"
 
 isTest() ::= "true"
 
-targetPath() ::= "org/eclipse/collections/impl/map/mutable/primitive"
+targetPath() ::= "com/m3/collections/eclipse/impl/map/mutable/primitive"
 
 fileName(primitive) ::= "SynchronizedObject<primitive.name>MapKeyValuesViewTest"
 
@@ -15,10 +15,10 @@ class(primitive) ::= <<
 body(type, name) ::= <<
 <copyright()>
 
-package org.eclipse.collections.impl.map.mutable.primitive;
+package com.m3.collections.eclipse.impl.map.mutable.primitive;
 
-import org.eclipse.collections.api.map.primitive.MutableObject<name>Map;
-import org.eclipse.collections.impl.map.primitive.AbstractObject<name>MapKeyValuesViewTestCase;
+import com.m3.collections.eclipse.api.map.primitive.MutableObject<name>Map;
+import com.m3.collections.eclipse.impl.map.primitive.AbstractObject<name>MapKeyValuesViewTestCase;
 
 /**
  * JUnit test for {@link SynchronizedObject<name>Map#keyValuesView()}.

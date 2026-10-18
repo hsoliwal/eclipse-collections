@@ -1,0 +1,4 @@
+role	owner	license
+source	hsoliwal/eclipse-collections@fbaa8605dad1a84900fd38a1f6954de31b733f07	EPL-1.0 and EDL-1.0
+recipe	hsoliwal/com.synexia/synexia-openrewrite-recipes	Apache-2.0
+probe	M3EclipseFactoryNamespaceProbe.java	Apache-2.0

@@ -1,0 +1,10 @@
+key	value
+recipe	com.synexia.rewrite.M3CollectionsPackageRenameImportOrderRecipe
+family	eclipse
+provider	rewrite-java-8.17.1.jar;sha256=32a3b27c0eafeb44c776500ae1378efdfb79d490a6afd7b58be07c6c0d6c55ff
+java	21.0.12.1
+inputs	15
+changed	15
+batch_size	32
+fixed_point	PASS
+production_compile	NOT_CLAIMED

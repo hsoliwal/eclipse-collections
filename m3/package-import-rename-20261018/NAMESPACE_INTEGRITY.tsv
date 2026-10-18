@@ -1,0 +1,4 @@
+gate	files	status
+preimage_sha256	2806	PASS
+postimage_sha256	2806	PASS
+namespace_normalized_byte_identity	2806	PASS

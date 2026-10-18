@@ -3,7 +3,7 @@ import "primitiveLiteral.stg"
 
 isTest() ::= "true"
 
-targetPath() ::= "org/eclipse/collections/impl/list/immutable/primitive"
+targetPath() ::= "com/m3/collections/eclipse/impl/list/immutable/primitive"
 
 fileName(primitive) ::= "Immutable<primitive.name>EmptyListTest"
 
@@ -14,18 +14,18 @@ class(primitive) ::= <<
 body(type, wrapperName, name) ::= <<
 <copyrightAndOthers()>
 
-package org.eclipse.collections.impl.list.immutable.primitive;
+package com.m3.collections.eclipse.impl.list.immutable.primitive;
 
 import java.util.NoSuchElementException;
 
-import org.eclipse.collections.api.<name>Iterable;
-import org.eclipse.collections.api.collection.primitive.Immutable<name>Collection;
-import org.eclipse.collections.api.list.primitive.Immutable<name>List;
-import org.eclipse.collections.api.stack.primitive.Mutable<name>Stack;
-import org.eclipse.collections.impl.block.factory.primitive.<name>Predicates;
-import org.eclipse.collections.impl.math.Mutable<wrapperName>;
-import org.eclipse.collections.impl.factory.primitive.<name>Lists;
-import org.eclipse.collections.impl.test.Verify;
+import com.m3.collections.eclipse.api.<name>Iterable;
+import com.m3.collections.eclipse.api.collection.primitive.Immutable<name>Collection;
+import com.m3.collections.eclipse.api.list.primitive.Immutable<name>List;
+import com.m3.collections.eclipse.api.stack.primitive.Mutable<name>Stack;
+import com.m3.collections.eclipse.impl.block.factory.primitive.<name>Predicates;
+import com.m3.collections.eclipse.impl.math.Mutable<wrapperName>;
+import com.m3.collections.eclipse.impl.factory.primitive.<name>Lists;
+import com.m3.collections.eclipse.impl.test.Verify;
 
 import org.junit.jupiter.api.Test;
 

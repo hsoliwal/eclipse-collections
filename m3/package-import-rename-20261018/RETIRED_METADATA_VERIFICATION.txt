@@ -1,0 +1,10 @@
+RETIRED: historical com.m3.sdk.eclipse.collections relocation is not applicable to this source tree.
+Applied namespace: com.m3.collections.eclipse; see m3/package-import-rename-20261018.
+Verification owner: .github/workflows/m3-eclipse-package-first-20261018.yml.
+This notice does not run relocation, publish source, or certify lint/build/test results.
+
+PASS manual-dispatch-only read-only workflow schema
+PASS historical rewrite.yml equals immutable HEAD bytes
+PASS current verification workflow equals prior admitted snapshot hash
+PASS all prior Java/source hashes unchanged
+PASS final source/metadata readback paths=3199

@@ -256,53 +256,53 @@ Arrays, Maps or Strings. The iteration protocol was inspired by the Smalltalk co
                         <maxMutationsPerClass>1</maxMutationsPerClass>
                         <additionalClasspathElements>target/generated-sources/java/*</additionalClasspathElements>
                         <excludedClasses>
-                            <param>org.eclipse.collections.impl.lazy.parallel*</param>
-                            <param>org.eclipse.collections.impl.parallel*</param>
-                            <param>org.eclipse.collections.impl.map.mutable.Concurrent*</param>
-                            <param>org.eclipse.collections.impl.collector.Collectors2</param>
+                            <param>com.m3.collections.eclipse.impl.lazy.parallel*</param>
+                            <param>com.m3.collections.eclipse.impl.parallel*</param>
+                            <param>com.m3.collections.eclipse.impl.map.mutable.Concurrent*</param>
+                            <param>com.m3.collections.eclipse.impl.collector.Collectors2</param>
                             <param>java.util.stream.*</param>
-                            <param>org.eclipse.collections.impl.*Char*</param>
-                            <param>org.eclipse.collections.impl.*Float*</param>
-                            <param>org.eclipse.collections.impl.*Long*</param>
-                            <param>org.eclipse.collections.impl.*Double*</param>
-                            <param>org.eclipse.collections.impl.*Byte*</param>
-                            <param>org.eclipse.collections.impl.*Short*</param>
-                            <param>org.eclipse.collections.impl.*Iterable*</param>
-                            <param>org.eclipse.collections.impl.*Multimap*</param>
-                            <param>org.eclipse.collections.impl.*Composite*</param>
-                            <param>org.eclipse.collections.impl.*Interval*</param>
-                            <param>org.eclipse.collections.impl.*Adapter*</param>
-                            <param>org.eclipse.collections.impl.*Concurrent*</param>
-                            <param>org.eclipse.collections.impl.*Parallel*</param>
-                            <param>org.eclipse.collections.impl.*Synchronized*</param>
-                            <param>org.eclipse.collections.impl.*Unmodifiable*</param>
-                            <param>org.eclipse.collections.impl.*Immutable*</param>
-                            <param>org.eclipse.collections.impl.*MultiReader*</param>
-                            <param>org.eclipse.collections.impl.*FixedSize*</param>
-                            <param>org.eclipse.collections.impl.*Collectors*</param>
+                            <param>com.m3.collections.eclipse.impl.*Char*</param>
+                            <param>com.m3.collections.eclipse.impl.*Float*</param>
+                            <param>com.m3.collections.eclipse.impl.*Long*</param>
+                            <param>com.m3.collections.eclipse.impl.*Double*</param>
+                            <param>com.m3.collections.eclipse.impl.*Byte*</param>
+                            <param>com.m3.collections.eclipse.impl.*Short*</param>
+                            <param>com.m3.collections.eclipse.impl.*Iterable*</param>
+                            <param>com.m3.collections.eclipse.impl.*Multimap*</param>
+                            <param>com.m3.collections.eclipse.impl.*Composite*</param>
+                            <param>com.m3.collections.eclipse.impl.*Interval*</param>
+                            <param>com.m3.collections.eclipse.impl.*Adapter*</param>
+                            <param>com.m3.collections.eclipse.impl.*Concurrent*</param>
+                            <param>com.m3.collections.eclipse.impl.*Parallel*</param>
+                            <param>com.m3.collections.eclipse.impl.*Synchronized*</param>
+                            <param>com.m3.collections.eclipse.impl.*Unmodifiable*</param>
+                            <param>com.m3.collections.eclipse.impl.*Immutable*</param>
+                            <param>com.m3.collections.eclipse.impl.*MultiReader*</param>
+                            <param>com.m3.collections.eclipse.impl.*FixedSize*</param>
+                            <param>com.m3.collections.eclipse.impl.*Collectors*</param>
                         </excludedClasses>
                         <excludedTestClasses>
-                            <param>org.eclipse.collections.impl.lazy.parallel*</param>
-                            <param>org.eclipse.collections.impl.parallel*</param>
-                            <param>org.eclipse.collections.impl.*Char*</param>
-                            <param>org.eclipse.collections.impl.*Float*</param>
-                            <param>org.eclipse.collections.impl.*Long*</param>
-                            <param>org.eclipse.collections.impl.*Double*</param>
-                            <param>org.eclipse.collections.impl.*Byte*</param>
-                            <param>org.eclipse.collections.impl.*Short*</param>
-                            <param>org.eclipse.collections.impl.*Iterable*</param>
-                            <param>org.eclipse.collections.impl.*Multimap*</param>
-                            <param>org.eclipse.collections.impl.*Composite*</param>
-                            <param>org.eclipse.collections.impl.*Interval*</param>
-                            <param>org.eclipse.collections.impl.*Adapter*</param>
-                            <param>org.eclipse.collections.impl.*Concurrent*</param>
-                            <param>org.eclipse.collections.impl.*Parallel*</param>
-                            <param>org.eclipse.collections.impl.*Synchronized*</param>
-                            <param>org.eclipse.collections.impl.*Unmodifiable*</param>
-                            <param>org.eclipse.collections.impl.*Immutable*</param>
-                            <param>org.eclipse.collections.impl.*MultiReader*</param>
-                            <param>org.eclipse.collections.impl.*FixedSize*</param>
-                            <param>org.eclipse.collections.impl.*Collectors*</param>
+                            <param>com.m3.collections.eclipse.impl.lazy.parallel*</param>
+                            <param>com.m3.collections.eclipse.impl.parallel*</param>
+                            <param>com.m3.collections.eclipse.impl.*Char*</param>
+                            <param>com.m3.collections.eclipse.impl.*Float*</param>
+                            <param>com.m3.collections.eclipse.impl.*Long*</param>
+                            <param>com.m3.collections.eclipse.impl.*Double*</param>
+                            <param>com.m3.collections.eclipse.impl.*Byte*</param>
+                            <param>com.m3.collections.eclipse.impl.*Short*</param>
+                            <param>com.m3.collections.eclipse.impl.*Iterable*</param>
+                            <param>com.m3.collections.eclipse.impl.*Multimap*</param>
+                            <param>com.m3.collections.eclipse.impl.*Composite*</param>
+                            <param>com.m3.collections.eclipse.impl.*Interval*</param>
+                            <param>com.m3.collections.eclipse.impl.*Adapter*</param>
+                            <param>com.m3.collections.eclipse.impl.*Concurrent*</param>
+                            <param>com.m3.collections.eclipse.impl.*Parallel*</param>
+                            <param>com.m3.collections.eclipse.impl.*Synchronized*</param>
+                            <param>com.m3.collections.eclipse.impl.*Unmodifiable*</param>
+                            <param>com.m3.collections.eclipse.impl.*Immutable*</param>
+                            <param>com.m3.collections.eclipse.impl.*MultiReader*</param>
+                            <param>com.m3.collections.eclipse.impl.*FixedSize*</param>
+                            <param>com.m3.collections.eclipse.impl.*Collectors*</param>
                         </excludedTestClasses>
                     </configuration>
                 </plugin>
@@ -539,7 +539,7 @@ Arrays, Maps or Strings. The iteration protocol was inspired by the Smalltalk co
                     <destDir>${project.version}</destDir>
                     <doclint>html,syntax,accessibility</doclint>
                     <excludePackageNames>
-                        org.openjdk,org.eclipse.collections.impl.jmh,org.eclipse.collections.codegenerator.maven
+                        org.openjdk,com.m3.collections.eclipse.impl.jmh,com.m3.collections.eclipse.codegenerator.maven
                     </excludePackageNames>
                     <additionalOptions>-html5</additionalOptions>
                     <legacyMode>true</legacyMode>
@@ -750,7 +750,7 @@ Arrays, Maps or Strings. The iteration protocol was inspired by the Smalltalk co
                             <destDir>${project.version}</destDir>
                             <doclint>html,syntax,accessibility</doclint>
                             <excludePackageNames>
-                                org.openjdk,org.eclipse.collections.impl.jmh,org.eclipse.collections.codegenerator.maven
+                                org.openjdk,com.m3.collections.eclipse.impl.jmh,com.m3.collections.eclipse.codegenerator.maven
                             </excludePackageNames>
                             <legacyMode>true</legacyMode>
                         </configuration>
@@ -1141,7 +1141,7 @@ Arrays, Maps or Strings. The iteration protocol was inspired by the Smalltalk co
                             <destDir>${project.version}</destDir>
                             <doclint>html,syntax,accessibility</doclint>
                             <excludePackageNames>
-                                org.openjdk,org.eclipse.collections.impl.jmh,org.eclipse.collections.codegenerator.maven
+                                org.openjdk,com.m3.collections.eclipse.impl.jmh,com.m3.collections.eclipse.codegenerator.maven
                             </excludePackageNames>
                             <legacyMode>true</legacyMode>
                         </configuration>

@@ -1,0 +1,160 @@
+Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+Maven home: /workspace/scratch/39a960e13a39/toolchain/apache-maven-3.9.11
+Java version: 21.0.12.1, vendor: Eclipse Adoptium, runtime: /workspace/scratch/39a960e13a39/toolchain/jdk-21.0.12.1+1
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "6.18.55", arch: "amd64", family: "unix"
+01:35:27:909 [INFO] Error stacktraces are turned on.
+01:35:27:987 [INFO] Scanning for projects...
+01:35:30:099 [WARNING] 
+01:35:30:099 [WARNING] Some problems were encountered while building the effective model for org.eclipse.collections:unit-tests-thread-safety:jar:14.0.0-SNAPSHOT
+01:35:30:099 [WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-enforcer-plugin is missing. @ line 80, column 21
+01:35:30:099 [WARNING] 
+01:35:30:099 [WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+01:35:30:100 [WARNING] 
+01:35:30:100 [WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+01:35:30:100 [WARNING] 
+01:35:30:116 [INFO] ------------------------------------------------------------------------
+01:35:30:116 [INFO] Reactor Build Order:
+01:35:30:116 [INFO] 
+01:35:30:123 [INFO] Eclipse Collections Parent Project                                 [pom]
+01:35:30:123 [INFO] Eclipse Collections Code Generator                                 [jar]
+01:35:30:123 [INFO] Eclipse Collections Code Generator Maven Plugin           [maven-plugin]
+01:35:30:124 [INFO] Eclipse Collections API                                            [jar]
+01:35:30:124 [INFO] Eclipse Collections Main Library                                   [jar]
+01:35:30:160 [INFO] 
+01:35:30:161 [INFO] ---------< org.eclipse.collections:eclipse-collections-parent >---------
+01:35:30:161 [INFO] Building Eclipse Collections Parent Project 14.0.0-SNAPSHOT        [1/5]
+01:35:30:161 [INFO]   from pom.xml
+01:35:30:161 [INFO] --------------------------------[ pom ]---------------------------------
+01:35:30:163 [INFO] 
+01:35:30:164 [INFO] -----< org.eclipse.collections:eclipse-collections-code-generator >-----
+01:35:30:164 [INFO] Building Eclipse Collections Code Generator 14.0.0-SNAPSHOT        [2/5]
+01:35:30:164 [INFO]   from eclipse-collections-code-generator/pom.xml
+01:35:30:164 [INFO] --------------------------------[ jar ]---------------------------------
+01:35:30:316 [INFO] 
+01:35:30:321 [INFO] --- resources:3.3.1:resources (default-resources) @ eclipse-collections-code-generator ---
+01:35:30:613 [INFO] Copying 383 resources from src/main/resources to target/classes
+01:35:30:641 [INFO] 
+01:35:30:643 [INFO] --- compiler:3.13.0:compile (default-compile) @ eclipse-collections-code-generator ---
+01:35:30:885 [INFO] Nothing to compile - all classes are up to date.
+01:35:30:885 [INFO] 
+01:35:30:885 [INFO] --- resources:3.3.1:testResources (default-testResources) @ eclipse-collections-code-generator ---
+01:35:30:890 [INFO] skip non existing resourceDirectory /dev/shm/m3-package-rename-39a960e13a39/repos/eclipse-collections/eclipse-collections-code-generator/src/test/resources
+01:35:30:890 [INFO] 
+01:35:30:890 [INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ eclipse-collections-code-generator ---
+01:35:30:914 [INFO] Nothing to compile - all classes are up to date.
+01:35:30:914 [INFO] 
+01:35:30:914 [INFO] --- surefire:3.6.0:test (default-test) @ eclipse-collections-code-generator ---
+01:35:31:152 [INFO] Tests will run in random order. To reproduce ordering use flag -Dsurefire.runOrder.random.seed=18989335286163
+01:35:31:167 [INFO] 
+01:35:31:167 [INFO] --< org.eclipse.collections:eclipse-collections-code-generator-maven-plugin >--
+01:35:31:167 [INFO] Building Eclipse Collections Code Generator Maven Plugin 14.0.0-SNAPSHOT [3/5]
+01:35:31:167 [INFO]   from eclipse-collections-code-generator-maven-plugin/pom.xml
+01:35:31:168 [INFO] ----------------------------[ maven-plugin ]----------------------------
+01:35:31:373 [INFO] 
+01:35:31:376 [INFO] --- plugin:3.15.0:helpmojo (help-goal) @ eclipse-collections-code-generator-maven-plugin ---
+01:35:32:171 [INFO] 
+01:35:32:172 [INFO] --- resources:3.3.1:resources (default-resources) @ eclipse-collections-code-generator-maven-plugin ---
+01:35:32:175 [INFO] skip non existing resourceDirectory /dev/shm/m3-package-rename-39a960e13a39/repos/eclipse-collections/eclipse-collections-code-generator-maven-plugin/src/main/resources
+01:35:32:175 [INFO] 
+01:35:32:175 [INFO] --- compiler:3.13.0:compile (default-compile) @ eclipse-collections-code-generator-maven-plugin ---
+01:35:32:249 [INFO] Nothing to compile - all classes are up to date.
+01:35:32:251 [INFO] 
+01:35:32:252 [INFO] --- plugin:3.15.0:descriptor (default-descriptor) @ eclipse-collections-code-generator-maven-plugin ---
+01:35:32:343 [INFO] Using 'UTF-8' encoding to read mojo source files.
+01:35:33:817 [INFO] java-annotations mojo extractor found 3 mojo descriptors.
+01:35:33:858 [INFO] java-javadoc mojo extractor found 0 mojo descriptor.
+01:35:33:873 [INFO] ant mojo extractor found 0 mojo descriptor.
+01:35:33:874 [INFO] bsh mojo extractor found 0 mojo descriptor.
+01:35:33:935 [INFO] 
+01:35:33:935 [INFO] --- plugin:3.15.0:descriptor (mojo-descriptor) @ eclipse-collections-code-generator-maven-plugin ---
+01:35:33:946 [INFO] Using 'UTF-8' encoding to read mojo source files.
+01:35:35:045 [INFO] java-annotations mojo extractor found 3 mojo descriptors.
+01:35:35:071 [INFO] java-javadoc mojo extractor found 0 mojo descriptor.
+01:35:35:072 [INFO] ant mojo extractor found 0 mojo descriptor.
+01:35:35:072 [INFO] bsh mojo extractor found 0 mojo descriptor.
+01:35:35:094 [INFO] 
+01:35:35:094 [INFO] --- resources:3.3.1:testResources (default-testResources) @ eclipse-collections-code-generator-maven-plugin ---
+01:35:35:098 [INFO] skip non existing resourceDirectory /dev/shm/m3-package-rename-39a960e13a39/repos/eclipse-collections/eclipse-collections-code-generator-maven-plugin/src/test/resources
+01:35:35:098 [INFO] 
+01:35:35:099 [INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ eclipse-collections-code-generator-maven-plugin ---
+01:35:35:110 [INFO] No sources to compile
+01:35:35:110 [INFO] 
+01:35:35:110 [INFO] --- surefire:3.6.0:test (default-test) @ eclipse-collections-code-generator-maven-plugin ---
+01:35:35:115 [INFO] No tests to run.
+01:35:35:123 [INFO] 
+01:35:35:123 [INFO] ----------< org.eclipse.collections:eclipse-collections-api >-----------
+01:35:35:123 [INFO] Building Eclipse Collections API 14.0.0-SNAPSHOT                   [4/5]
+01:35:35:124 [INFO]   from eclipse-collections-api/pom.xml
+01:35:35:124 [INFO] --------------------------------[ jar ]---------------------------------
+01:35:35:149 [INFO] 
+01:35:35:149 [INFO] --- eclipse-collections-code-generator:14.0.0-SNAPSHOT:generate-sources (default) @ eclipse-collections-api ---
+01:35:35:210 [INFO] Generating sources in eclipse-collections-api to /dev/shm/m3-package-rename-39a960e13a39/repos/eclipse-collections/eclipse-collections-api/target/generated-sources/java
+01:35:38:061 [INFO] Generated 32 files
+01:35:38:061 [INFO] 
+01:35:38:061 [INFO] --- resources:3.3.1:resources (default-resources) @ eclipse-collections-api ---
+01:35:38:065 [INFO] Copying 3 resources from src/main/resources to target/classes
+01:35:38:065 [INFO] 
+01:35:38:066 [INFO] --- compiler:3.13.0:compile (default-compile) @ eclipse-collections-api ---
+01:35:38:278 [INFO] Recompiling the module because of changed source code.
+01:35:38:326 [INFO] Compiling 1607 source files with javac [forked debug release 17] to target/classes
+01:35:52:732 [INFO] 
+01:35:52:732 [INFO] --- resources:3.3.1:testResources (default-testResources) @ eclipse-collections-api ---
+01:35:52:740 [INFO] skip non existing resourceDirectory /dev/shm/m3-package-rename-39a960e13a39/repos/eclipse-collections/eclipse-collections-api/src/test/resources
+01:35:52:740 [INFO] 
+01:35:52:741 [INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ eclipse-collections-api ---
+01:35:52:747 [INFO] No sources to compile
+01:35:52:747 [INFO] 
+01:35:52:747 [INFO] --- surefire:3.6.0:test (default-test) @ eclipse-collections-api ---
+01:35:52:756 [INFO] No tests to run.
+01:35:52:757 [INFO] 
+01:35:52:757 [INFO] ------------< org.eclipse.collections:eclipse-collections >-------------
+01:35:52:757 [INFO] Building Eclipse Collections Main Library 14.0.0-SNAPSHOT          [5/5]
+01:35:52:759 [INFO]   from eclipse-collections/pom.xml
+01:35:52:759 [INFO] --------------------------------[ jar ]---------------------------------
+01:35:52:773 [INFO] 
+01:35:52:774 [INFO] --- eclipse-collections-code-generator:14.0.0-SNAPSHOT:generate-sources (generate-sources) @ eclipse-collections ---
+01:35:52:775 [INFO] Generating sources in eclipse-collections to /dev/shm/m3-package-rename-39a960e13a39/repos/eclipse-collections/eclipse-collections/target/generated-sources/java
+01:36:01:756 [INFO] Generated 1478 files
+01:36:01:758 [INFO] 
+01:36:01:758 [INFO] --- resources:3.3.1:resources (default-resources) @ eclipse-collections ---
+01:36:01:766 [INFO] Copying 3 resources from src/main/resources to target/classes
+01:36:01:770 [INFO] 
+01:36:01:770 [INFO] --- compiler:3.13.0:compile (default-compile) @ eclipse-collections ---
+01:36:01:913 [INFO] Recompiling the module because of changed dependency.
+01:36:01:917 [INFO] Compiling 2143 source files with javac [forked debug release 17] to target/classes
+01:36:53:618 [WARNING] /dev/shm/m3-package-rename-39a960e13a39/repos/eclipse-collections/eclipse-collections/src/main/java/com/m3/collections/eclipse/impl/map/mutable/ConcurrentHashMapUnsafe.java:[57,15] Unsafe is internal proprietary API and may be removed in a future release
+01:36:53:620 [WARNING] /dev/shm/m3-package-rename-39a960e13a39/repos/eclipse-collections/eclipse-collections/src/main/java/com/m3/collections/eclipse/impl/map/mutable/ConcurrentHashMapUnsafe.java:[82,25] Unsafe is internal proprietary API and may be removed in a future release
+01:36:53:620 [WARNING] /dev/shm/m3-package-rename-39a960e13a39/repos/eclipse-collections/eclipse-collections/src/main/java/com/m3/collections/eclipse/impl/map/mutable/ConcurrentHashMapUnsafe.java:[2333,19] Unsafe is internal proprietary API and may be removed in a future release
+01:36:53:620 [WARNING] /dev/shm/m3-package-rename-39a960e13a39/repos/eclipse-collections/eclipse-collections/src/main/java/com/m3/collections/eclipse/impl/map/mutable/ConcurrentHashMapUnsafe.java:[2337,19] Unsafe is internal proprietary API and may be removed in a future release
+01:36:53:620 [WARNING] /dev/shm/m3-package-rename-39a960e13a39/repos/eclipse-collections/eclipse-collections/src/main/java/com/m3/collections/eclipse/impl/map/mutable/ConcurrentHashMapUnsafe.java:[2343,83] Unsafe is internal proprietary API and may be removed in a future release
+01:36:53:620 [WARNING] /dev/shm/m3-package-rename-39a960e13a39/repos/eclipse-collections/eclipse-collections/src/main/java/com/m3/collections/eclipse/impl/map/mutable/ConcurrentHashMapUnsafe.java:[2346,27] Unsafe is internal proprietary API and may be removed in a future release
+01:36:53:620 [WARNING] /dev/shm/m3-package-rename-39a960e13a39/repos/eclipse-collections/eclipse-collections/src/main/java/com/m3/collections/eclipse/impl/map/mutable/ConcurrentHashMapUnsafe.java:[2348,34] Unsafe is internal proprietary API and may be removed in a future release
+01:36:53:620 [WARNING] /dev/shm/m3-package-rename-39a960e13a39/repos/eclipse-collections/eclipse-collections/src/main/java/com/m3/collections/eclipse/impl/map/mutable/ConcurrentHashMapUnsafe.java:[2350,32] Unsafe is internal proprietary API and may be removed in a future release
+01:36:53:620 [WARNING] /dev/shm/m3-package-rename-39a960e13a39/repos/eclipse-collections/eclipse-collections/src/main/java/com/m3/collections/eclipse/impl/map/mutable/ConcurrentHashMapUnsafe.java:[2343,23] [removal] AccessController in java.security has been deprecated and marked for removal
+01:36:53:620 [WARNING] /dev/shm/m3-package-rename-39a960e13a39/repos/eclipse-collections/eclipse-collections/src/main/java/com/m3/collections/eclipse/impl/parallel/CollectionsThreadFactory.java:[27,8] [removal] SecurityManager in java.lang has been deprecated and marked for removal
+01:36:53:620 [WARNING] /dev/shm/m3-package-rename-39a960e13a39/repos/eclipse-collections/eclipse-collections/src/main/java/com/m3/collections/eclipse/impl/parallel/CollectionsThreadFactory.java:[27,48] [removal] getSecurityManager() in System has been deprecated and marked for removal
+01:36:53:626 [INFO] 
+01:36:53:626 [INFO] --- resources:3.3.1:testResources (default-testResources) @ eclipse-collections ---
+01:36:53:650 [INFO] skip non existing resourceDirectory /dev/shm/m3-package-rename-39a960e13a39/repos/eclipse-collections/eclipse-collections/src/test/resources
+01:36:53:650 [INFO] 
+01:36:53:650 [INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ eclipse-collections ---
+01:36:53:666 [INFO] Recompiling the module because of changed dependency.
+01:36:53:667 [INFO] Compiling 1 source file with javac [forked debug release 17] to target/test-classes
+01:36:55:455 [INFO] 
+01:36:55:455 [INFO] --- surefire:3.6.0:test (default-test) @ eclipse-collections ---
+01:36:55:471 [INFO] Tests will run in random order. To reproduce ordering use flag -Dsurefire.runOrder.random.seed=19073654804029
+01:36:55:477 [INFO] ------------------------------------------------------------------------
+01:36:55:478 [INFO] Reactor Summary for Eclipse Collections Parent Project 14.0.0-SNAPSHOT:
+01:36:55:478 [INFO] 
+01:36:55:480 [INFO] Eclipse Collections Parent Project ................. SUCCESS [  0.003 s]
+01:36:55:480 [INFO] Eclipse Collections Code Generator ................. SUCCESS [  1.004 s]
+01:36:55:480 [INFO] Eclipse Collections Code Generator Maven Plugin .... SUCCESS [  3.951 s]
+01:36:55:480 [INFO] Eclipse Collections API ............................ SUCCESS [ 17.634 s]
+01:36:55:480 [INFO] Eclipse Collections Main Library ................... SUCCESS [01:02 min]
+01:36:55:480 [INFO] ------------------------------------------------------------------------
+01:36:55:480 [INFO] BUILD SUCCESS
+01:36:55:480 [INFO] ------------------------------------------------------------------------
+01:36:55:480 [INFO] Total time:  01:27 min
+01:36:55:481 [INFO] Finished at: 2026-10-18T01:36:55-07:00
+01:36:55:481 [INFO] ------------------------------------------------------------------------

@@ -1,0 +1,2587 @@
+[
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.bag.ImmutableBagFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.bag.ImmutableBagFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.bag.MultiReaderBagFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.bag.MultiReaderBagFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.bag.MutableBagFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.bag.MutableBagFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.bag.primitive.ImmutableBooleanBagFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.bag.primitive.ImmutableBooleanBagFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.bag.primitive.ImmutableByteBagFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.bag.primitive.ImmutableByteBagFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.bag.primitive.ImmutableCharBagFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.bag.primitive.ImmutableCharBagFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.bag.primitive.ImmutableDoubleBagFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.bag.primitive.ImmutableDoubleBagFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.bag.primitive.ImmutableFloatBagFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.bag.primitive.ImmutableFloatBagFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.bag.primitive.ImmutableIntBagFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.bag.primitive.ImmutableIntBagFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.bag.primitive.ImmutableLongBagFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.bag.primitive.ImmutableLongBagFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.bag.primitive.ImmutableShortBagFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.bag.primitive.ImmutableShortBagFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.bag.primitive.MutableBooleanBagFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.bag.primitive.MutableBooleanBagFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.bag.primitive.MutableByteBagFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.bag.primitive.MutableByteBagFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.bag.primitive.MutableCharBagFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.bag.primitive.MutableCharBagFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.bag.primitive.MutableDoubleBagFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.bag.primitive.MutableDoubleBagFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.bag.primitive.MutableFloatBagFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.bag.primitive.MutableFloatBagFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.bag.primitive.MutableIntBagFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.bag.primitive.MutableIntBagFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.bag.primitive.MutableLongBagFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.bag.primitive.MutableLongBagFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.bag.primitive.MutableShortBagFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.bag.primitive.MutableShortBagFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.bag.sorted.ImmutableSortedBagFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.bag.sorted.ImmutableSortedBagFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.bag.sorted.MutableSortedBagFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.bag.sorted.MutableSortedBagFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.bimap.ImmutableBiMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.bimap.ImmutableBiMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.bimap.MutableBiMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.bimap.MutableBiMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.list.FixedSizeListFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.list.FixedSizeListFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.list.ImmutableListFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.list.ImmutableListFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.list.MultiReaderListFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.list.MultiReaderListFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.list.MutableListFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.list.MutableListFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.list.primitive.ImmutableBooleanListFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.list.primitive.ImmutableBooleanListFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.list.primitive.ImmutableByteListFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.list.primitive.ImmutableByteListFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.list.primitive.ImmutableCharListFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.list.primitive.ImmutableCharListFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.list.primitive.ImmutableDoubleListFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.list.primitive.ImmutableDoubleListFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.list.primitive.ImmutableFloatListFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.list.primitive.ImmutableFloatListFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.list.primitive.ImmutableIntListFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.list.primitive.ImmutableIntListFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.list.primitive.ImmutableLongListFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.list.primitive.ImmutableLongListFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.list.primitive.ImmutableShortListFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.list.primitive.ImmutableShortListFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.list.primitive.MutableBooleanListFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.list.primitive.MutableBooleanListFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.list.primitive.MutableByteListFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.list.primitive.MutableByteListFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.list.primitive.MutableCharListFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.list.primitive.MutableCharListFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.list.primitive.MutableDoubleListFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.list.primitive.MutableDoubleListFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.list.primitive.MutableFloatListFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.list.primitive.MutableFloatListFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.list.primitive.MutableIntListFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.list.primitive.MutableIntListFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.list.primitive.MutableLongListFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.list.primitive.MutableLongListFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.list.primitive.MutableShortListFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.list.primitive.MutableShortListFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.FixedSizeMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.FixedSizeMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.ImmutableMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.ImmutableMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.MutableMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.MutableMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.ordered.MutableOrderedMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.ordered.MutableOrderedMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableBooleanBooleanMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableBooleanBooleanMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableBooleanByteMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableBooleanByteMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableBooleanCharMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableBooleanCharMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableBooleanDoubleMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableBooleanDoubleMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableBooleanFloatMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableBooleanFloatMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableBooleanIntMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableBooleanIntMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableBooleanLongMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableBooleanLongMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableBooleanShortMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableBooleanShortMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableByteBooleanMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableByteBooleanMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableByteByteMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableByteByteMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableByteCharMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableByteCharMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableByteDoubleMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableByteDoubleMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableByteFloatMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableByteFloatMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableByteIntMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableByteIntMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableByteLongMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableByteLongMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableByteObjectMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableByteObjectMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableByteShortMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableByteShortMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableCharBooleanMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableCharBooleanMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableCharByteMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableCharByteMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableCharCharMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableCharCharMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableCharDoubleMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableCharDoubleMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableCharFloatMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableCharFloatMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableCharIntMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableCharIntMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableCharLongMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableCharLongMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableCharObjectMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableCharObjectMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableCharShortMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableCharShortMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableDoubleBooleanMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableDoubleBooleanMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableDoubleByteMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableDoubleByteMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableDoubleCharMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableDoubleCharMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableDoubleDoubleMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableDoubleDoubleMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableDoubleFloatMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableDoubleFloatMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableDoubleIntMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableDoubleIntMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableDoubleLongMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableDoubleLongMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableDoubleObjectMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableDoubleObjectMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableDoubleShortMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableDoubleShortMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableFloatBooleanMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableFloatBooleanMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableFloatByteMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableFloatByteMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableFloatCharMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableFloatCharMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableFloatDoubleMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableFloatDoubleMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableFloatFloatMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableFloatFloatMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableFloatIntMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableFloatIntMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableFloatLongMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableFloatLongMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableFloatObjectMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableFloatObjectMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableFloatShortMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableFloatShortMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableIntBooleanMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableIntBooleanMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableIntByteMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableIntByteMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableIntCharMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableIntCharMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableIntDoubleMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableIntDoubleMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableIntFloatMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableIntFloatMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableIntIntMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableIntIntMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableIntLongMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableIntLongMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableIntObjectMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableIntObjectMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableIntShortMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableIntShortMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableLongBooleanMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableLongBooleanMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableLongByteMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableLongByteMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableLongCharMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableLongCharMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableLongDoubleMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableLongDoubleMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableLongFloatMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableLongFloatMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableLongIntMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableLongIntMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableLongLongMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableLongLongMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableLongObjectMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableLongObjectMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableLongShortMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableLongShortMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableObjectBooleanMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableObjectBooleanMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableObjectByteMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableObjectByteMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableObjectCharMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableObjectCharMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableObjectDoubleMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableObjectDoubleMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableObjectFloatMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableObjectFloatMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableObjectIntMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableObjectIntMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableObjectLongMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableObjectLongMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableObjectShortMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableObjectShortMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableShortBooleanMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableShortBooleanMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableShortByteMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableShortByteMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableShortCharMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableShortCharMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableShortDoubleMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableShortDoubleMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableShortFloatMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableShortFloatMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableShortIntMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableShortIntMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableShortLongMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableShortLongMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableShortObjectMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableShortObjectMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.ImmutableShortShortMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.ImmutableShortShortMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableBooleanBooleanMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableBooleanBooleanMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableBooleanByteMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableBooleanByteMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableBooleanCharMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableBooleanCharMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableBooleanDoubleMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableBooleanDoubleMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableBooleanFloatMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableBooleanFloatMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableBooleanIntMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableBooleanIntMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableBooleanLongMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableBooleanLongMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableBooleanShortMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableBooleanShortMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableByteBooleanMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableByteBooleanMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableByteByteMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableByteByteMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableByteCharMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableByteCharMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableByteDoubleMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableByteDoubleMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableByteFloatMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableByteFloatMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableByteIntMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableByteIntMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableByteLongMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableByteLongMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableByteObjectMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableByteObjectMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableByteShortMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableByteShortMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableCharBooleanMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableCharBooleanMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableCharByteMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableCharByteMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableCharCharMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableCharCharMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableCharDoubleMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableCharDoubleMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableCharFloatMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableCharFloatMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableCharIntMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableCharIntMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableCharLongMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableCharLongMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableCharObjectMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableCharObjectMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableCharShortMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableCharShortMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableDoubleBooleanMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableDoubleBooleanMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableDoubleByteMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableDoubleByteMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableDoubleCharMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableDoubleCharMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableDoubleDoubleMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableDoubleDoubleMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableDoubleFloatMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableDoubleFloatMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableDoubleIntMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableDoubleIntMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableDoubleLongMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableDoubleLongMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableDoubleObjectMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableDoubleObjectMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableDoubleShortMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableDoubleShortMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableFloatBooleanMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableFloatBooleanMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableFloatByteMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableFloatByteMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableFloatCharMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableFloatCharMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableFloatDoubleMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableFloatDoubleMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableFloatFloatMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableFloatFloatMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableFloatIntMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableFloatIntMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableFloatLongMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableFloatLongMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableFloatObjectMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableFloatObjectMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableFloatShortMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableFloatShortMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableIntBooleanMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableIntBooleanMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableIntByteMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableIntByteMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableIntCharMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableIntCharMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableIntDoubleMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableIntDoubleMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableIntFloatMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableIntFloatMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableIntIntMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableIntIntMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableIntLongMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableIntLongMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableIntObjectMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableIntObjectMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableIntShortMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableIntShortMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableLongBooleanMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableLongBooleanMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableLongByteMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableLongByteMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableLongCharMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableLongCharMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableLongDoubleMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableLongDoubleMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableLongFloatMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableLongFloatMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableLongIntMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableLongIntMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableLongLongMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableLongLongMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableLongObjectMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableLongObjectMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableLongShortMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableLongShortMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableObjectBooleanHashingStrategyMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableObjectBooleanHashingStrategyMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableObjectBooleanMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableObjectBooleanMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableObjectByteHashingStrategyMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableObjectByteHashingStrategyMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableObjectByteMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableObjectByteMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableObjectCharHashingStrategyMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableObjectCharHashingStrategyMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableObjectCharMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableObjectCharMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableObjectDoubleHashingStrategyMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableObjectDoubleHashingStrategyMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableObjectDoubleMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableObjectDoubleMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableObjectFloatHashingStrategyMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableObjectFloatHashingStrategyMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableObjectFloatMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableObjectFloatMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableObjectIntHashingStrategyMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableObjectIntHashingStrategyMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableObjectIntMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableObjectIntMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableObjectLongHashingStrategyMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableObjectLongHashingStrategyMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableObjectLongMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableObjectLongMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableObjectShortHashingStrategyMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableObjectShortHashingStrategyMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableObjectShortMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableObjectShortMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableShortBooleanMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableShortBooleanMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableShortByteMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableShortByteMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableShortCharMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableShortCharMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableShortDoubleMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableShortDoubleMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableShortFloatMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableShortFloatMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableShortIntMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableShortIntMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableShortLongMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableShortLongMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableShortObjectMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableShortObjectMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.primitive.MutableShortShortMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.primitive.MutableShortShortMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.sorted.ImmutableSortedMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.sorted.ImmutableSortedMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.map.sorted.MutableSortedMapFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.map.sorted.MutableSortedMapFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.set.FixedSizeSetFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.set.FixedSizeSetFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.set.ImmutableSetFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.set.ImmutableSetFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.set.MultiReaderSetFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.set.MultiReaderSetFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.set.MutableSetFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.set.MutableSetFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.set.primitive.ImmutableBooleanSetFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.set.primitive.ImmutableBooleanSetFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.set.primitive.ImmutableByteSetFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.set.primitive.ImmutableByteSetFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.set.primitive.ImmutableCharSetFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.set.primitive.ImmutableCharSetFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.set.primitive.ImmutableDoubleSetFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.set.primitive.ImmutableDoubleSetFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.set.primitive.ImmutableFloatSetFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.set.primitive.ImmutableFloatSetFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.set.primitive.ImmutableIntSetFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.set.primitive.ImmutableIntSetFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.set.primitive.ImmutableLongSetFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.set.primitive.ImmutableLongSetFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.set.primitive.ImmutableShortSetFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.set.primitive.ImmutableShortSetFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.set.primitive.MutableBooleanSetFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.set.primitive.MutableBooleanSetFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.set.primitive.MutableByteSetFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.set.primitive.MutableByteSetFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.set.primitive.MutableCharSetFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.set.primitive.MutableCharSetFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.set.primitive.MutableDoubleSetFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.set.primitive.MutableDoubleSetFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.set.primitive.MutableFloatSetFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.set.primitive.MutableFloatSetFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.set.primitive.MutableIntSetFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.set.primitive.MutableIntSetFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.set.primitive.MutableLongSetFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.set.primitive.MutableLongSetFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.set.primitive.MutableShortSetFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.set.primitive.MutableShortSetFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.set.sorted.ImmutableSortedSetFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.set.sorted.ImmutableSortedSetFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.set.sorted.MutableSortedSetFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.set.sorted.MutableSortedSetFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.stack.ImmutableStackFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.stack.ImmutableStackFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.stack.MutableStackFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.stack.MutableStackFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.stack.primitive.ImmutableBooleanStackFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.stack.primitive.ImmutableBooleanStackFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.stack.primitive.ImmutableByteStackFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.stack.primitive.ImmutableByteStackFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.stack.primitive.ImmutableCharStackFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.stack.primitive.ImmutableCharStackFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.stack.primitive.ImmutableDoubleStackFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.stack.primitive.ImmutableDoubleStackFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.stack.primitive.ImmutableFloatStackFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.stack.primitive.ImmutableFloatStackFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.stack.primitive.ImmutableIntStackFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.stack.primitive.ImmutableIntStackFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.stack.primitive.ImmutableLongStackFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.stack.primitive.ImmutableLongStackFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.stack.primitive.ImmutableShortStackFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.stack.primitive.ImmutableShortStackFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.stack.primitive.MutableBooleanStackFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.stack.primitive.MutableBooleanStackFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.stack.primitive.MutableByteStackFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.stack.primitive.MutableByteStackFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.stack.primitive.MutableCharStackFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.stack.primitive.MutableCharStackFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.stack.primitive.MutableDoubleStackFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.stack.primitive.MutableDoubleStackFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.stack.primitive.MutableFloatStackFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.stack.primitive.MutableFloatStackFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.stack.primitive.MutableIntStackFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.stack.primitive.MutableIntStackFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.stack.primitive.MutableLongStackFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.stack.primitive.MutableLongStackFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.api.factory.stack.primitive.MutableShortStackFactory\"",
+    "new": "\"com.m3.collections.eclipse.api.factory.stack.primitive.MutableShortStackFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.bag.immutable.ImmutableBagFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.bag.immutable.ImmutableBagFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.bag.immutable.primitive.ImmutableBooleanBagFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.bag.immutable.primitive.ImmutableBooleanBagFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.bag.immutable.primitive.ImmutableByteBagFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.bag.immutable.primitive.ImmutableByteBagFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.bag.immutable.primitive.ImmutableCharBagFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.bag.immutable.primitive.ImmutableCharBagFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.bag.immutable.primitive.ImmutableDoubleBagFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.bag.immutable.primitive.ImmutableDoubleBagFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.bag.immutable.primitive.ImmutableFloatBagFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.bag.immutable.primitive.ImmutableFloatBagFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.bag.immutable.primitive.ImmutableIntBagFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.bag.immutable.primitive.ImmutableIntBagFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.bag.immutable.primitive.ImmutableLongBagFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.bag.immutable.primitive.ImmutableLongBagFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.bag.immutable.primitive.ImmutableShortBagFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.bag.immutable.primitive.ImmutableShortBagFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.bag.mutable.MultiReaderMutableBagFactory\"",
+    "new": "\"com.m3.collections.eclipse.impl.bag.mutable.MultiReaderMutableBagFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.bag.mutable.MutableBagFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.bag.mutable.MutableBagFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.bag.mutable.primitive.MutableBooleanBagFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.bag.mutable.primitive.MutableBooleanBagFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.bag.mutable.primitive.MutableByteBagFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.bag.mutable.primitive.MutableByteBagFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.bag.mutable.primitive.MutableCharBagFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.bag.mutable.primitive.MutableCharBagFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.bag.mutable.primitive.MutableDoubleBagFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.bag.mutable.primitive.MutableDoubleBagFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.bag.mutable.primitive.MutableFloatBagFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.bag.mutable.primitive.MutableFloatBagFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.bag.mutable.primitive.MutableIntBagFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.bag.mutable.primitive.MutableIntBagFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.bag.mutable.primitive.MutableLongBagFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.bag.mutable.primitive.MutableLongBagFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.bag.mutable.primitive.MutableShortBagFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.bag.mutable.primitive.MutableShortBagFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.bag.sorted.immutable.ImmutableSortedBagFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.bag.sorted.immutable.ImmutableSortedBagFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.bag.sorted.mutable.MutableSortedBagFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.bag.sorted.mutable.MutableSortedBagFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.bimap.immutable.ImmutableBiMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.bimap.immutable.ImmutableBiMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.bimap.mutable.MutableBiMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.bimap.mutable.MutableBiMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.list.fixed.FixedSizeListFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.list.fixed.FixedSizeListFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.list.immutable.ImmutableListFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.list.immutable.ImmutableListFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.list.immutable.primitive.ImmutableBooleanListFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.list.immutable.primitive.ImmutableBooleanListFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.list.immutable.primitive.ImmutableByteListFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.list.immutable.primitive.ImmutableByteListFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.list.immutable.primitive.ImmutableCharListFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.list.immutable.primitive.ImmutableCharListFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.list.immutable.primitive.ImmutableDoubleListFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.list.immutable.primitive.ImmutableDoubleListFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.list.immutable.primitive.ImmutableFloatListFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.list.immutable.primitive.ImmutableFloatListFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.list.immutable.primitive.ImmutableIntListFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.list.immutable.primitive.ImmutableIntListFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.list.immutable.primitive.ImmutableLongListFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.list.immutable.primitive.ImmutableLongListFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.list.immutable.primitive.ImmutableShortListFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.list.immutable.primitive.ImmutableShortListFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.list.mutable.MultiReaderMutableListFactory\"",
+    "new": "\"com.m3.collections.eclipse.impl.list.mutable.MultiReaderMutableListFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.list.mutable.MutableListFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.list.mutable.MutableListFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.list.mutable.primitive.MutableBooleanListFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.list.mutable.primitive.MutableBooleanListFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.list.mutable.primitive.MutableByteListFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.list.mutable.primitive.MutableByteListFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.list.mutable.primitive.MutableCharListFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.list.mutable.primitive.MutableCharListFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.list.mutable.primitive.MutableDoubleListFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.list.mutable.primitive.MutableDoubleListFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.list.mutable.primitive.MutableFloatListFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.list.mutable.primitive.MutableFloatListFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.list.mutable.primitive.MutableIntListFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.list.mutable.primitive.MutableIntListFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.list.mutable.primitive.MutableLongListFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.list.mutable.primitive.MutableLongListFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.list.mutable.primitive.MutableShortListFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.list.mutable.primitive.MutableShortListFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.fixed.FixedSizeMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.fixed.FixedSizeMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.ImmutableMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.ImmutableMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableBooleanBooleanMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableBooleanBooleanMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableBooleanByteMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableBooleanByteMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableBooleanCharMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableBooleanCharMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableBooleanDoubleMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableBooleanDoubleMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableBooleanFloatMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableBooleanFloatMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableBooleanIntMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableBooleanIntMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableBooleanLongMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableBooleanLongMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableBooleanShortMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableBooleanShortMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableByteBooleanMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableByteBooleanMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableByteByteMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableByteByteMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableByteCharMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableByteCharMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableByteDoubleMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableByteDoubleMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableByteFloatMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableByteFloatMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableByteIntMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableByteIntMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableByteLongMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableByteLongMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableByteObjectMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableByteObjectMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableByteShortMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableByteShortMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableCharBooleanMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableCharBooleanMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableCharByteMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableCharByteMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableCharCharMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableCharCharMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableCharDoubleMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableCharDoubleMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableCharFloatMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableCharFloatMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableCharIntMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableCharIntMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableCharLongMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableCharLongMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableCharObjectMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableCharObjectMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableCharShortMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableCharShortMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableDoubleBooleanMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableDoubleBooleanMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableDoubleByteMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableDoubleByteMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableDoubleCharMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableDoubleCharMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableDoubleDoubleMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableDoubleDoubleMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableDoubleFloatMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableDoubleFloatMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableDoubleIntMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableDoubleIntMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableDoubleLongMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableDoubleLongMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableDoubleObjectMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableDoubleObjectMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableDoubleShortMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableDoubleShortMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableFloatBooleanMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableFloatBooleanMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableFloatByteMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableFloatByteMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableFloatCharMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableFloatCharMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableFloatDoubleMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableFloatDoubleMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableFloatFloatMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableFloatFloatMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableFloatIntMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableFloatIntMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableFloatLongMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableFloatLongMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableFloatObjectMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableFloatObjectMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableFloatShortMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableFloatShortMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableIntBooleanMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableIntBooleanMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableIntByteMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableIntByteMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableIntCharMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableIntCharMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableIntDoubleMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableIntDoubleMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableIntFloatMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableIntFloatMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableIntIntMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableIntIntMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableIntLongMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableIntLongMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableIntObjectMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableIntObjectMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableIntShortMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableIntShortMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableLongBooleanMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableLongBooleanMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableLongByteMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableLongByteMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableLongCharMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableLongCharMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableLongDoubleMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableLongDoubleMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableLongFloatMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableLongFloatMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableLongIntMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableLongIntMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableLongLongMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableLongLongMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableLongObjectMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableLongObjectMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableLongShortMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableLongShortMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableObjectBooleanMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableObjectBooleanMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableObjectByteMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableObjectByteMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableObjectCharMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableObjectCharMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableObjectDoubleMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableObjectDoubleMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableObjectFloatMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableObjectFloatMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableObjectIntMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableObjectIntMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableObjectLongMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableObjectLongMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableObjectShortMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableObjectShortMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableShortBooleanMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableShortBooleanMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableShortByteMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableShortByteMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableShortCharMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableShortCharMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableShortDoubleMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableShortDoubleMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableShortFloatMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableShortFloatMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableShortIntMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableShortIntMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableShortLongMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableShortLongMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableShortObjectMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableShortObjectMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.immutable.primitive.ImmutableShortShortMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.immutable.primitive.ImmutableShortShortMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.MutableMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.MutableMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableBooleanBooleanMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableBooleanBooleanMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableBooleanByteMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableBooleanByteMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableBooleanCharMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableBooleanCharMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableBooleanDoubleMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableBooleanDoubleMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableBooleanFloatMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableBooleanFloatMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableBooleanIntMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableBooleanIntMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableBooleanLongMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableBooleanLongMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableBooleanShortMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableBooleanShortMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableByteBooleanMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableByteBooleanMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableByteByteMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableByteByteMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableByteCharMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableByteCharMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableByteDoubleMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableByteDoubleMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableByteFloatMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableByteFloatMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableByteIntMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableByteIntMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableByteLongMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableByteLongMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableByteObjectMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableByteObjectMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableByteShortMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableByteShortMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableCharBooleanMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableCharBooleanMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableCharByteMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableCharByteMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableCharCharMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableCharCharMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableCharDoubleMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableCharDoubleMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableCharFloatMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableCharFloatMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableCharIntMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableCharIntMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableCharLongMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableCharLongMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableCharObjectMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableCharObjectMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableCharShortMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableCharShortMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableDoubleBooleanMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableDoubleBooleanMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableDoubleByteMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableDoubleByteMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableDoubleCharMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableDoubleCharMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableDoubleDoubleMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableDoubleDoubleMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableDoubleFloatMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableDoubleFloatMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableDoubleIntMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableDoubleIntMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableDoubleLongMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableDoubleLongMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableDoubleObjectMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableDoubleObjectMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableDoubleShortMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableDoubleShortMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableFloatBooleanMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableFloatBooleanMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableFloatByteMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableFloatByteMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableFloatCharMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableFloatCharMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableFloatDoubleMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableFloatDoubleMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableFloatFloatMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableFloatFloatMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableFloatIntMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableFloatIntMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableFloatLongMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableFloatLongMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableFloatObjectMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableFloatObjectMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableFloatShortMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableFloatShortMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableIntBooleanMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableIntBooleanMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableIntByteMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableIntByteMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableIntCharMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableIntCharMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableIntDoubleMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableIntDoubleMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableIntFloatMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableIntFloatMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableIntIntMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableIntIntMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableIntLongMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableIntLongMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableIntObjectMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableIntObjectMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableIntShortMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableIntShortMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableLongBooleanMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableLongBooleanMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableLongByteMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableLongByteMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableLongCharMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableLongCharMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableLongDoubleMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableLongDoubleMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableLongFloatMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableLongFloatMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableLongIntMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableLongIntMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableLongLongMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableLongLongMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableLongObjectMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableLongObjectMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableLongShortMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableLongShortMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableObjectBooleanHashingStrategyMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableObjectBooleanHashingStrategyMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableObjectBooleanMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableObjectBooleanMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableObjectByteHashingStrategyMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableObjectByteHashingStrategyMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableObjectByteMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableObjectByteMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableObjectCharHashingStrategyMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableObjectCharHashingStrategyMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableObjectCharMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableObjectCharMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableObjectDoubleHashingStrategyMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableObjectDoubleHashingStrategyMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableObjectDoubleMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableObjectDoubleMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableObjectFloatHashingStrategyMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableObjectFloatHashingStrategyMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableObjectFloatMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableObjectFloatMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableObjectIntHashingStrategyMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableObjectIntHashingStrategyMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableObjectIntMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableObjectIntMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableObjectLongHashingStrategyMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableObjectLongHashingStrategyMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableObjectLongMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableObjectLongMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableObjectShortHashingStrategyMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableObjectShortHashingStrategyMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableObjectShortMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableObjectShortMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableShortBooleanMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableShortBooleanMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableShortByteMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableShortByteMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableShortCharMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableShortCharMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableShortDoubleMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableShortDoubleMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableShortFloatMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableShortFloatMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableShortIntMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableShortIntMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableShortLongMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableShortLongMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableShortObjectMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableShortObjectMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.mutable.primitive.MutableShortShortMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.mutable.primitive.MutableShortShortMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.ordered.mutable.MutableOrderedMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.ordered.mutable.MutableOrderedMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.sorted.immutable.ImmutableSortedMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.sorted.immutable.ImmutableSortedMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.map.sorted.mutable.MutableSortedMapFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.map.sorted.mutable.MutableSortedMapFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.set.fixed.FixedSizeSetFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.set.fixed.FixedSizeSetFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.set.immutable.ImmutableSetFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.set.immutable.ImmutableSetFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.set.immutable.primitive.ImmutableBooleanSetFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.set.immutable.primitive.ImmutableBooleanSetFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.set.immutable.primitive.ImmutableByteSetFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.set.immutable.primitive.ImmutableByteSetFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.set.immutable.primitive.ImmutableCharSetFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.set.immutable.primitive.ImmutableCharSetFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.set.immutable.primitive.ImmutableDoubleSetFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.set.immutable.primitive.ImmutableDoubleSetFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.set.immutable.primitive.ImmutableFloatSetFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.set.immutable.primitive.ImmutableFloatSetFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.set.immutable.primitive.ImmutableIntSetFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.set.immutable.primitive.ImmutableIntSetFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.set.immutable.primitive.ImmutableLongSetFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.set.immutable.primitive.ImmutableLongSetFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.set.immutable.primitive.ImmutableShortSetFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.set.immutable.primitive.ImmutableShortSetFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.set.mutable.MultiReaderMutableSetFactory\"",
+    "new": "\"com.m3.collections.eclipse.impl.set.mutable.MultiReaderMutableSetFactory\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.set.mutable.MutableSetFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.set.mutable.MutableSetFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.set.mutable.primitive.MutableBooleanSetFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.set.mutable.primitive.MutableBooleanSetFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.set.mutable.primitive.MutableByteSetFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.set.mutable.primitive.MutableByteSetFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.set.mutable.primitive.MutableCharSetFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.set.mutable.primitive.MutableCharSetFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.set.mutable.primitive.MutableDoubleSetFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.set.mutable.primitive.MutableDoubleSetFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.set.mutable.primitive.MutableFloatSetFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.set.mutable.primitive.MutableFloatSetFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.set.mutable.primitive.MutableIntSetFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.set.mutable.primitive.MutableIntSetFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.set.mutable.primitive.MutableLongSetFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.set.mutable.primitive.MutableLongSetFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.set.mutable.primitive.MutableShortSetFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.set.mutable.primitive.MutableShortSetFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.set.sorted.immutable.ImmutableSortedSetFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.set.sorted.immutable.ImmutableSortedSetFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.set.sorted.mutable.MutableSortedSetFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.set.sorted.mutable.MutableSortedSetFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.stack.immutable.ImmutableStackFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.stack.immutable.ImmutableStackFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.stack.immutable.primitive.ImmutableBooleanStackFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.stack.immutable.primitive.ImmutableBooleanStackFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.stack.immutable.primitive.ImmutableByteStackFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.stack.immutable.primitive.ImmutableByteStackFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.stack.immutable.primitive.ImmutableCharStackFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.stack.immutable.primitive.ImmutableCharStackFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.stack.immutable.primitive.ImmutableDoubleStackFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.stack.immutable.primitive.ImmutableDoubleStackFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.stack.immutable.primitive.ImmutableFloatStackFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.stack.immutable.primitive.ImmutableFloatStackFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.stack.immutable.primitive.ImmutableIntStackFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.stack.immutable.primitive.ImmutableIntStackFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.stack.immutable.primitive.ImmutableLongStackFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.stack.immutable.primitive.ImmutableLongStackFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.stack.immutable.primitive.ImmutableShortStackFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.stack.immutable.primitive.ImmutableShortStackFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.stack.mutable.MutableStackFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.stack.mutable.MutableStackFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.stack.mutable.primitive.MutableBooleanStackFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.stack.mutable.primitive.MutableBooleanStackFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.stack.mutable.primitive.MutableByteStackFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.stack.mutable.primitive.MutableByteStackFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.stack.mutable.primitive.MutableCharStackFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.stack.mutable.primitive.MutableCharStackFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.stack.mutable.primitive.MutableDoubleStackFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.stack.mutable.primitive.MutableDoubleStackFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.stack.mutable.primitive.MutableFloatStackFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.stack.mutable.primitive.MutableFloatStackFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.stack.mutable.primitive.MutableIntStackFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.stack.mutable.primitive.MutableIntStackFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.stack.mutable.primitive.MutableLongStackFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.stack.mutable.primitive.MutableLongStackFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-api/src/main/java/com/m3/collections/eclipse/api/factory/ServiceLoaderUtils.java",
+    "old": "\"org.eclipse.collections.impl.stack.mutable.primitive.MutableShortStackFactoryImpl\"",
+    "new": "\"com.m3.collections.eclipse.impl.stack.mutable.primitive.MutableShortStackFactoryImpl\""
+  },
+  {
+    "path": "eclipse-collections-testutils/src/test/java/com/m3/collections/eclipse/impl/test/AssertTest.java",
+    "old": "\" but was:<org.eclipse.collections.impl.test.AssertTest$1>\"",
+    "new": "\" but was:<com.m3.collections.eclipse.impl.test.AssertTest$1>\""
+  },
+  {
+    "path": "eclipse-collections-testutils/src/test/java/com/m3/collections/eclipse/impl/test/AssertTest.java",
+    "old": "\"expected org.eclipse.collections.impl.test.AssertTest.NestedException to be thrown,\"",
+    "new": "\"expected com.m3.collections.eclipse.impl.test.AssertTest.NestedException to be thrown,\""
+  },
+  {
+    "path": "eclipse-collections-testutils/src/test/java/com/m3/collections/eclipse/impl/test/AssertTest.java",
+    "old": "\"expected: org.eclipse.collections.impl.test.AssertTest$NullToString<null> but \"",
+    "new": "\"expected: com.m3.collections.eclipse.impl.test.AssertTest$NullToString<null> but \""
+  },
+  {
+    "path": "eclipse-collections-testutils/src/test/java/com/m3/collections/eclipse/impl/test/AssertTest.java",
+    "old": "\"unexpected exception type thrown; expected:<org.eclipse.collections.impl.test.AssertTest.NestedException>\"",
+    "new": "\"unexpected exception type thrown; expected:<com.m3.collections.eclipse.impl.test.AssertTest.NestedException>\""
+  },
+  {
+    "path": "eclipse-collections-testutils/src/test/java/com/m3/collections/eclipse/impl/test/AssertTest.java",
+    "old": "\"was: org.eclipse.collections.impl.test.AssertTest$NullToString<null>\"",
+    "new": "\"was: com.m3.collections.eclipse.impl.test.AssertTest$NullToString<null>\""
+  },
+  {
+    "path": "jmh-tests/src/main/java/com/m3/collections/eclipse/impl/jmh/runner/JMHRunnerTest.java",
+    "old": "\".*org.eclipse.collections.impl.jmh.*\"",
+    "new": "\".*com.m3.collections.eclipse.impl.jmh.*\""
+  },
+  {
+    "path": "jmh-tests/src/main/java/com/m3/collections/eclipse/impl/jmh/runner/JMHRunnerTest.java",
+    "old": "\".*org.eclipse.collections.impl.jmh.map.*\"",
+    "new": "\".*com.m3.collections.eclipse.impl.jmh.map.*\""
+  }
+]

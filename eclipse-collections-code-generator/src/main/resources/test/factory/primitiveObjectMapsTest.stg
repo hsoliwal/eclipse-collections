@@ -3,7 +3,7 @@ import "primitiveLiteral.stg"
 
 isTest() ::= "true"
 
-targetPath() ::= "org/eclipse/collections/impl/factory/primitive"
+targetPath() ::= "com/m3/collections/eclipse/impl/factory/primitive"
 
 fileName(primitive) ::= "<primitive.name>ObjectMapFactoryTest"
 
@@ -16,11 +16,11 @@ class(primitive) ::= <<
 body(type, name, wrapperName, charPrimitive) ::= <<
 <copyright()>
 
-package org.eclipse.collections.impl.factory.primitive;
+package com.m3.collections.eclipse.impl.factory.primitive;
 
-import org.eclipse.collections.api.factory.map.primitive.Immutable<name>ObjectMapFactory;
-import org.eclipse.collections.api.factory.map.primitive.Mutable<name>ObjectMapFactory;
-import org.eclipse.collections.impl.map.mutable.primitive.<name>ObjectHashMap;
+import com.m3.collections.eclipse.api.factory.map.primitive.Immutable<name>ObjectMapFactory;
+import com.m3.collections.eclipse.api.factory.map.primitive.Mutable<name>ObjectMapFactory;
+import com.m3.collections.eclipse.impl.map.mutable.primitive.<name>ObjectHashMap;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -35,7 +35,7 @@ public class <name>ObjectMapFactoryTest
     public void immutables()
     {
         this.assertImmutable<name>ObjectMapFactory(<name>ObjectMaps.immutable);
-        this.assertImmutable<name>ObjectMapFactory(org.eclipse.collections.api.factory.primitive.<name>ObjectMaps.immutable);
+        this.assertImmutable<name>ObjectMapFactory(com.m3.collections.eclipse.api.factory.primitive.<name>ObjectMaps.immutable);
     }
 
     private void assertImmutable<name>ObjectMapFactory(Immutable<name>ObjectMapFactory mapFactory)
@@ -51,7 +51,7 @@ public class <name>ObjectMapFactoryTest
     public void mutables()
     {
         this.assertMutable<name>ObjectMapFactory(<name>ObjectMaps.mutable);
-        this.assertMutable<name>ObjectMapFactory(org.eclipse.collections.api.factory.primitive.<name>ObjectMaps.mutable);
+        this.assertMutable<name>ObjectMapFactory(com.m3.collections.eclipse.api.factory.primitive.<name>ObjectMaps.mutable);
     }
 
     private void assertMutable<name>ObjectMapFactory(Mutable<name>ObjectMapFactory mapFactory)
