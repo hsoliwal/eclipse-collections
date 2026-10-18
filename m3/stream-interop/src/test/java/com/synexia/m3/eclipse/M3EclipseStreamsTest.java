@@ -18,4 +18,14 @@ class M3EclipseStreamsTest {
         assertEquals(List.of(2,2,4,6),live.map(x -> x*2).collect(Collectors.toList()));
         assertEquals(List.of(1,1,2,3),M3EclipseStreams.snapshot(data).collect(Collectors.toList()));
     }
+
+    @Test void allIterableCollectionFamiliesUseTheSameOperators() {
+        var list = new java.util.ArrayList<>(List.of(4,4));
+        var snap = M3EclipseStreams.snapshotAny(list);
+        var live = M3EclipseStreams.liveAny(list);
+        list.add(5);
+        assertEquals(List.of(4,4),snap.collect(Collectors.toList()));
+        assertEquals(List.of(4,4,5),live.collect(Collectors.toList()));
+        assertEquals(List.of(8,8,10),live.map(v -> v*2).collect(Collectors.toList()));
+    }
 }
