@@ -55,7 +55,7 @@ The Eclipse Collections team gives a huge thank you to everyone who participated
 * Added missing overrides of aggregateBy() and aggregateInPlaceBy().
 * Added documentation on serializing Eclipse Collections with jackson.
 * Added logic to throw UnsupportedOperationException on calling withMap method in FixedSizeMap. This is a breaking change.
-* Made org.eclipse.collections.impl.list.Interval#goForward private. This is a breaking change.
+* Made com.m3.collections.eclipse.impl.list.Interval#goForward private. This is a breaking change.
 * Replaced HashingStrategies.longHashCode with Java 8 Long.hashCode. This is a breaking change.
 * Deleted version.properties as the file is no longer needed.
 * Removed extra calls to map.get in sumByDoubleFunction and sumByFloatFunction.
@@ -92,7 +92,7 @@ The Eclipse Collections team gives a huge thank you to everyone who participated
 Warning: These changes are already mentioned above. The list below might not be exhaustive, make sure to test your application and usages to verify.
 
 * Added logic to throw UnsupportedOperationException on calling withMap method in FixedSizeMap.
-* Made org.eclipse.collections.impl.list.Interval#goForward private.
+* Made com.m3.collections.eclipse.impl.list.Interval#goForward private.
 * Replaced HashingStrategies.longHashCode with Java 8 Long.hashCode.
 * Removed Verify.assertThrows() which takes a Runnable in favor of Assert.assertThrows().
 * Removed assertNotEquals() from Verify as Assert already has the same API.
@@ -147,10 +147,10 @@ implementation 'org.eclipse.collections:eclipse-collections-forkjoin:11.0.0'
 ### Ivy
 
 ```xml
-<dependency org="org.eclipse.collections" name="eclipse-collections-api" rev="11.0.0" />
-<dependency org="org.eclipse.collections" name="eclipse-collections" rev="11.0.0" />
-<dependency org="org.eclipse.collections" name="eclipse-collections-testutils" rev="11.0.0" />
-<dependency org="org.eclipse.collections" name="eclipse-collections-forkjoin" rev="11.0.0"/>
+<dependency org="com.m3.collections.eclipse" name="eclipse-collections-api" rev="11.0.0" />
+<dependency org="com.m3.collections.eclipse" name="eclipse-collections" rev="11.0.0" />
+<dependency org="com.m3.collections.eclipse" name="eclipse-collections-testutils" rev="11.0.0" />
+<dependency org="com.m3.collections.eclipse" name="eclipse-collections-forkjoin" rev="11.0.0"/>
 ```
 
 ### OSGi Bundle

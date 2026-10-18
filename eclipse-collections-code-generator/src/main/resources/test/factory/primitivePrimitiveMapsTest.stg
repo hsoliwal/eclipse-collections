@@ -9,7 +9,7 @@ hasTwoPrimitives() ::= "true"
 
 skipBoolean() ::= "true"
 
-targetPath() ::= "org/eclipse/collections/impl/factory/primitive"
+targetPath() ::= "com/m3/collections/eclipse/impl/factory/primitive"
 
 fileName(primitive1, primitive2, sameTwoPrimitives) ::= "<primitive1.name><primitive2.name>MapsTest"
 
@@ -20,11 +20,11 @@ class(primitive1, primitive2, sameTwoPrimitives) ::= <<
 body(type1, type2, name1, name2) ::= <<
 <copyrightAndOthers()>
 
-package org.eclipse.collections.impl.factory.primitive;
+package com.m3.collections.eclipse.impl.factory.primitive;
 
-import org.eclipse.collections.api.factory.map.primitive.Immutable<name1><name2>MapFactory;
-import org.eclipse.collections.api.factory.map.primitive.Mutable<name1><name2>MapFactory;
-import org.eclipse.collections.impl.map.mutable.primitive.<name1><name2>HashMap;
+import com.m3.collections.eclipse.api.factory.map.primitive.Immutable<name1><name2>MapFactory;
+import com.m3.collections.eclipse.api.factory.map.primitive.Mutable<name1><name2>MapFactory;
+import com.m3.collections.eclipse.impl.map.mutable.primitive.<name1><name2>HashMap;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -38,7 +38,7 @@ public class <name1><name2>MapsTest
     public void immutables()
     {
         this.assertImmutableMapFactory(<name1><name2>Maps.immutable);
-        this.assertImmutableMapFactory(org.eclipse.collections.api.factory.primitive.<name1><name2>Maps.immutable);
+        this.assertImmutableMapFactory(com.m3.collections.eclipse.api.factory.primitive.<name1><name2>Maps.immutable);
     }
 
     private void assertImmutableMapFactory(Immutable<name1><name2>MapFactory mapFactory)
@@ -55,7 +55,7 @@ public class <name1><name2>MapsTest
     public void mutables()
     {
         this.assertMutableMapFactory(<name1><name2>Maps.mutable);
-        this.assertMutableMapFactory(org.eclipse.collections.api.factory.primitive.<name1><name2>Maps.mutable);
+        this.assertMutableMapFactory(com.m3.collections.eclipse.api.factory.primitive.<name1><name2>Maps.mutable);
     }
 
     private void assertMutableMapFactory(Mutable<name1><name2>MapFactory mapFactory)

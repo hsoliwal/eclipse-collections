@@ -7,7 +7,7 @@ skipBoolean() ::= "true"
 
 isTest() ::= "true"
 
-targetPath() ::= "org/eclipse/collections/impl/map/mutable/primitive"
+targetPath() ::= "com/m3/collections/eclipse/impl/map/mutable/primitive"
 
 fileName(primitive) ::= "UnmodifiableObject<primitive.name>MapTest"
 
@@ -18,16 +18,16 @@ class(primitive) ::= <<
 body(type, name, wrapperName) ::= <<
 <copyrightAndOthers()>
 
-package org.eclipse.collections.impl.map.mutable.primitive;
+package com.m3.collections.eclipse.impl.map.mutable.primitive;
 
-import org.eclipse.collections.api.block.function.primitive.<name>Function;
-import org.eclipse.collections.api.block.function.primitive.<name>Function0;
-import org.eclipse.collections.api.block.function.primitive.<name>To<name>Function;
-import org.eclipse.collections.api.map.primitive.MutableObject<name>Map;
-import org.eclipse.collections.impl.factory.Iterables;
-import org.eclipse.collections.impl.list.mutable.FastList;
-import org.eclipse.collections.impl.test.Verify;
-import org.eclipse.collections.impl.tuple.primitive.PrimitiveTuples;
+import com.m3.collections.eclipse.api.block.function.primitive.<name>Function;
+import com.m3.collections.eclipse.api.block.function.primitive.<name>Function0;
+import com.m3.collections.eclipse.api.block.function.primitive.<name>To<name>Function;
+import com.m3.collections.eclipse.api.map.primitive.MutableObject<name>Map;
+import com.m3.collections.eclipse.impl.factory.Iterables;
+import com.m3.collections.eclipse.impl.list.mutable.FastList;
+import com.m3.collections.eclipse.impl.test.Verify;
+import com.m3.collections.eclipse.impl.tuple.primitive.PrimitiveTuples;
 import org.junit.Assert;
 import org.junit.Test;
 

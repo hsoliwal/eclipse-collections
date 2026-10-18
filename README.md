@@ -121,8 +121,8 @@ We welcome contributions! We accept contributions via pull requests here in GitH
 [actions javadoc]:https://github.com/eclipse/eclipse-collections/actions?query=workflow%3A%22JavaDoc%22
 [actions javadoc img]:https://github.com/eclipse/eclipse-collections/workflows/JavaDoc/badge.svg?branch=master
 
-[maven]:http://search.maven.org/#search|gav|1|g:"org.eclipse.collections"%20AND%20a:"eclipse-collections"
-[maven img]:https://maven-badges.herokuapp.com/maven-central/org.eclipse.collections/eclipse-collections/badge.svg
+[maven]:http://search.maven.org/#search|gav|1|g:"com.m3.collections.eclipse"%20AND%20a:"eclipse-collections"
+[maven img]:https://maven-badges.herokuapp.com/maven-central/com.m3.collections.eclipse/eclipse-collections/badge.svg
 
 [release]:https://github.com/eclipse/eclipse-collections/releases
 [release img]:https://img.shields.io/github/release/eclipse/eclipse-collections.svg
@@ -140,7 +140,7 @@ We welcome contributions! We accept contributions via pull requests here in GitH
 [license-edl img]:https://img.shields.io/badge/License-EDL-blue.svg
 
 [snyk-badge]:https://snyk.io/vuln/maven:org.eclipse.collections:eclipse-collections@11.0.0?utm_medium=referral&utm_source=badge&utm_campaign=snyk-widget
-[snyk-badge img]:https://snyk-widget.herokuapp.com/badge/mvn/org.eclipse.collections/eclipse-collections/11.0.0/badge.svg
+[snyk-badge img]:https://snyk-widget.herokuapp.com/badge/mvn/com.m3.collections.eclipse/eclipse-collections/11.0.0/badge.svg
 
 [RichIterable]: https://www.eclipse.org/collections/javadoc/11.0.0/org/eclipse/collections/api/RichIterable.html
 [ListIterable]: https://www.eclipse.org/collections/javadoc/11.0.0/org/eclipse/collections/api/list/ListIterable.html

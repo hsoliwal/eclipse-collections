@@ -3,7 +3,7 @@ import "primitiveEquals.stg"
 import "primitiveHashCode.stg"
 import "primitiveLiteral.stg"
 
-targetPath() ::= "org/eclipse/collections/impl/map/immutable/primitive"
+targetPath() ::= "com/m3/collections/eclipse/impl/map/immutable/primitive"
 
 fileName(primitive) ::= "AbstractImmutable<primitive.name>ObjectMap"
 
@@ -16,30 +16,30 @@ class(primitive) ::= <<
 body(type, name) ::= <<
 <copyright()>
 
-package org.eclipse.collections.impl.map.immutable.primitive;
+package com.m3.collections.eclipse.impl.map.immutable.primitive;
 
 import java.io.Externalizable;
 import java.io.IOException;
 import java.io.ObjectInput;
 import java.io.ObjectOutput;
 
-import org.eclipse.collections.api.block.function.Function;
-import org.eclipse.collections.api.block.function.primitive.DoubleFunction;
-import org.eclipse.collections.api.block.function.primitive.FloatFunction;
-import org.eclipse.collections.api.block.function.primitive.IntFunction;
-import org.eclipse.collections.api.block.function.primitive.LongFunction;
-import org.eclipse.collections.api.map.primitive.Immutable<name>ObjectMap;
-import org.eclipse.collections.api.map.primitive.ImmutableObjectDoubleMap;
-import org.eclipse.collections.api.map.primitive.ImmutableObjectLongMap;
-import org.eclipse.collections.api.map.primitive.Mutable<name>ObjectMap;
-import org.eclipse.collections.api.map.primitive.MutableObjectDoubleMap;
-import org.eclipse.collections.api.map.primitive.MutableObjectLongMap;
-import org.eclipse.collections.api.map.primitive.<name>ObjectMap;
-import org.eclipse.collections.impl.block.factory.PrimitiveFunctions;
-import org.eclipse.collections.impl.block.procedure.checked.primitive.Checked<name>ObjectProcedure;
-import org.eclipse.collections.impl.factory.primitive.ObjectDoubleMaps;
-import org.eclipse.collections.impl.factory.primitive.ObjectLongMaps;
-import org.eclipse.collections.impl.map.mutable.primitive.<name>ObjectHashMap;
+import com.m3.collections.eclipse.api.block.function.Function;
+import com.m3.collections.eclipse.api.block.function.primitive.DoubleFunction;
+import com.m3.collections.eclipse.api.block.function.primitive.FloatFunction;
+import com.m3.collections.eclipse.api.block.function.primitive.IntFunction;
+import com.m3.collections.eclipse.api.block.function.primitive.LongFunction;
+import com.m3.collections.eclipse.api.map.primitive.Immutable<name>ObjectMap;
+import com.m3.collections.eclipse.api.map.primitive.ImmutableObjectDoubleMap;
+import com.m3.collections.eclipse.api.map.primitive.ImmutableObjectLongMap;
+import com.m3.collections.eclipse.api.map.primitive.Mutable<name>ObjectMap;
+import com.m3.collections.eclipse.api.map.primitive.MutableObjectDoubleMap;
+import com.m3.collections.eclipse.api.map.primitive.MutableObjectLongMap;
+import com.m3.collections.eclipse.api.map.primitive.<name>ObjectMap;
+import com.m3.collections.eclipse.impl.block.factory.PrimitiveFunctions;
+import com.m3.collections.eclipse.impl.block.procedure.checked.primitive.Checked<name>ObjectProcedure;
+import com.m3.collections.eclipse.impl.factory.primitive.ObjectDoubleMaps;
+import com.m3.collections.eclipse.impl.factory.primitive.ObjectLongMaps;
+import com.m3.collections.eclipse.impl.map.mutable.primitive.<name>ObjectHashMap;
 
 /**
  * This file was automatically generated from template file abstractImmutablePrimitiveObjectMap.stg.

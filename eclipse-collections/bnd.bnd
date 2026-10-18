@@ -1,10 +1,10 @@
 package-version=${version;===;${Bundle-Version}}
 
-Automatic-Module-Name: org.eclipse.collections.impl
+Automatic-Module-Name: com.m3.collections.eclipse.impl
 Bundle-SymbolicName: org.eclipse.collections.impl
 
 Export-Package: \
-	org.eclipse.collections.impl.*;version="${package-version}"
+	com.m3.collections.eclipse.impl.*;version="${package-version}"
 
 Import-Package: \
  sun.misc.*;resolution:=optional, \

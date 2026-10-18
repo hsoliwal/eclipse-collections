@@ -4,7 +4,7 @@ import "primitiveHashCode.stg"
 import "primitiveAPI.stg"
 import "primitiveLiteral.stg"
 
-targetPath() ::= "org/eclipse/collections/api/ordered/primitive"
+targetPath() ::= "com/m3/collections/eclipse/api/ordered/primitive"
 
 fileName(primitive) ::= "Ordered<primitive.name>Iterable"
 
@@ -15,19 +15,19 @@ class(primitive) ::= <<
 body(type, name) ::= <<
 <copyrightAndOthers()>
 
-package org.eclipse.collections.api.ordered.primitive;
+package com.m3.collections.eclipse.api.ordered.primitive;
 
 import java.util.Collection;
 
-import org.eclipse.collections.api.<name>Iterable;
-import org.eclipse.collections.api.block.function.primitive.<name>IntToObjectFunction;
-import org.eclipse.collections.api.block.function.primitive.<name>ToObjectFunction;
-import org.eclipse.collections.api.block.function.primitive.Object<name>IntToObjectFunction;
-import org.eclipse.collections.api.block.predicate.primitive.<name>IntPredicate;
-import org.eclipse.collections.api.block.predicate.primitive.<name>Predicate;
-import org.eclipse.collections.api.block.procedure.primitive.<name>IntProcedure;
-import org.eclipse.collections.api.collection.primitive.Mutable<name>Collection;
-import org.eclipse.collections.api.ordered.OrderedIterable;
+import com.m3.collections.eclipse.api.<name>Iterable;
+import com.m3.collections.eclipse.api.block.function.primitive.<name>IntToObjectFunction;
+import com.m3.collections.eclipse.api.block.function.primitive.<name>ToObjectFunction;
+import com.m3.collections.eclipse.api.block.function.primitive.Object<name>IntToObjectFunction;
+import com.m3.collections.eclipse.api.block.predicate.primitive.<name>IntPredicate;
+import com.m3.collections.eclipse.api.block.predicate.primitive.<name>Predicate;
+import com.m3.collections.eclipse.api.block.procedure.primitive.<name>IntProcedure;
+import com.m3.collections.eclipse.api.collection.primitive.Mutable<name>Collection;
+import com.m3.collections.eclipse.api.ordered.OrderedIterable;
 
 /**
  * This file was automatically generated from template file orderedPrimitiveIterable.stg.

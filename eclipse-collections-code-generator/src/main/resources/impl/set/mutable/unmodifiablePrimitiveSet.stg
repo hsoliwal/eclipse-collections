@@ -3,7 +3,7 @@ import "primitiveEquals.stg"
 import "primitiveHashCode.stg"
 import "primitiveLiteral.stg"
 
-targetPath() ::= "org/eclipse/collections/impl/set/mutable/primitive"
+targetPath() ::= "com/m3/collections/eclipse/impl/set/mutable/primitive"
 
 fileName(primitive) ::= "Unmodifiable<primitive.name>Set"
 
@@ -14,19 +14,19 @@ class(primitive) ::= <<
 body(type, name) ::= <<
 <copyrightAndOthers()>
 
-package org.eclipse.collections.impl.set.mutable.primitive;
+package com.m3.collections.eclipse.impl.set.mutable.primitive;
 
-import org.eclipse.collections.api.<name>Iterable;
-import org.eclipse.collections.api.block.function.primitive.<name>ToObjectFunction;
-import org.eclipse.collections.api.block.predicate.primitive.<name>Predicate;
-import org.eclipse.collections.api.set.MutableSet;
-import org.eclipse.collections.api.set.primitive.Immutable<name>Set;
-import org.eclipse.collections.api.set.primitive.<name>Set;
-import org.eclipse.collections.api.set.primitive.Mutable<name>Set;
-import org.eclipse.collections.impl.collection.mutable.primitive.AbstractUnmodifiable<name>Collection;
-import org.eclipse.collections.api.LazyIterable;
-import org.eclipse.collections.api.tuple.primitive.<name><name>Pair;
-import org.eclipse.collections.impl.factory.primitive.<name>Sets;
+import com.m3.collections.eclipse.api.<name>Iterable;
+import com.m3.collections.eclipse.api.block.function.primitive.<name>ToObjectFunction;
+import com.m3.collections.eclipse.api.block.predicate.primitive.<name>Predicate;
+import com.m3.collections.eclipse.api.set.MutableSet;
+import com.m3.collections.eclipse.api.set.primitive.Immutable<name>Set;
+import com.m3.collections.eclipse.api.set.primitive.<name>Set;
+import com.m3.collections.eclipse.api.set.primitive.Mutable<name>Set;
+import com.m3.collections.eclipse.impl.collection.mutable.primitive.AbstractUnmodifiable<name>Collection;
+import com.m3.collections.eclipse.api.LazyIterable;
+import com.m3.collections.eclipse.api.tuple.primitive.<name><name>Pair;
+import com.m3.collections.eclipse.impl.factory.primitive.<name>Sets;
 
 /**
  * This file was automatically generated from template file unmodifiablePrimitiveSet.stg.

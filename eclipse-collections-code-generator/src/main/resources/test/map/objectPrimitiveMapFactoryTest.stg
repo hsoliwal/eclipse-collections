@@ -3,7 +3,7 @@ import "primitiveLiteral.stg"
 
 isTest() ::= "true"
 
-targetPath() ::= "org/eclipse/collections/impl/map/primitive"
+targetPath() ::= "com/m3/collections/eclipse/impl/map/primitive"
 
 fileName(primitive) ::= "Object<primitive.name>MapFactoryTest"
 
@@ -16,13 +16,13 @@ class(primitive) ::= <<
 body(type, name, wrapperName, charPrimitive) ::= <<
 <copyrightAndOthers()>
 
-package org.eclipse.collections.impl.map.primitive;
+package com.m3.collections.eclipse.impl.map.primitive;
 
-import org.eclipse.collections.api.map.primitive.ImmutableObject<name>Map;
-import org.eclipse.collections.api.map.primitive.MutableObject<name>Map;
-import org.eclipse.collections.impl.factory.Lists;
-import org.eclipse.collections.impl.factory.primitive.Object<name>Maps;
-import org.eclipse.collections.impl.map.mutable.primitive.Object<name>HashMap;
+import com.m3.collections.eclipse.api.map.primitive.ImmutableObject<name>Map;
+import com.m3.collections.eclipse.api.map.primitive.MutableObject<name>Map;
+import com.m3.collections.eclipse.impl.factory.Lists;
+import com.m3.collections.eclipse.impl.factory.primitive.Object<name>Maps;
+import com.m3.collections.eclipse.impl.map.mutable.primitive.Object<name>HashMap;
 import org.junit.Assert;
 import org.junit.Test;
 

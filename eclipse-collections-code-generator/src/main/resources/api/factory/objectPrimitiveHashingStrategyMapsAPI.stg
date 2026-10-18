@@ -1,6 +1,6 @@
 import "copyrightAndOthers.stg"
 
-targetPath() ::= "org/eclipse/collections/api/factory/primitive"
+targetPath() ::= "com/m3/collections/eclipse/api/factory/primitive"
 
 fileName(primitive) ::= "Object<primitive.name>HashingStrategyMaps"
 
@@ -11,10 +11,10 @@ class(primitive) ::= <<
 body(type, name) ::= <<
 <copyrightAndOthers()>
 
-package org.eclipse.collections.api.factory.primitive;
+package com.m3.collections.eclipse.api.factory.primitive;
 
-import org.eclipse.collections.api.factory.ServiceLoaderUtils;
-import org.eclipse.collections.api.factory.map.primitive.MutableObject<name>HashingStrategyMapFactory;
+import com.m3.collections.eclipse.api.factory.ServiceLoaderUtils;
+import com.m3.collections.eclipse.api.factory.map.primitive.MutableObject<name>HashingStrategyMapFactory;
 
 /**
  * Object<name>HashingStrategyMaps is a static utility for creating {@link MutableObject<name>HashingStrategyMapFactory}.

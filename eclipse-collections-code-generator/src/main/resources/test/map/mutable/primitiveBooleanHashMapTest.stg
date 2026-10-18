@@ -7,7 +7,7 @@ skipBoolean() ::= "true"
 
 isTest() ::= "true"
 
-targetPath() ::= "org/eclipse/collections/impl/map/mutable/primitive"
+targetPath() ::= "com/m3/collections/eclipse/impl/map/mutable/primitive"
 
 fileName(primitive) ::= "<primitive.name>BooleanHashMapTest"
 
@@ -18,17 +18,17 @@ class(primitive) ::= <<
 body(type, name, wrapperName) ::= <<
 <copyright()>
 
-package org.eclipse.collections.impl.map.mutable.primitive;
+package com.m3.collections.eclipse.impl.map.mutable.primitive;
 
 import java.lang.reflect.Field;
 import java.util.BitSet;
 
-import org.eclipse.collections.api.block.function.primitive.BooleanFunction;
-import org.eclipse.collections.api.block.function.primitive.BooleanFunction0;
-import org.eclipse.collections.api.block.function.primitive.BooleanToBooleanFunction;
-import org.eclipse.collections.api.block.function.primitive.<name>ToBooleanFunction;
-import org.eclipse.collections.api.map.primitive.Mutable<name>BooleanMap;
-import org.eclipse.collections.impl.test.Verify;
+import com.m3.collections.eclipse.api.block.function.primitive.BooleanFunction;
+import com.m3.collections.eclipse.api.block.function.primitive.BooleanFunction0;
+import com.m3.collections.eclipse.api.block.function.primitive.BooleanToBooleanFunction;
+import com.m3.collections.eclipse.api.block.function.primitive.<name>ToBooleanFunction;
+import com.m3.collections.eclipse.api.map.primitive.Mutable<name>BooleanMap;
+import com.m3.collections.eclipse.impl.test.Verify;
 import org.junit.Assert;
 import org.junit.Test;
 
