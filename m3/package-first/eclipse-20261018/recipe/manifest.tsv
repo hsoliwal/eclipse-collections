@@ -1,0 +1,3 @@
+eclipse-collections/src/main/java/com/m3/collections/eclipse/impl/EmptyIterator.java	ABSENT	8aad364bdfcda9759875a30e5542053efd2cdc6f4b4e85b350934036a252ecfd	EmptyIterator.java.txt
+eclipse-collections/src/main/java/com/m3/collections/eclipse/impl/list/IntervalUtils.java	ABSENT	b23c4ea7132388d1728638995c9e012f1860a103ecc3a0d840e365d7f7c0cb71	IntervalUtils.java.txt
+eclipse-collections/src/test/java/com/m3/collections/eclipse/impl/M3EclipsePackageRelocationProof.java	ABSENT	23c9a956156b9f533785d6f4d5dc0de04709ecad371ef971db192356d0ea27a1	M3EclipsePackageRelocationProof.java.txt

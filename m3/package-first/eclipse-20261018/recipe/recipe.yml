@@ -1,0 +1,7 @@
+type: specs.openrewrite.org/v1beta/recipe
+name: com.synexia.m3.donors.EclipsePackageFirst20261018
+displayName: Admit complete Eclipse list-index and immutable iterator donors under M3 package
+description: Three exact additive Java21 postimages; complete original source method bodies preserved.
+recipeList:
+  - com.synexia.rewrite.M3HashPinnedJavaSnapshotRecipe:
+      crateName: m3-donors-eclipse-package-first-20261018
