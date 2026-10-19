@@ -18,7 +18,7 @@ import java.util.Comparator;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.SortedMap;
-import java.util.TreeMap;
+
 
 import com.m3.collections.eclipse.api.block.predicate.Predicate;
 import com.m3.collections.eclipse.api.block.procedure.Procedure2;
@@ -42,37 +42,37 @@ public class TreeSortedMap<K, V>
         implements Externalizable
 {
     private static final long serialVersionUID = 1L;
-    private TreeMap<K, V> treeMap;
+    private IndexedSortedMap<K, V> treeMap;
 
     public TreeSortedMap()
     {
-        this.treeMap = new TreeMap<>();
+        this.treeMap = new IndexedSortedMap<>();
     }
 
     public TreeSortedMap(Comparator<? super K> comparator)
     {
-        this.treeMap = new TreeMap<>(comparator);
+        this.treeMap = new IndexedSortedMap<>(comparator);
     }
 
     public TreeSortedMap(Map<? extends K, ? extends V> map)
     {
-        this.treeMap = new TreeMap<>(map);
+        this.treeMap = new IndexedSortedMap<>(map);
     }
 
     public TreeSortedMap(Comparator<? super K> comparator, Map<? extends K, ? extends V> map)
     {
-        this.treeMap = new TreeMap<>(comparator);
+        this.treeMap = new IndexedSortedMap<>(comparator);
         this.treeMap.putAll(map);
     }
 
     public TreeSortedMap(SortedMap<K, ? extends V> map)
     {
-        this.treeMap = new TreeMap<>(map);
+        this.treeMap = new IndexedSortedMap<>(map);
     }
 
     public TreeSortedMap(Pair<K, V>... pairs)
     {
-        this.treeMap = new TreeMap<>();
+        this.treeMap = new IndexedSortedMap<>();
         ArrayIterate.forEach(pairs, new MapCollectProcedure<Pair<K, V>, K, V>(
                 this.treeMap,
                 Functions.firstOfPair(),
@@ -483,7 +483,7 @@ public class TreeSortedMap<K, V>
     @Override
     public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException
     {
-        this.treeMap = new TreeMap<>((Comparator<? super K>) in.readObject());
+        this.treeMap = new IndexedSortedMap<>((Comparator<? super K>) in.readObject());
         int size = in.readInt();
         for (int i = 0; i < size; ++i)
         {
