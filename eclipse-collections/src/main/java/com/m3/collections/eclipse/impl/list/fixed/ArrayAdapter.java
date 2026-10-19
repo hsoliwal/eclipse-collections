@@ -10,6 +10,8 @@
 
 package com.m3.collections.eclipse.impl.list.fixed;
 
+// Array-operation contribution: Copyright (c) 2026 Hitesh Soliwal and Synexia contributors.
+
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -155,6 +157,16 @@ public final class ArrayAdapter<T>
         if (Iterate.isEmpty(elements))
         {
             return this;
+        }
+        if (elements instanceof ArrayAdapter<?> arrayAdapter
+                && this.items.length <= Integer.MAX_VALUE - arrayAdapter.items.length)
+        {
+            // Both final adapters expose plain array payloads: materialize the result once.
+            int oldSize = this.items.length;
+            T[] joined = (T[]) new Object[oldSize + arrayAdapter.items.length];
+            System.arraycopy(this.items, 0, joined, 0, oldSize);
+            System.arraycopy(arrayAdapter.items, 0, joined, oldSize, arrayAdapter.items.length);
+            return new ArrayAdapter<>(joined);
         }
         return ArrayAdapter.newArray(this.toList().withAll(elements));
     }

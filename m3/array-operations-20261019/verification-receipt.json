@@ -1,0 +1,11 @@
+{
+  "sourcePr": "https://github.com/hsoliwal/com.synexia/pull/12484",
+  "sourceCommit": "da475085ca326d91e20314c2fd7f895accc2b6cc",
+  "base": "489c8e63b973aaf52eb87f08f5908a152a4b8f22",
+  "behavior": "1,420,476 checks per version; matching fallback callback trace. Changed-owner Checkstyle passes with the existing SuperClone warning. The fixed-CPU 8+8 JMH case measured about 89.97 -> 16.82 ns/op and 256 -> 96 B/op.",
+  "hold": "Full native Checkstyle fails on 88 existing relocation-proof violations. Full product tests, device workloads and universal performance admission remain pending.",
+  "sdk": "PASS_15_TESTS_EXACT_POSTIMAGES_AND_FIXED_POINT",
+  "api": "FULL_FIELD_METHOD_DESCRIPTORS_IDENTICAL",
+  "nativeGate": "FAIL_BASELINE_88_CHECKSTYLE_VIOLATIONS",
+  "allForksComplete": false
+}
