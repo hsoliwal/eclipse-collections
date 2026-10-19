@@ -10,6 +10,8 @@
 
 package com.m3.collections.eclipse.impl.list.immutable.primitive;
 
+// Modified 2026 by Hitesh Soliwal and Contributors: materialize packed chunk ranges directly.
+
 import java.io.Externalizable;
 import java.io.IOException;
 import java.io.ObjectInput;
@@ -539,26 +541,26 @@ final class ImmutableBooleanArrayList
         {
             throw new IllegalArgumentException("Size for groups must be positive but was: " + size);
         }
-        MutableList<BooleanIterable> result = Lists.mutable.empty();
-        if (this.notEmpty())
+        if (this.size <= size)
         {
-            if (this.size() <= size)
+            return Lists.immutable.with(this);
+        }
+        // Materialize each immutable range once, without a temporary mutable primitive list.
+        int chunkCount = 1 + (this.size - 1) / size;
+        MutableList<BooleanIterable> result = Lists.mutable.withInitialCapacity(chunkCount);
+        for (int offset = 0; offset < this.size; )
+        {
+            int length = Math.min(size, this.size - offset);
+            if (length == 1)
             {
-                result.add(this);
+                result.add(BooleanLists.immutable.with(this.items.get(offset)));
             }
             else
             {
-                BooleanIterator iterator = this.booleanIterator();
-                while (iterator.hasNext())
-                {
-                    MutableBooleanList batch = BooleanLists.mutable.empty();
-                    for (int i = 0; i < size && iterator.hasNext(); i++)
-                    {
-                        batch.add(iterator.next());
-                    }
-                    result.add(batch.toImmutable());
-                }
+                BitSet chunk = this.items.get(offset, offset + length);
+                result.add(new ImmutableBooleanArrayList(chunk, length));
             }
+            offset += length;
         }
         return result.toImmutable();
     }

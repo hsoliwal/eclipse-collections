@@ -1,0 +1,20 @@
+{
+  "source_commit": "6edef08c6ab5a3b29dad74a13d3f20df687e0ef5",
+  "canonical_packet": "https://github.com/hsoliwal/com.synexia/tree/6edef08c6ab5a3b29dad74a13d3f20df687e0ef5/synexia-openrewrite-recipes/crates/m3-all-fork-array-pass-20261019",
+  "base": "e460a03da7ac45602f795e4bd9783b2a03de09c0",
+  "source_changes": 2,
+  "public_or_private_field_and_method_descriptors_changed": false,
+  "evidence_archive_sha256": "ff35d20d325fda7d9dbec00dc51763d391ec9b122d26576975eaa17c1423f3de",
+  "universal_space_and_time_admission": false,
+  "status": "DRAFT_CANDIDATE_NOT_COMPLETE_FLEET_OPTIMIZATION",
+  "runtime_recipe_dependency": false,
+  "runtime_types": 8,
+  "native_baseline_package_exit": 0,
+  "native_candidate_package_exit": 0,
+  "contract_checks_per_version": 3283582,
+  "contract_transcript": "-6431703903772675072",
+  "native_generated_numeric_types": 7,
+  "changed_owner_checkstyle": "PASS with existing Boolean size-hiding warning",
+  "full_unit_test_reactor": "NOT_RUN",
+  "benchmark_base": "0d48359990e199a55fa0b1fd2d5c443108960a98"
+}

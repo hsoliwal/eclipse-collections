@@ -16,6 +16,8 @@ body(type, name) ::= <<
 
 package com.m3.collections.eclipse.impl.list.immutable.primitive;
 
+// Modified 2026 by Hitesh Soliwal and Contributors: materialize immutable chunk ranges directly.
+
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.Arrays;
@@ -595,26 +597,26 @@ final class Immutable<name>ArrayList
         {
             throw new IllegalArgumentException("Size for groups must be positive but was: " + size);
         }
-        MutableList\<<name>Iterable> result = Lists.mutable.empty();
-        if (this.notEmpty())
+        if (this.items.length \<= size)
         {
-            if (this.size() \<= size)
+            return Lists.immutable.with(this);
+        }
+        // Materialize each immutable range once, without a temporary mutable primitive list.
+        int chunkCount = 1 + (this.items.length - 1) / size;
+        MutableList\<<name>Iterable> result = Lists.mutable.withInitialCapacity(chunkCount);
+        for (int offset = 0; offset \< this.items.length; )
+        {
+            int length = Math.min(size, this.items.length - offset);
+            if (length == 1)
             {
-                result.add(this);
+                result.add(<name>Lists.immutable.with(this.items[offset]));
             }
             else
             {
-                <name>Iterator iterator = this.<type>Iterator();
-                while (iterator.hasNext())
-                {
-                    Mutable<name>List batch = <name>Lists.mutable.empty();
-                    for (int i = 0; i \< size && iterator.hasNext(); i++)
-                    {
-                        batch.add(iterator.next());
-                    }
-                    result.add(batch.toImmutable());
-                }
+                <type>[] chunk = Arrays.copyOfRange(this.items, offset, offset + length);
+                result.add(new Immutable<name>ArrayList(chunk));
             }
+            offset += length;
         }
         return result.toImmutable();
     }
