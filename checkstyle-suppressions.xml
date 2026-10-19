@@ -62,6 +62,12 @@
 
     <suppress checks="RegexpHeader" files="MemoryTestBench.java" />
 
+    <!-- This separately authored M3 test fixture retains its Apache-2.0 SPDX header.
+         The immutable Eclipse/EDL donor source keeps the normal RegexpHeader policy.
+         The fixture's console output is its explicit standalone proof receipt. -->
+    <suppress checks="RegexpHeader" files="M3EclipsePackageRelocationProof.java" />
+    <suppress checks="RegexpSinglelineJava" files="M3EclipsePackageRelocationProof.java" />
+
     <!--suppress lambda expression-->
     <suppress checks="[a-zA-Z0-0]*" files="SerialParallelLazyPerformanceTest.java" />
 
