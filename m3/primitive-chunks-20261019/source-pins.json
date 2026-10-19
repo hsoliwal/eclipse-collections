@@ -1,0 +1,36 @@
+{
+  "canonical_repository": "hsoliwal/com.synexia",
+  "canonical_commit": "6edef08c6ab5a3b29dad74a13d3f20df687e0ef5",
+  "canonical_crate": "synexia-openrewrite-recipes/crates/m3-all-fork-array-pass-20261019",
+  "receiving_base": "e460a03da7ac45602f795e4bd9783b2a03de09c0",
+  "inputs": [
+    {
+      "repository": "hsoliwal/eclipse-collections",
+      "commit": "0d48359990e199a55fa0b1fd2d5c443108960a98",
+      "tree": "e7647ac590f1732dfc0659adc8408c6303deb778",
+      "path": "eclipse-collections-code-generator/src/main/resources/impl/list/immutable/immutablePrimitiveArrayList.stg",
+      "before_sha256": "c69b333b1d7db80f528b72745d6599411cac4c067a06b8a48445387d4a3bfe4a",
+      "before_blob": "f12b4819ac31e508e3b6ff9d5dffbff9e7cca707",
+      "after_sha256": "c7cb3f9755b7d8bf4fedeb4e7cc500b5563c96754071c81fc6991bbd91301b8e",
+      "after_blob": "92823bab2610001a1364d4004db443b6d72557fa",
+      "lane": "text",
+      "license": "EPL-1.0 OR BSD-3-Clause",
+      "template": "0001-immutablePrimitiveArrayList.stg.txt",
+      "crate": "all-fork-arrays-eclipse-collections-20261019"
+    },
+    {
+      "repository": "hsoliwal/eclipse-collections",
+      "commit": "0d48359990e199a55fa0b1fd2d5c443108960a98",
+      "tree": "e7647ac590f1732dfc0659adc8408c6303deb778",
+      "path": "eclipse-collections/src/main/java/com/m3/collections/eclipse/impl/list/immutable/primitive/ImmutableBooleanArrayList.java",
+      "before_sha256": "8512d17a95f3414e530da6400b12f90a771d5aa65ff56b9ff69dc852ac9b353f",
+      "before_blob": "30cb52ce64f233d5a05f73dce238cf35ff4169ce",
+      "after_sha256": "4bf57cb8a06cefa8d05b9c51f7d76521d3f953381206381d75ef08ab695f5408",
+      "after_blob": "1fef0e37f821ebd300a6547f37b9a3e6b84214f6",
+      "lane": "java",
+      "license": "EPL-1.0 OR BSD-3-Clause",
+      "template": "0001-ImmutableBooleanArrayList.java.txt",
+      "crate": "all-fork-arrays-eclipse-collections-20261019"
+    }
+  ]
+}
