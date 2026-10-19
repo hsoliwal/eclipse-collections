@@ -1,0 +1,195 @@
+{
+  "schema": "m3-algorithm-catalogue/v1",
+  "synexiaM3Invariant": "Maintain reusable validated recipes; apply contract-preserving per-file transformations; compare catalogue candidates and donor evidence before each refinement.",
+  "categories": [
+    {
+      "problem": "dynamic array slot lifecycle",
+      "selection": "parallel geometric arrays, free chain, live/color masks",
+      "complexity": "amortized O(1) allocation, O(n) growth",
+      "donor": "M3LinkedList",
+      "validation": "Arena5328; no throughput claim"
+    },
+    {
+      "problem": "ordered map balance",
+      "selection": "indexed red-black links and rotations",
+      "complexity": "O(log n) ordinary lookup/mutation; O(n) sorted build",
+      "donor": "Apache TreeBidiMap rotation/delete slice",
+      "validation": "5040 permutations,174670 exact structural/invariant observations"
+    },
+    {
+      "problem": "retained iterator mutation",
+      "selection": "stable tree owner, arena identity, original epoch/count/root publication",
+      "validation": "Final independent public55 exact and prior14/24/5/58 exact; three D prefixes with bounded noncompletion retained separately."
+    },
+    {
+      "problem": "API entry identity",
+      "selection": "weakly cached projections detach before slot reuse; expose directly",
+      "validation": "Four normal Jupiter pass, including two prior-candidate identity failures; all55 public traces/identity/state records exact."
+    },
+    {
+      "problem": "bounded collection emptiness",
+      "selection": "resolve lowest indexed slot and original upper-bound callback schedule",
+      "validation": "All six original count/view cases exact, including full comparator traces; part of final55 exact."
+    },
+    {
+      "problem": "entry and values view callback schedule",
+      "selection": "root/bounded getter and equality direction plus one positioned indexed match-and-erase atom",
+      "rejected": "tailMap iterator rediscovery adds comparator callbacks; stored/query reversal changes valid symmetric equality logs",
+      "correctness": "V5 exposes44 raw/76 public callback differences and two normal-Jupiter failures. FinalV6 raw16/public16 converge exactly, all six normal tests pass. Root/range getter order, equality receiver and positioned erase validated without normalization.",
+      "complexity": "O(log n) entry search/removal, O(n) values removal; no throughput claim",
+      "qualification": {
+        "path": "ec-indexed-rb-current-owner-final-v6-qualification-20261019/QUALIFICATION_RESULT_V6.json",
+        "bytes": 24502,
+        "sha256": "781378dfba601500657471f06298551955faf2adf40e2f6a3fb90509bb5cddb0"
+      },
+      "normalTests": {
+        "path": "ec-indexed-rb-view-protocol-final-junit-v6-20261019/FINAL_RESULT.json",
+        "bytes": 5744,
+        "sha256": "82fbe4b56b9f83e5e0717d4bb7f24df3a263ac42d239caa8ebf005e3b4210e74"
+      },
+      "finalIndependentReplay": {
+        "path": "ec-final-v6-sourceblind-replay-20261019/continuation-v2/FINAL_AGGREGATE_RESULT.json.gz",
+        "bytes": 2030,
+        "sha256": "7f15092f73def3dc8d98a447c803782255f3a8eefcee1053d4d201b944996705"
+      }
+    },
+    {
+      "problem": "sorted bulk-load comparator equality callback receiver",
+      "selection": "Retain the existing target-receiver predicate in both indexed map layers",
+      "evaluation": "Actual JDK21/current-public-owner originals and all15 V6 raw/helper/public cases are exact with valid symmetric equality; source-receiver review proposal rejected",
+      "complexity": "O(n) compatible sorted build; ordinary insertion fallback unchanged; no new performance claim",
+      "evidence": {
+        "path": "ec-comparator-putall-original-first-20261019/V6_BASELINE_RESULT.json.gz",
+        "bytes": 1821,
+        "sha256": "d833f90efc25a37fd551622c5f5109c9f404cb198bcdfdf214484391a9e95779"
+      },
+      "normalTests": {
+        "path": "ec-comparator-putall-original-first-20261019/FINAL_NINE_V6_RESULT.json.gz",
+        "bytes": 1097,
+        "sha256": "500004c31b08c381635c9b5b1b8b0ca3e0d22ebd3d27b2ea96b7d9f06781648e"
+      }
+    }
+  ],
+  "alternatives": [
+    {
+      "candidate": "whole Apache TreeBidiMap",
+      "decision": "NO_FIT",
+      "reason": "stored nodes, bijection uniqueness, positional swap differ"
+    },
+    {
+      "candidate": "whole fastutil RB map",
+      "decision": "NO_FIT",
+      "reason": "stored threaded entries and key-research removal differ"
+    },
+    {
+      "candidate": "LeetCode/HackerRank hints",
+      "decision": "RESEARCH_ONLY",
+      "reason": "problem statements are catalogue prompts, not licensed implementation or measured peak proof; existing PR1356 records14 primary hints"
+    }
+  ],
+  "currentSourcePins": {
+    "eclipse-collections/src/main/java/com/m3/collections/eclipse/impl/map/sorted/mutable/IndexedTreeArena.java": "e12c41963cf7dad3a3bda058397de6863e3393443cbbfb74ee8fe26918d97ac3",
+    "eclipse-collections/src/main/java/com/m3/collections/eclipse/impl/map/sorted/mutable/IndexedRedBlackTree.java": "4a2a723c135bc46590069491a8675d8d470c44d8c83f9087048077e90dcc755a",
+    "eclipse-collections/src/main/java/com/m3/collections/eclipse/impl/map/sorted/mutable/IndexedRedBlackMap.java": "07c7f5a64d5c40a729d786412ab46432a6b30ac9791ec71375d243211a37eb16",
+    "eclipse-collections/src/main/java/com/m3/collections/eclipse/impl/map/sorted/mutable/IndexedSortedMap.java": "632204c5cc96775dc5809c30a33e6c9f569b3cf90cc0d5260305c18b868405c2",
+    "eclipse-collections/src/main/java/com/m3/collections/eclipse/impl/map/sorted/mutable/TreeSortedMap.java": "60a96dcbe95c90295e989daf5053401b7f4dcba940e383c2b13f77e17742bd4c"
+  },
+  "evidence": [
+    {
+      "path": "ec-indexed-rb-current-owner-final-v6-qualification-20261019/QUALIFICATION_RESULT_V6.json",
+      "bytes": 24502,
+      "sha256": "781378dfba601500657471f06298551955faf2adf40e2f6a3fb90509bb5cddb0"
+    },
+    {
+      "path": "ec-indexed-rb-view-protocol-final-junit-v6-20261019/FINAL_RESULT.json",
+      "bytes": 5744,
+      "sha256": "82fbe4b56b9f83e5e0717d4bb7f24df3a263ac42d239caa8ebf005e3b4210e74"
+    },
+    {
+      "path": "ec-final-v6-sourceblind-replay-20261019/continuation-v2/FINAL_AGGREGATE_RESULT.json.gz",
+      "bytes": 2030,
+      "sha256": "7f15092f73def3dc8d98a447c803782255f3a8eefcee1053d4d201b944996705"
+    },
+    {
+      "path": "ec-indexed-rb-current-owner-final-v6-qualification-20261019/SOURCE_REFINEMENT_RESULT_V6.json",
+      "bytes": 5997,
+      "sha256": "6d8f72cb0529c5a8ec79abaae4d51a851b0882c6fa01f69cde9d291e6df2c1bd"
+    },
+    {
+      "path": "m3/indexed-rb/PURE_RECIPE_PROOF_R3.json",
+      "bytes": 281,
+      "sha256": "27927b38d515c488612a4d742b4cc29325c6f6c1ff032be6b319c81f98385318"
+    },
+    {
+      "path": "ec-comparator-putall-original-first-20261019/V6_BASELINE_RESULT.json.gz",
+      "bytes": 1821,
+      "sha256": "d833f90efc25a37fd551622c5f5109c9f404cb198bcdfdf214484391a9e95779"
+    },
+    {
+      "path": "ec-comparator-putall-original-first-20261019/FINAL_NINE_V6_RESULT.json.gz",
+      "bytes": 1097,
+      "sha256": "500004c31b08c381635c9b5b1b8b0ca3e0d22ebd3d27b2ea96b7d9f06781648e"
+    }
+  ],
+  "pending": {
+    "sourceAwareReview": "Full V6 source and R3 test/resource/metadata reviews completed. Comparator finding refuted by sealed originals. The sole stale proof-link finding is corrected by shipping and pinning the already executed exact R3 proof; no production, test or recipe code changed. Raw reports remain recorded separately in the PR and receiving manifest.",
+    "fullEC14": "Clean/incremental reactor, generator/dependency closure and checkstyle NOT_RUN; finite owner proof uses received11.1 hierarchy",
+    "runtime17": "NOT_RUN; release17 compilation executed on JDK21",
+    "moduleOSGi": "JPMS/bnd/OSGi/single-provider installed artifact qualification OPEN",
+    "GCResource": "CPU, retained heap and native/process-memory comparison OPEN; no peak or zero-GC claim",
+    "JNI": "No native symbols added or JNI execution in this change",
+    "canonicalRecipe": "Existing Synexia Maven/OpenRewrite control-plane crate/registration/execution PENDING; pure CPU guards are explicit source custody proof, not that execution",
+    "fiveLibraries": "Full JDK/Guava/Eclipse/Apache/Spring coverage UNFINISHED"
+  },
+  "coverageState": "QUALIFIED_FOR_LISTED_FINITE_SOURCE_GATES_ONLY",
+  "finalV6Validation": {
+    "prior101Exact": true,
+    "public55Exact": true,
+    "entryPairs32Exact": true,
+    "aggregateCountsNotUniqueTotal": true,
+    "threeBoundedControlsNotOrdinaryPass": true,
+    "originalsRerun": 0,
+    "normalizationApplied": false,
+    "receipt": {
+      "path": "ec-final-v6-sourceblind-replay-20261019/continuation-v2/FINAL_AGGREGATE_RESULT.json.gz",
+      "bytes": 2030,
+      "sha256": "7f15092f73def3dc8d98a447c803782255f3a8eefcee1053d4d201b944996705"
+    }
+  },
+  "historicalV5Evidence": [
+    {
+      "path": "ec-indexed-rb-current-owner-final-v5-qualification-20261019/QUALIFICATION_RESULT_V5.json",
+      "bytes": 24505,
+      "sha256": "55b910ea6c78228428c788a0a235e0a212de533cd01aca47a1b2b35cec9ca49d"
+    },
+    {
+      "path": "ec-owner-indexed-rb-fresh-behavior-20261019-v5/RESULT.json",
+      "bytes": 7589,
+      "sha256": "a3c6fd1cd8e4635a35a1a5b9ea7cbbe08354fd317b7ad022384e78ad407bc5af"
+    },
+    {
+      "path": "ec-indexed-rb-prior-contracts-fresh-20261019/v6-run/RESULT.json",
+      "bytes": 12642,
+      "sha256": "d81a7d6e8aab8d4279d33f73bbe47cf328077172a96b505060a6dcb0c2e9ad7f"
+    },
+    {
+      "path": "ec-indexed-rb-helper-map-recipe-v5-20261019/RECIPE_PROOF_V5.json",
+      "bytes": 11991,
+      "sha256": "359f6facbded7227153c603ff268f4050cdfc39e6d3cf0253da8f05dddd4a360"
+    }
+  ],
+  "historicalV6PureRecipeProof": {
+    "path": "ec-indexed-rb-source-packet-v6-20261019/PURE_RECIPE_PROOF_V6.json",
+    "bytes": 405,
+    "sha256": "dd1d40f7191aee6b30c8cf8b22a2319bb29678ea7e31fd7f94a270f80c8f55eb"
+  },
+  "currentRecipeProof": {
+    "recipePath": "m3/indexed-rb/EC_INDEXED_RB_RECIPE_V1.json",
+    "recipeSha256": "3be56902188c143e403b753dae5ab798dbbebfeed1578b8b4897969f666c7929",
+    "receipt": {
+      "path": "m3/indexed-rb/PURE_RECIPE_PROOF_R3.json",
+      "bytes": 281,
+      "sha256": "27927b38d515c488612a4d742b4cc29325c6f6c1ff032be6b319c81f98385318"
+    }
+  }
+}
