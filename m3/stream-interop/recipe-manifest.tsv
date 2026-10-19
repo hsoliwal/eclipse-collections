@@ -1,0 +1,3 @@
+# path	before-sha256	after-sha256	template
+m3/stream-interop/src/main/java/com/synexia/m3/eclipse/M3EclipseStreams.java	ABSENT	db922c726b26e642f3b4655dbffa95e70d5cf1d11e2501d05063785480212291	M3EclipseStreams.java.txt
+m3/stream-interop/src/test/java/com/synexia/m3/eclipse/M3EclipseStreamsTest.java	ABSENT	a00e51e46830fa7260afc04b338b1c16cbb519ee7b813162c591318b1676342a	M3EclipseStreamsTest.java.txt
