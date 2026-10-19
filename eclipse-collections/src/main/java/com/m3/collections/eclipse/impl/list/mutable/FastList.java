@@ -728,11 +728,24 @@ public class FastList<T>
         return changed;
     }
 
+    /**
+     * Modified 2026 by Hitesh Soliwal and Contributors to the Synexia Project.
+     * Clears an admitted backing-array span in bulk. The fallback retains the
+     * original partial-store boundary for invalid protected subclass state.
+     */
     private void wipeAndResetTheEnd(int newCurrentFilledIndex)
     {
-        for (int i = newCurrentFilledIndex; i < this.size; i++)
+        if (newCurrentFilledIndex >= 0 && newCurrentFilledIndex < this.size
+                && this.items != null && this.size <= this.items.length)
         {
-            this.items[i] = null;
+            Arrays.fill(this.items, newCurrentFilledIndex, this.size, null);
+        }
+        else
+        {
+            for (int i = newCurrentFilledIndex; i < this.size; i++)
+            {
+                this.items[i] = null;
+            }
         }
         this.size = newCurrentFilledIndex;
     }
