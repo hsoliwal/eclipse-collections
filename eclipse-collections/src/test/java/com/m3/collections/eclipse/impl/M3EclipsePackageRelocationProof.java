@@ -113,7 +113,7 @@ public final class M3EclipsePackageRelocationProof
         emptyIterator();
         long[] extrema = {
                 Long.MIN_VALUE, Long.MIN_VALUE + 1, -100, -1, 0,
-                1, 100, Long.MAX_VALUE - 1, Long.MAX_VALUE
+                1, 100, Long.MAX_VALUE - 1, Long.MAX_VALUE,
         };
         for (long from : extrema)
         {
