@@ -1,0 +1,9 @@
+schema	M3_ECLIPSE_BUILD_SOURCE_GATE_V1
+repository	hsoliwal/eclipse-collections
+source_ref	master
+root_path	pom.xml
+root_sha256	f8aaffe1381d0209a25dd5d14d9372474f9e475e32a0f5d138e6da9f32fc50b4
+original_build	ECLIPSE_COLLECTIONS_MAVEN
+canonical_recipe	com.synexia.eclipse.EstateAstEclipseCollections20261021
+canonical_commit	b77c892d7519c6aa037c2b5cebd8658867ea712b
+status	HOLD_NATIVE_AND_SEMANTIC_GATES
