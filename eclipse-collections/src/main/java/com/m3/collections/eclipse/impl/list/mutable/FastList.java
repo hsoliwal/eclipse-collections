@@ -7,6 +7,7 @@
  * and the Eclipse Distribution License is available at
  * http://www.eclipse.org/org/documents/edl-v10.php.
  */
+// Modified 2026 by Hitesh Soliwal and Synexia contributors: wipeAndResetTheEnd clears the backing-array span in bulk.
 
 package com.m3.collections.eclipse.impl.list.mutable;
 

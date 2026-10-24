@@ -7,6 +7,7 @@
  * and the Eclipse Distribution License is available at
  * http://www.eclipse.org/org/documents/edl-v10.php.
  */
+// Modified 2026 by Hitesh Soliwal and Synexia contributors: withAll joins two ArrayAdapter payloads into one array.
 
 package com.m3.collections.eclipse.impl.list.fixed;
 

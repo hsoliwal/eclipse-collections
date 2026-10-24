@@ -1,3 +1,4 @@
+// Modified 2026 by Hitesh Soliwal and Synexia contributors: chunk(int) materializes immutable array ranges directly.
 import "copyrightAndOthers.stg"
 import "primitiveEquals.stg"
 import "primitiveHashCode.stg"
