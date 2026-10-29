@@ -1,6 +1,0 @@
-capability	donor	classification	proof	gap
-exact-source-overlay	M3 apply_recipe.py 787f7ee4f66cb17134497a2e88465b0ef3867c644df2ef71a81ee360d039a0d6	ADAPT	hash-guard/fixedpoint/inverse refusal interface	canonical five-file absent-or-exact overlay, pure mapping API
-array arena	M3LinkedList a3e88976ee8664d1ef5d0cade96aec1206b2133d	ADAPT	5328 arena checks	parallel RB links and bit state, weak API projections
-RB rotations/deletion	commons-collections 03f5ae07596f2fd648419cd69e7c4f3dc01d7420 TreeBidiMap	ADAPT	5040 permutations and174670 structural comparisons	indexed links, successor payload copy and stable owner lifecycle
-view callback schedule	existing indexed owner plus black-box JDK/current-EC originals	ADAPT	originals-first16 raw/16 public and two failing baseline Jupiter tests	root/bounded getter order, stored equality and one positioned erase; no OpenJDK code imported
-comparator callback validation	existing indexed sorted-build predicate plus actual JDK21/current-owner black-box originals	ADAPT	15 exact observations; three normal Jupiter tests and sealed resource	retain target equality receiver; no OpenJDK source imported
