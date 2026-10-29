@@ -1,0 +1,95 @@
+{
+  "schema": "SYNEXIA_QUALIFIED_PRODUCT_RESULTS_V1",
+  "repository": "hsoliwal/eclipse-collections",
+  "baseline_commit": "bceaaa8c1be1c27bed6b4a7517ff788075283397",
+  "source_authority": {
+    "repository": "hsoliwal/com.synexia",
+    "commit": "60f0f54df25ba0950171adff4d2d0c9ef61998b3",
+    "review": "https://github.com/hsoliwal/com.synexia/pull/13950",
+    "evidence_path": "synexia-openrewrite-recipes/recipe-crates/m3-ast-build-reverse-20261017/proofs/eclipse-release-20261029"
+  },
+  "recipe_executions": [
+    {
+      "dataset": "collections-release-20261029",
+      "recipe": "com.synexia.m3jdk.AstBuildReverse20261017",
+      "sdk_tests": 5,
+      "input_sealing_tests": 12,
+      "receiver_cases": 15,
+      "sdk_inputs_sha256": "c96a073a2001caf367350905092bf7d6e4cf1270cb23ec5046abcc2c5b73fc02",
+      "sdk_results_sha256": "008853c3dc54f4bba43e10b924535cca0930d3fb26d1eb707369e8ccea7a8a8f",
+      "sdk_test_report_sha256": "dde80875d6aed250e1e755912d422ed7d96ff82ff8504d87d081615cfe40f20a"
+    },
+    {
+      "dataset": "collections-ser-release-20261029",
+      "recipe": "com.synexia.m3jdk.AstBuildReverse20261017",
+      "sdk_tests": 5,
+      "input_sealing_tests": 12,
+      "receiver_cases": 15,
+      "sdk_inputs_sha256": "5041bcf9169cdd12cd9d184591232954cda3410b83f54d8f491a3ce2be1702d2",
+      "sdk_results_sha256": "b67aa74c74cef14d9cc4bf4f3ba7d62d4c80535524c9eaccefdecc44d389e2e0",
+      "sdk_test_report_sha256": "49201b3d75fa99173e530c152b83d410a0b6adf0df48fa06d355eba7980d780b"
+    },
+    {
+      "dataset": "collections-ser-compat-20261029",
+      "recipe": "com.synexia.m3jdk.AstBuildReverse20261017",
+      "sdk_tests": 5,
+      "input_sealing_tests": 12,
+      "receiver_cases": 15,
+      "sdk_inputs_sha256": "85daddf453252e5e95d6680d51999dd613e7b1fb8018f71e486af5a7be399d32",
+      "sdk_results_sha256": "eb97c2750b38b41b22e7593a9e3554b1d0929f216cab95cd5fa2f405bac7ff57",
+      "sdk_test_report_sha256": "be44b96e3c13f0beaed8af597268cdc6c8e0931f3c5b181d89ecefb66c6ffe39"
+    }
+  ],
+  "files": [
+    {
+      "path": "eclipse-collections-testutils/src/main/java/com/m3/collections/eclipse/impl/test/Verify.java",
+      "source_sha256": "2b2cb8e4d200648bd511e1c966971f4e3f794b4e1a23eab4e9fb1f4e08008c18",
+      "postimage_sha256": "871e1db8ea53621614d7d919643487a576376ba1a118a8984b1ad5fd9d6373ac",
+      "mode": "100644",
+      "datasets": [
+        "collections-ser-release-20261029",
+        "collections-ser-compat-20261029"
+      ]
+    },
+    {
+      "path": "eclipse-collections-testutils/src/test/java/com/m3/collections/eclipse/impl/test/VerifyTest.java",
+      "source_sha256": "60cb08ea9c4869d7bf84e0ca1a6fcf582617243b98528997d3e9e72547b8707c",
+      "postimage_sha256": "69678f6c6ffd20d91d1e5a9a906f00a1ecb9e03c497a2ba2ce456b59a037f25c",
+      "mode": "100644",
+      "datasets": [
+        "collections-ser-release-20261029",
+        "collections-ser-compat-20261029"
+      ]
+    },
+    {
+      "path": "unit-tests/src/test/java/com/m3/collections/eclipse/impl/list/mutable/FastListTest.java",
+      "source_sha256": "8b68106a6aeedbbfd39aa2583d72cd625cfd95fcc6a75acdb175f40a201215c9",
+      "postimage_sha256": "3f7846c273096e8046d861ec6a8189d56b4dd0e5abbbf8aeb6b20531dd0e5d71",
+      "mode": "100644",
+      "datasets": [
+        "collections-release-20261029"
+      ]
+    }
+  ],
+  "recorded_product_gates": {
+    "fullOriginalVerify": "PASS at metadata-adapter epoch, prior to the separately qualified compatibility supplement",
+    "modules": 14,
+    "reportedTests": 183352,
+    "passed": 183232,
+    "skipped": 120,
+    "failed": 0,
+    "errors": 0,
+    "originalSkipReasons": "collections-serialization/ORIGINAL_SKIPS.json",
+    "compatibilitySupplement": {
+      "ownerTests": 89,
+      "originalSerializationTests": 1567,
+      "failed": 0,
+      "skipped": 0,
+      "receivedClassfilesIdentical": true
+    },
+    "osgiPackaging": "Default verify p2 output is empty; original explicit Bnd profile is a separate pending packaging gate"
+  },
+  "release_status": "DRAFT_REQUIRES_REMAINING_PRODUCT_AND_PLATFORM_GATES",
+  "scope": "This receipt covers exactly the listed qualified source/test/build outputs; source pins and recipe execution are distinct from full product or platform qualification.",
+  "receipt_dataset": "coll-current-receipt-20261029"
+}

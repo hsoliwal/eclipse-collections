@@ -1377,4 +1377,133 @@ public class VerifyTest
             return 0;
         }
     }
+
+    @Test
+    public void assertHistoricalSerializedMetadata()
+    {
+        String expected = "rO0ABXNyADJvcmcuZWNsaXBzZS5jb2xsZWN0aW9ucy5pbXBsLmxpc3QubXV0YWJsZS5GYXN0TGlz\n"
+                        + "dAAAAAAAAAABDAAAeHB3BAAAAAB4";
+        Verify.assertSerializedForm(expected, FastList.newList());
+        Verify.assertSerializedForm(1L, expected, FastList.newList());
+        Verify.assertDeserializedForm(expected, FastList.newList());
+    }
+
+    @Test
+    public void historicalPackageTextInPayloadStaysExact()
+    {
+        Verify.assertSerializedForm(
+                1L,
+                "rO0ABXNyADJvcmcuZWNsaXBzZS5jb2xsZWN0aW9ucy5pbXBsLmxpc3QubXV0YWJsZS5GYXN0TGlz\n"
+                        + "dAAAAAAAAAABDAAAeHB3BAAAAAF0AD5vcmcuZWNsaXBzZS5jb2xsZWN0aW9ucy5wYXlsb2FkLkxv\n"
+                        + "cmcvZWNsaXBzZS9jb2xsZWN0aW9ucy9LZWVwO3g=",
+                FastList.newListWith("org.eclipse.collections.payload.Lorg/eclipse/collections/Keep;"));
+    }
+
+    @Test
+    public void historicalOrdinaryUidAndPayloadStillFailOnMutation()
+    {
+        String changedUid = "rO0ABXNyADJvcmcuZWNsaXBzZS5jb2xsZWN0aW9ucy5pbXBsLmxpc3QubXV0YWJsZS5GYXN0TGlz\n"
+                        + "dAAAAAAAAAAADAAAeHB3BAAAAAB4";
+        String changedPayload = "rO0ABXNyADJvcmcuZWNsaXBzZS5jb2xsZWN0aW9ucy5pbXBsLmxpc3QubXV0YWJsZS5GYXN0TGlz\n"
+                        + "dAAAAAAAAAABDAAAeHB3BAAAAAF4";
+        String changedHandle = "rO0ABXNyADJvcmcuZWNsaXBzZS5jb2xsZWN0aW9ucy5pbXBsLmxpc3QubXV0YWJsZS5GYXN0TGlz\n"
+                        + "dAAAAAAAAAABDAAAeHB3BAAAAAFxAH4AAHg=";
+        org.junit.Assert.assertThrows(org.junit.ComparisonFailure.class,
+                () -> Verify.assertSerializedForm(1L, changedUid, FastList.newList()));
+        org.junit.Assert.assertThrows(org.junit.ComparisonFailure.class,
+                () -> Verify.assertSerializedForm(1L, changedPayload, FastList.newList()));
+        org.junit.Assert.assertThrows(org.junit.ComparisonFailure.class,
+                () -> Verify.assertSerializedForm(1L, changedHandle, FastList.newListWith((Object) null)));
+    }
+
+    @Test
+    public void historicalMetadataPayloadAliasesAreRejected()
+    {
+        String metadataFirst = "rO0ABXNyADJvcmcuZWNsaXBzZS5jb2xsZWN0aW9ucy5pbXBsLmxpc3QubXV0YWJsZS5GYXN0TGlz\n"
+                        + "dAAAAAAAAAABAgABTAABeHQANUxvcmcvZWNsaXBzZS9jb2xsZWN0aW9ucy9hcGkvYmxvY2svZnVu\n"
+                        + "Y3Rpb24vRnVuY3Rpb247eHBxAH4AAQ==";
+        String payloadFirst = "rO0ABXNyADJvcmcuZWNsaXBzZS5jb2xsZWN0aW9ucy5pbXBsLmxpc3QubXV0YWJsZS5GYXN0TGlz\n"
+                        + "dAAAAAAAAAABAgACTAABYXQAEkxqYXZhL2xhbmcvT2JqZWN0O0wAAWJxAH4AAXhwdAA1TG9yZy9l\n"
+                        + "Y2xpcHNlL2NvbGxlY3Rpb25zL2FwaS9ibG9jay9mdW5jdGlvbi9GdW5jdGlvbjtzcgAQamF2YS5s\n"
+                        + "YW5nLk9iamVjdAAAAAAAAAABAgABTAABeHEAfgADeHBw";
+        for (String expected : new String[]{metadataFirst, payloadFirst})
+        {
+            AssertionError failure = org.junit.Assert.assertThrows(AssertionError.class,
+                    () -> Verify.assertSerializedForm(expected, FastList.newList()));
+            assertEquals(IllegalArgumentException.class, failure.getCause().getClass());
+            org.junit.Assert.assertTrue(failure.getCause().getMessage().contains("aliases ordinary payload"));
+        }
+    }
+
+    @Test
+    public void historicalArrayUidRequiresAnExactReviewedStream()
+    {
+        String expected = "rO0ABXVyADZbTG9yZy5lY2xpcHNlLmNvbGxlY3Rpb25zLmFwaS5ibG9jay5mdW5jdGlvbi5GdW5j\n"
+                        + "dGlvbjvtku5jQqEUiQIAAHhwAAAAAA==";
+        AssertionError failure = org.junit.Assert.assertThrows(AssertionError.class,
+                () -> Verify.assertSerializedForm(expected, FastList.newList()));
+        assertEquals(IllegalArgumentException.class, failure.getCause().getClass());
+        org.junit.Assert.assertTrue(failure.getCause().getMessage().contains("seven original stream allowlist"));
+    }
+
+    @Test
+    public void ordinarySerializedStringKeepsItsOriginalAssertion()
+    {
+        Verify.assertSerializedForm("rO0ABXQABWhlbGxv", "hello");
+        org.junit.Assert.assertThrows(org.junit.ComparisonFailure.class,
+                () -> Verify.assertSerializedForm("rO0ABXQABWhlbGxv", "different"));
+    }
+
+    @Test
+    public void historicalExpectedBase64FormattingIsNotNormalized()
+    {
+        String expected = "rO0ABXNyADJvcmcuZWNsaXBzZS5jb2xsZWN0aW9ucy5pbXBsLmxpc3QubXV0YWJsZS5GYXN0TGlz\n"
+                + "dAAAAAAAAAABDAAAeHB3BAAAAAB4";
+        for (String mutation : new String[]{" " + expected, expected + "\n", expected.replace("\n", "\r\n")})
+        {
+            AssertionError failure = org.junit.Assert.assertThrows(AssertionError.class,
+                    () -> Verify.assertSerializedForm(mutation, FastList.newList()));
+            assertEquals(IllegalArgumentException.class, failure.getCause().getClass());
+            org.junit.Assert.assertTrue(failure.getCause().getMessage().contains("Base64 literal is not canonical"));
+        }
+    }
+
+    @Test
+    public void oldPackagePayloadBeforeCurrentLambdaKeepsExactStream() throws ReflectiveOperationException, java.io.IOException
+    {
+        VerifyTest.assertCurrentLambdaPayload(false);
+    }
+
+    @Test
+    public void oldPackagePayloadAfterCurrentLambdaKeepsExactStream() throws ReflectiveOperationException, java.io.IOException
+    {
+        VerifyTest.assertCurrentLambdaPayload(true);
+    }
+
+    private static void assertCurrentLambdaPayload(boolean lambdaFirst) throws ReflectiveOperationException, java.io.IOException
+    {
+        String captured = "org.eclipse.collections.application.Payload";
+        java.util.function.IntFunction<String> function =
+                (java.util.function.IntFunction<String> & Serializable) value -> captured + value;
+        java.lang.reflect.Method writeReplace = function.getClass().getDeclaredMethod("writeReplace");
+        writeReplace.setAccessible(true);
+        java.lang.invoke.SerializedLambda metadata = (java.lang.invoke.SerializedLambda) writeReplace.invoke(function);
+        assertEquals(1, metadata.getCapturedArgCount());
+        org.junit.Assert.assertSame(captured, metadata.getCapturedArg(0));
+        Object[] fixture = lambdaFirst ? new Object[]{function, captured} : new Object[]{captured, function};
+
+        // Independent JDK encoding of test-only objects is the unchanged-pass oracle here.
+        // Historical golden bytes are never generated from current collection serialization.
+        java.io.ByteArrayOutputStream bytes = new java.io.ByteArrayOutputStream();
+        try (java.io.ObjectOutputStream output = new java.io.ObjectOutputStream(bytes))
+        {
+            output.writeObject(fixture);
+        }
+        String expected = java.util.Base64.getMimeEncoder(76, new byte[]{'\n'}).encodeToString(bytes.toByteArray());
+        if (expected.length() % 77 == 76)
+        {
+            expected += "\n";
+        }
+        Verify.assertSerializedForm(expected, fixture);
+    }
 }
