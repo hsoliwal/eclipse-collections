@@ -139,7 +139,11 @@ public final class ArrayAdapter<T>
     @Override
     public ArrayAdapter<T> with(T value)
     {
-        return ArrayAdapter.newArrayWithItem(this, value);
+        int size = this.items.length;
+        T[] joined = (T[]) new Object[size + 1];
+        System.arraycopy(this.items, 0, joined, 0, size);
+        joined[size] = value;
+        return new ArrayAdapter<>(joined);
     }
 
     @Override
