@@ -81,6 +81,13 @@ public final class ArrayAdapter<T>
 
     public static <E> ArrayAdapter<E> newArrayWithItem(Iterable<? extends E> iterable, E itemToAdd)
     {
+        if (iterable instanceof ArrayAdapter<?> adapter)
+        {
+            // The exact final owner already supplies the one-array append path.
+            @SuppressWarnings("unchecked")
+            ArrayAdapter<E> exact = (ArrayAdapter<E>) adapter;
+            return exact.with(itemToAdd);
+        }
         int oldSize = Iterate.sizeOf(iterable);
         E[] array = (E[]) new Object[oldSize + 1];
         Iterate.toArray(iterable, array);
