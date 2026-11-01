@@ -17,3 +17,15 @@ Everything outside the exact selected method atoms remains unchanged; all provid
 - **Held:** speed, allocation, packaging, rollout and merge acceptance. Measurements are not asserted.
 
 The historical local `.m3-relocation/rewrite.yml` is superseded; do not apply it to this already-relocated source. Continue serial per-owner atomization/patternization and contract-preserving recipe improvements. In JDK-received classes add the `M3` prefix only to new first-party owner types; keep received donor class simple names.
+
+## Second-pass differential oracles and CI (2026-11-01)
+
+- New source-sealed test: `unit-tests/src/test/java/com/m3/collections/eclipse/impl/list/fixed/M3ArrayAdapterAppendContractTest.java`
+
+The canonical source and expected SHA-256 postimages live in [Synexia draft PR #14952](https://github.com/hsoliwal/com.synexia/pull/14952), now expanded to eight target files (4 production, 4 additive test targets). The focused pull-request workflow is `.github/workflows/m3-arrayification-append-20261101.yml`, and its executable scoped invocation is:
+
+```bash
+mvn -B -ntp -pl eclipse-collections-api,eclipse-collections,eclipse-collections-testutils,unit-tests -am -Dcheckstyle.skip=true -Dtest=M3ArrayAdapterAppendContractTest -Dsurefire.failIfNoSpecifiedTests=false test
+```
+
+Eclipse inherited Checkstyle baseline remains a separate blocking gate. A passing focused oracle would prove this slice only. **No full-fork/JNI/benchmark gate is waived, and no merge is authorized.**
