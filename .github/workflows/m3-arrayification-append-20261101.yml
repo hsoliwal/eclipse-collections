@@ -5,6 +5,7 @@ on:
     paths:
       - 'eclipse-collections/src/main/java/com/m3/collections/eclipse/impl/list/fixed/ArrayAdapter.java'
       - 'unit-tests/src/test/java/com/m3/collections/eclipse/impl/list/fixed/M3ArrayAdapterAppendContractTest.java'
+      - 'unit-tests/src/test/java/com/m3/collections/eclipse/impl/list/fixed/M3ArrayAdapterFactoryContractTest.java'
       - '.github/workflows/m3-arrayification-append-20261101.yml'
   workflow_dispatch:
 permissions:
@@ -25,15 +26,16 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          printf '331efadf359c50448ee4fabd4c14f38b355c44c8bf8abaf3a7864cfa2bd57419  %s\n' 'eclipse-collections/src/main/java/com/m3/collections/eclipse/impl/list/fixed/ArrayAdapter.java' | sha256sum -c -
+          printf 'ba5a3c86c385e90db5d499d619408a6c494c05d125de5b3d8f7e6e57021cc34b  %s\n' 'eclipse-collections/src/main/java/com/m3/collections/eclipse/impl/list/fixed/ArrayAdapter.java' | sha256sum -c -
           printf 'a7186d80f6c60ba526e64b25135b70447d730040a381485f5121c4308c0ffc7d  %s\n' 'unit-tests/src/test/java/com/m3/collections/eclipse/impl/list/fixed/M3ArrayAdapterAppendContractTest.java' | sha256sum -c -
+          printf '3d99e801a791833bae26efb7bdcc6375ddc9d60ec275816f856a86e541b3ca60  %s\n' 'unit-tests/src/test/java/com/m3/collections/eclipse/impl/list/fixed/M3ArrayAdapterFactoryContractTest.java' | sha256sum -c -
       - name: Execute real Eclipse array-append JUnit tests
         shell: bash
         run: |
           set -euo pipefail
           mvn -B -ntp -pl eclipse-collections-api,eclipse-collections,eclipse-collections-testutils,unit-tests -am \
             -Dcheckstyle.skip=true \
-            -Dtest=M3ArrayAdapterAppendContractTest \
+            -Dtest=M3ArrayAdapterAppendContractTest,M3ArrayAdapterFactoryContractTest \
             -Dsurefire.failIfNoSpecifiedTests=false test
       - name: Require executed non-skipped JUnit tests
         shell: bash
@@ -41,13 +43,13 @@ jobs:
           python3 - <<'PY'
           from pathlib import Path
           import xml.etree.ElementTree as ET
-          reports=list(Path('unit-tests/target/surefire-reports').glob('TEST-*M3ArrayAdapterAppendContractTest*.xml'))
+          reports=list(Path('unit-tests/target/surefire-reports').glob('TEST-*M3ArrayAdapter*ContractTest*.xml'))
           assert reports, 'NO_REAL_JUNIT_REPORTS'
           totals=[0,0,0,0]
           for f in reports:
               e=ET.parse(f).getroot()
               totals=[a+int(e.attrib.get(k,'0')) for a,k in zip(totals,('tests','failures','errors','skipped'))]
-          assert totals[0]>=2 and totals[1:]==[0,0,0],totals
+          assert totals[0]>=4 and totals[1:]==[0,0,0],totals
           print('ECLIPSE_APPEND_CONTRACT_PASS',totals)
           PY
       - name: Upload test reports
