@@ -250,6 +250,9 @@ public class TreeSortedMap<K, V>
         else
         {
             this.treeMap.forEachKeyValue((key, value) -> procedure2.value(key, value));
+        if (!this.treeMap.isEmpty())
+        {
+            this.treeMap.forEach((key, value) -> procedure2.value(key, value));
         }
     }
 
