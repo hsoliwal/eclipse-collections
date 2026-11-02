@@ -243,7 +243,10 @@ public class TreeSortedMap<K, V>
     @Override
     public void forEachKeyValue(Procedure2<? super K, ? super V> procedure2)
     {
-        MapIterate.forEachKeyValue(this.treeMap, procedure2);
+        if (!this.treeMap.isEmpty())
+        {
+            this.treeMap.forEach((key, value) -> procedure2.value(key, value));
+        }
     }
 
     @Override
@@ -445,10 +448,10 @@ public class TreeSortedMap<K, V>
     public PartitionMutableList<V> partitionWhile(Predicate<? super V> predicate)
     {
         PartitionMutableList<V> result = new PartitionFastList<>();
-        Iterator<Entry<K, V>> iterator = this.treeMap.entrySet().iterator();
+        Iterator<V> iterator = this.treeMap.values().iterator();
         while (iterator.hasNext())
         {
-            V value = iterator.next().getValue();
+            V value = iterator.next();
             if (!predicate.accept(value))
             {
                 result.getRejected().add(value);
@@ -458,7 +461,7 @@ public class TreeSortedMap<K, V>
         }
         while (iterator.hasNext())
         {
-            result.getRejected().add(iterator.next().getValue());
+            result.getRejected().add(iterator.next());
         }
         return result;
     }
