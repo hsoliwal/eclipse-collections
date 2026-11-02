@@ -17,3 +17,21 @@ Everything outside the exact selected method atoms remains unchanged; all provid
 - **Held:** speed, allocation, packaging, rollout and merge acceptance. Measurements are not asserted.
 
 The historical local `.m3-relocation/rewrite.yml` is superseded; do not apply it to this already-relocated source. Continue serial per-owner atomization/patternization and contract-preserving recipe improvements. In JDK-received classes add the `M3` prefix only to new first-party owner types; keep received donor class simple names.
+
+## Second-pass differential oracles and CI (2026-11-01)
+
+- New source-sealed test: `unit-tests/src/test/java/com/m3/collections/eclipse/impl/list/fixed/M3ArrayAdapterAppendContractTest.java`
+
+The canonical source and expected SHA-256 postimages live in [Synexia draft PR #14952](https://github.com/hsoliwal/com.synexia/pull/14952), now expanded to eight target files (4 production, 4 additive test targets). The focused pull-request workflow is `.github/workflows/m3-arrayification-append-20261101.yml`, and its executable scoped invocation is:
+
+```bash
+mvn -B -ntp -pl eclipse-collections-api,eclipse-collections,eclipse-collections-testutils,unit-tests -am -Dcheckstyle.skip=true -Dtest=M3ArrayAdapterAppendContractTest -Dsurefire.failIfNoSpecifiedTests=false test
+```
+
+Eclipse inherited Checkstyle baseline remains a separate blocking gate. A passing focused oracle would prove this slice only. **No full-fork/JNI/benchmark gate is waived, and no merge is authorized.**
+
+## Second hash-pinned Eclipse factory pass
+
+The canonical [Synexia PR #14952](https://github.com/hsoliwal/com.synexia/pull/14952) now includes `m3-eclipse-array-factory-20261101` as an independent recipe stage after `m3-bulk-arrayification-eclipse-collections-20261031`. The `ArrayAdapter.newArrayWithItem(Iterable, E)` implementation recognizes the **final** `ArrayAdapter` source type and calls its already-refined `with` implementation. The generic `Iterable` fallback is byte-for-byte unchanged. The source stage one SHA-256 is `331efadf...` and stage two is `ba5a3c86...`; both exact postimages are retained in separate canonical recipe resources.
+
+The added `M3ArrayAdapterFactoryContractTest` compares the specialization against an `ArrayList`-backed Iterable oracle across 256 sizes, nulls, alias independence and chained snapshots. The focused CI now requires the two test classes and four executed JUnit cases, plus exact source hashes. Full Eclipse Checkstyle, Maven reactor, native/JNI residency and benchmark acceptance remain held; no default-branch merge is authorized.

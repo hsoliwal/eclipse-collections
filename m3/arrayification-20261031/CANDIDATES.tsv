@@ -1,2 +1,5 @@
 source_path	preimage_git_blob	technique	status
 eclipse-collections/src/main/java/com/m3/collections/eclipse/impl/list/fixed/ArrayAdapter.java	80eab769b89d6c9992e7a8a0eb095a79bf201e77	Direct_one-array_append	HELD_NATIVE_GATES
+unit-tests/src/test/java/com/m3/collections/eclipse/impl/list/fixed/M3ArrayAdapterAppendContractTest.java	ABSENT	DETERMINISTIC_DIFFERENTIAL_ORACLE	PENDING_NATIVE_JUNIT
+eclipse-collections/src/main/java/com/m3/collections/eclipse/impl/list/fixed/ArrayAdapter.java	460d623d7b945f916c168134c1df8cf4f5c8a618	DIRECT_ARRAY_FACTORY_REUSE_STAGE2	PENDING_NATIVE_TESTS
+unit-tests/src/test/java/com/m3/collections/eclipse/impl/list/fixed/M3ArrayAdapterFactoryContractTest.java	ABSENT	DIFFERENTIAL_ITERABLE_FACTORY_ORACLE	PENDING_NATIVE_JUNIT
