@@ -31,6 +31,7 @@ import java.util.Map;
 import java.util.NoSuchElementException;
 import java.util.Set;
 import java.util.SortedMap;
+import java.util.function.BiConsumer;
 
 /** Private storage boundary; its visible signatures use Java 8 platform types. */
 final class IndexedSortedMap<K, V> extends AbstractMap<K, V>
@@ -188,7 +189,7 @@ final class IndexedSortedMap<K, V> extends AbstractMap<K, V>
         }
         else if (this.storage.backend.tree.root >= 0)
         {
-            Iterator<Entry<K, V>> cursor = this.entrySet().iterator();
+            Iterator<K> cursor = this.keySet().iterator();
             while (cursor.hasNext()) { cursor.next(); cursor.remove(); }
         }
     }
@@ -288,6 +289,15 @@ final class IndexedSortedMap<K, V> extends AbstractMap<K, V>
             if (sameValue(query, stored)) { return true; }
         }
         return false;
+    }
+
+    void forEachKeyValue(BiConsumer<? super K, ? super V> action)
+    {
+        // MapIterate's historical empty-map path never evaluated the callback.
+        if (!this.isEmpty())
+        {
+            ((IndexedRedBlackMap<K, V>) this.delegate()).forEachKeyValue(action);
+        }
     }
 
     @Override public Set<Entry<K, V>> entrySet()

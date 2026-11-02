@@ -25,6 +25,7 @@ import java.util.Map;
 import java.util.NoSuchElementException;
 import java.util.Set;
 import java.util.SortedMap;
+import java.util.function.BiConsumer;
 
 /** Experimental composition boundary; it is not a production admission. */
 final class IndexedRedBlackMap<K, V> extends AbstractMap<K, V> implements SortedMap<K, V> {
@@ -310,6 +311,28 @@ final class IndexedRedBlackMap<K, V> extends AbstractMap<K, V> implements Sorted
             }
         }
         return false;
+    }
+
+    /** Traverse the existing array slots without materializing public entries. */
+    @SuppressWarnings("unchecked")
+    void forEachKeyValue(BiConsumer<? super K, ? super V> action)
+    {
+        SlotIterator<V> cursor = new SlotIterator<>(VALUE);
+        boolean more = cursor.hasNext();
+        int expected = tree.epoch;
+        while (more)
+        {
+            // Match IndexedSortedMap's receiving iterator: check the cached
+            // availability and epoch before consulting the underlying cursor.
+            if (expected != tree.epoch)
+            {
+                throw new ConcurrentModificationException();
+            }
+            V value = cursor.next();
+            K key = (K) cursor.selected.keys[cursor.returned];
+            more = cursor.hasNext();
+            action.accept(key, value);
+        }
     }
 
     @Override
