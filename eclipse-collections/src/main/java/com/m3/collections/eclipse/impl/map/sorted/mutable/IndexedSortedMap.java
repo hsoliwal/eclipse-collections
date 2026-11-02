@@ -301,6 +301,15 @@ final class IndexedSortedMap<K, V> extends AbstractMap<K, V>
         return false;
     }
 
+    void forEachKeyValue(BiConsumer<? super K, ? super V> action)
+    {
+        // MapIterate's historical empty-map path never evaluated the callback.
+        if (!this.isEmpty())
+        {
+            ((IndexedRedBlackMap<K, V>) this.delegate()).forEachKeyValue(action);
+        }
+    }
+
     @Override public Set<Entry<K, V>> entrySet()
     {
         if (this.entries == null) { this.entries = new EntryView(); }

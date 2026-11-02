@@ -313,6 +313,24 @@ final class IndexedRedBlackMap<K, V> extends AbstractMap<K, V> implements Sorted
         return false;
     }
 
+    /** Traverse the existing array slots without materializing public entries. */
+    @SuppressWarnings("unchecked")
+    void forEachKeyValue(BiConsumer<? super K, ? super V> action)
+    {
+        SlotIterator<V> cursor = new SlotIterator<>(VALUE);
+        boolean more = cursor.hasNext();
+        int expected = tree.epoch;
+        while (more)
+        {
+            // Match IndexedSortedMap's receiving iterator: check the cached
+            // availability and epoch before consulting the underlying cursor.
+            if (expected != tree.epoch)
+            {
+                throw new ConcurrentModificationException();
+            }
+            V value = cursor.next();
+            K key = (K) cursor.selected.keys[cursor.returned];
+            more = cursor.hasNext();
     /** Visit paired array lanes with the receiving iterator's callback boundary. */
     @SuppressWarnings("unchecked")
     void forEachKeyValue(BiConsumer<? super K, ? super V> action) {

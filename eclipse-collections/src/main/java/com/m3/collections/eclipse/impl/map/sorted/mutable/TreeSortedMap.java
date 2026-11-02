@@ -243,6 +243,13 @@ public class TreeSortedMap<K, V>
     @Override
     public void forEachKeyValue(Procedure2<? super K, ? super V> procedure2)
     {
+        if (procedure2 == null)
+        {
+            MapIterate.forEachKeyValue(this.treeMap, procedure2);
+        }
+        else
+        {
+            this.treeMap.forEachKeyValue((key, value) -> procedure2.value(key, value));
         if (!this.treeMap.isEmpty())
         {
             this.treeMap.forEach((key, value) -> procedure2.value(key, value));
