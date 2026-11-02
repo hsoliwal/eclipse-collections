@@ -1,0 +1,5 @@
+# SPDX-License-Identifier: Apache-2.0
+# Result-only passive receipt; generated candidate reviewed against private canonical M3HashPinnedJavaSnapshotRecipe.
+# Synexia draft #14954. No public recipe copied; no default-branch/product admission.
+repository	path	before_git_blob_sha1	after_git_blob_sha1	before_sha256	after_sha256	problem_category	recipe	status
+hsoliwal/eclipse-collections	eclipse-collections/src/main/java/com/m3/collections/eclipse/impl/set/mutable/UnifiedSet.java	0a5b5d38200afd216ec1bf716178b8fc76177c8e	4bcbd66b7cfac6a2c6d0fd9ce330879a8168509b	c2c506a9872c7b7c8b95b1f0f58b09568d823b68da4683b272b6045354ac4532	c72c6fefa41a4dfc2588c7569e212823d4461880d82432dfae70d2910bee97a5	ARRAY_BULK_FILL	com.synexia.m3.ForkArrayEclipse20261031	DRAFT_UNVERIFIED_FULL_FORK_JUNIT_ABI_SERIALIZATION_JMH_JNI
