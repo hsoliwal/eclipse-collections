@@ -188,7 +188,7 @@ final class IndexedSortedMap<K, V> extends AbstractMap<K, V>
         }
         else if (this.storage.backend.tree.root >= 0)
         {
-            Iterator<Entry<K, V>> cursor = this.entrySet().iterator();
+            Iterator<K> cursor = this.keySet().iterator();
             while (cursor.hasNext()) { cursor.next(); cursor.remove(); }
         }
     }
