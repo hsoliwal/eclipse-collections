@@ -3457,7 +3457,43 @@ public class UnifiedMap<K, V> extends AbstractMutableMap<K, V>
         @Override
         public boolean containsAll(Collection<?> collection)
         {
-            // todo: this is N^2. if c is large, we should copy the values to a set.
+            // A bounded exact-type fast path: final immutable String values have no user
+            // equality callbacks, and natural String order is consistent with equals.
+            // Other types retain the original lookup and callback behavior.
+            if (collection != null
+                    && UnifiedMap.this.getClass() == UnifiedMap.class
+                    && collection.getClass() == java.util.ArrayList.class
+                    && collection.size() >= 128
+                    && UnifiedMap.this.occupied >= 128
+                    && UnifiedMap.this.occupied <= 65536)
+            {
+                for (Object query : collection)
+                {
+                    if (!(query instanceof String))
+                    {
+                        return Iterate.allSatisfy(collection, Predicates.in(this));
+                    }
+                }
+                String[] sortedValues = new String[UnifiedMap.this.occupied];
+                int count = 0;
+                for (V value : this)
+                {
+                    if (!(value instanceof String))
+                    {
+                        return Iterate.allSatisfy(collection, Predicates.in(this));
+                    }
+                    sortedValues[count++] = (String) value;
+                }
+                java.util.Arrays.sort(sortedValues);
+                for (Object query : collection)
+                {
+                    if (java.util.Arrays.binarySearch(sortedValues, (String) query) < 0)
+                    {
+                        return false;
+                    }
+                }
+                return true;
+            }
             return Iterate.allSatisfy(collection, Predicates.in(this));
         }
 
