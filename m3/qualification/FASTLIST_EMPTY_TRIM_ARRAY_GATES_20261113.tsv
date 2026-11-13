@@ -14,3 +14,6 @@ fork_test_source	COMMITTED	unit-tests/.../FastListEmptyTrimArrayTest.java; 4 tes
 full_eclipse_tests	NOT_RUN	no local Maven/dependency closure	fork CI
 full_javap_contract	NOT_RUN	public/protected signatures unmodified syntactically	compile before comparison
 receiving	HOLD	branch-only change, no master merge	full fork-native gate
+source_pre_sha256	PASS	3d47a5f5e682ab4396244910b17065b526ddf74bc22b53179573cf3216896ade	pinned full UTF-8 source
+source_post_sha256	PASS	05ab18325013051663d9c93c601253a9755252dabe400509ebf17043545ac7d7	pinned full UTF-8 source
+standalone_harness_sha256	PASS	e898099d5ef5467892cb8c086b9f49896799446afbec052f2b95641bcfa30e1c	harness replay
