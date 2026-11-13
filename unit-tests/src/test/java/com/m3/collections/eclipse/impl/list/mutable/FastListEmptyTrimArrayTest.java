@@ -24,7 +24,7 @@ public final class FastListEmptyTrimArrayTest
         assertEquals(0, list.size());
         list.add(17);
         assertEquals(10, list.items.length);
-        assertEquals(17, list.get(0));
+        assertEquals(Integer.valueOf(17), list.get(0));
     }
 
     @Test
@@ -34,7 +34,7 @@ public final class FastListEmptyTrimArrayTest
         list.trimToSize();
         list.add(17);
         assertEquals(1, list.items.length);
-        assertEquals(17, list.get(0));
+        assertEquals(Integer.valueOf(17), list.get(0));
     }
 
     @Test
@@ -52,7 +52,7 @@ public final class FastListEmptyTrimArrayTest
         {
             list.add(cycle);
             assertEquals(1, list.items.length);
-            assertEquals(cycle, list.get(0));
+            assertEquals(Integer.valueOf(cycle), list.get(0));
             list.clear();
             list.trimToSize();
             assertSame(zero, list.items);
@@ -60,7 +60,7 @@ public final class FastListEmptyTrimArrayTest
             assertTrue(list.isEmpty());
         }
         list.add(42);
-        assertEquals(42, list.get(0));
+        assertEquals(Integer.valueOf(42), list.get(0));
     }
 
     private static final class InstrumentedList extends FastList<Integer>
@@ -84,6 +84,6 @@ public final class FastListEmptyTrimArrayTest
         assertNotSame(previous, list.items, "subclass retains the original fresh-array semantics");
         list.add(7);
         assertEquals(1, list.size());
-        assertEquals(7, list.get(0));
+        assertEquals(Integer.valueOf(7), list.get(0));
     }
 }
