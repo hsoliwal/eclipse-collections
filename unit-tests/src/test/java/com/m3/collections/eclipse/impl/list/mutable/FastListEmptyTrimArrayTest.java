@@ -23,7 +23,7 @@ public final class FastListEmptyTrimArrayTest
         list.trimToSize();
         assertEquals(0, list.size());
         list.add(17);
-        assertEquals(10, list.items.length);
+        assertEquals(10, backing(list).length);
         assertEquals(Integer.valueOf(17), list.get(0));
     }
 
@@ -33,7 +33,7 @@ public final class FastListEmptyTrimArrayTest
         FastList<Integer> list = new FastList<>(0);
         list.trimToSize();
         list.add(17);
-        assertEquals(1, list.items.length);
+        assertEquals(1, backing(list).length);
         assertEquals(Integer.valueOf(17), list.get(0));
     }
 
@@ -45,17 +45,17 @@ public final class FastListEmptyTrimArrayTest
         list.clear();
         list.trimToSize();
         assertEquals(0, list.size());
-        assertEquals(0, list.items.length);
-        Object[] zero = list.items;
+        assertEquals(0, backing(list).length);
+        Object[] zero = backing(list);
 
         for (int cycle = 0; cycle < 256; cycle++)
         {
             list.add(cycle);
-            assertEquals(1, list.items.length);
+            assertEquals(1, backing(list).length);
             assertEquals(Integer.valueOf(cycle), list.get(0));
             list.clear();
             list.trimToSize();
-            assertSame(zero, list.items);
+            assertSame(zero, backing(list));
             assertEquals(0, list.size());
             assertTrue(list.isEmpty());
         }
@@ -76,14 +76,19 @@ public final class FastListEmptyTrimArrayTest
     {
         InstrumentedList list = new InstrumentedList();
         list.trimToSize();
-        Object[] previous = list.items;
+        Object[] previous = backing(list);
         assertEquals(0, previous.length);
         list.ensureCapacity(128);
         list.trimToSize();
-        assertEquals(0, list.items.length);
-        assertNotSame(previous, list.items, "subclass retains the original fresh-array semantics");
+        assertEquals(0, backing(list).length);
+        assertNotSame(previous, backing(list), "subclass retains the original fresh-array semantics");
         list.add(7);
         assertEquals(1, list.size());
         assertEquals(Integer.valueOf(7), list.get(0));
+    }
+    /** Expose the erased backing lane without a runtime Integer[] checkcast. */
+    private static Object[] backing(FastList<?> list)
+    {
+        return list.items;
     }
 }
