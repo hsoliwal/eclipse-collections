@@ -717,9 +717,9 @@ public class FastList<T>
     public boolean removeAll(Collection<?> collection)
     {
         if (getClass() == FastList.class && collection.getClass() == ArrayList.class
-                && this.size >= 8192 && collection.size() >= 512
+                && this.size >= 16384 && collection.size() >= 512
                 && collection.size() <= 65536
-                && (long) this.size * collection.size() >= 4_000_000L)
+                && (long) this.size * collection.size() >= 8_000_000L)
         {
             boolean safe = true;
             for (int i = 0; i < this.size; i++)
