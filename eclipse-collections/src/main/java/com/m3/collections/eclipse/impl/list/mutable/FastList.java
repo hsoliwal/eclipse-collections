@@ -1222,9 +1222,27 @@ public class FastList<T>
     {
         int sourceSize = source.size();
         int newSize = this.size + sourceSize;
-        this.ensureCapacity(newSize);
-        this.shiftElementsAtIndex(index, sourceSize);
-        System.arraycopy(source.items, 0, this.items, index, sourceSize);
+        // Modified 2026 by Hitesh Soliwal and contributors to the Synexia Project.
+        // Copy a growing exact FastList directly to its final positions. Subclasses
+        // retain the existing ensureCapacity callback and publication sequence.
+        if (this.getClass() == FastList.class && newSize > this.items.length && index < this.size)
+        {
+            int newCapacity = Math.max(this.sizePlusFiftyPercent(this.items.length), newSize);
+            T[] newItems = (T[]) new Object[newCapacity];
+            if (index > 0)
+            {
+                System.arraycopy(this.items, 0, newItems, 0, index);
+            }
+            System.arraycopy(this.items, index, newItems, index + sourceSize, this.size - index);
+            System.arraycopy(source.items, 0, newItems, index, sourceSize);
+            this.items = newItems;
+        }
+        else
+        {
+            this.ensureCapacity(newSize);
+            this.shiftElementsAtIndex(index, sourceSize);
+            System.arraycopy(source.items, 0, this.items, index, sourceSize);
+        }
         this.size = newSize;
     }
 
