@@ -13,6 +13,7 @@
  *     Hitesh Soliwal (Synexia) - initial API and implementation
  *******************************************************************************/
 // Modified 2026 by Hitesh Soliwal and Contributors to the Synexia Project: tree-slot lifecycle adaptation.
+// Modified 2026 by Hitesh Soliwal and contributors: grow optional projection storage only on demand.
 package com.m3.collections.eclipse.impl.map.sorted.mutable;
 
 import java.lang.ref.WeakReference;
@@ -32,6 +33,8 @@ final class IndexedTreeArena<K, V> {
     int[] parent = new int[0];
     long[] liveMask = new long[0];
     long[] blackMask = new long[0];
+    // Only requested API projections need reference slots; payload growth does
+    // not allocate or copy this optional prefix lane.
     Object[] entryViews = new Object[0];
     int used;
     int size;
@@ -86,7 +89,9 @@ final class IndexedTreeArena<K, V> {
         if (view != null) {
             view.detach();
         }
-        entryViews[slot] = null;
+        if (slot < entryViews.length) {
+            entryViews[slot] = null;
+        }
         keys[slot] = null;
         values[slot] = null;
         long bit = 1L << (slot & 63);
@@ -131,15 +136,25 @@ final class IndexedTreeArena<K, V> {
         requireLive(slot);
         EntryView<K, V> view = cachedView(slot);
         if (view == null) {
+            Object[] views = entryViews;
+            if (slot >= views.length) {
+                int capacity = views.length == 0 ? 8 : views.length;
+                while (capacity <= slot) {
+                    capacity = capacity <= (Integer.MAX_VALUE - 8) / 2
+                            ? capacity * 2 : keys.length;
+                }
+                views = Arrays.copyOf(views, capacity);
+            }
             view = new EntryView<>(this, slot);
-            entryViews[slot] = new WeakReference<>(view);
+            views[slot] = new WeakReference<>(view);
+            entryViews = views;
         }
         return view;
     }
 
     @SuppressWarnings("unchecked")
     private EntryView<K, V> cachedView(int slot) {
-        Object reference = entryViews[slot];
+        Object reference = slot < entryViews.length ? entryViews[slot] : null;
         return reference == null ? null
                 : ((WeakReference<EntryView<K, V>>) reference).get();
     }
@@ -157,7 +172,8 @@ final class IndexedTreeArena<K, V> {
     private void requireCleared(int slot) {
         if (bit(liveMask, slot) || bit(blackMask, slot)
                 || keys[slot] != null || values[slot] != null
-                || right[slot] != -1 || parent[slot] != -1 || entryViews[slot] != null) {
+                || right[slot] != -1 || parent[slot] != -1
+                || slot < entryViews.length && entryViews[slot] != null) {
             throw new IllegalStateException("arena slot is not cleared: " + slot);
         }
     }
@@ -178,7 +194,6 @@ final class IndexedTreeArena<K, V> {
         int[] newParent = Arrays.copyOf(parent, capacity);
         long[] newLive = Arrays.copyOf(liveMask, words);
         long[] newBlack = Arrays.copyOf(blackMask, words);
-        Object[] newViews = Arrays.copyOf(entryViews, capacity);
         Arrays.fill(newLeft, old, capacity, -1);
         Arrays.fill(newRight, old, capacity, -1);
         Arrays.fill(newParent, old, capacity, -1);
@@ -189,7 +204,6 @@ final class IndexedTreeArena<K, V> {
         parent = newParent;
         liveMask = newLive;
         blackMask = newBlack;
-        entryViews = newViews;
     }
 
     void verifyInvariants() {
@@ -197,7 +211,7 @@ final class IndexedTreeArena<K, V> {
         int words = capacity == 0 ? 0 : ((capacity - 1) >>> 6) + 1;
         invariant(values.length == capacity && left.length == capacity
                 && right.length == capacity && parent.length == capacity
-                && entryViews.length == capacity && liveMask.length == words
+                && entryViews.length <= capacity && liveMask.length == words
                 && blackMask.length == words, "parallel lanes");
         invariant(used >= 0 && used <= capacity && size >= 0 && size <= used,
                 "arena counts");
@@ -213,15 +227,15 @@ final class IndexedTreeArena<K, V> {
                     >>> (capacity & 63)) == 0, "mask beyond capacity");
         }
         for (int slot = 0; slot < capacity; slot++) {
+            Object reference = slot < entryViews.length ? entryViews[slot] : null;
             if (slot < used && live(slot)) {
                 verifyLink(slot, left[slot]);
                 verifyLink(slot, right[slot]);
                 verifyLink(slot, parent[slot]);
-                invariant(entryViews[slot] == null
-                        || entryViews[slot] instanceof WeakReference<?>, "entry cache");
+                invariant(reference == null || reference instanceof WeakReference<?>, "entry cache");
             } else {
                 invariant(keys[slot] == null && values[slot] == null
-                        && entryViews[slot] == null && right[slot] == -1
+                        && reference == null && right[slot] == -1
                         && parent[slot] == -1 && !bit(liveMask, slot)
                         && !bit(blackMask, slot), "cleared slot");
                 invariant(slot < used || left[slot] == -1, "unused slot link");
