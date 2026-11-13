@@ -3467,6 +3467,20 @@ public class UnifiedMap<K, V> extends AbstractMutableMap<K, V>
                     && UnifiedMap.this.occupied >= 128
                     && UnifiedMap.this.occupied <= 65536)
             {
+                // Preserve cheap early exits before paying to sort the mapped values.
+                java.util.ArrayList<?> orderedQueries = (java.util.ArrayList<?>) collection;
+                for (int i = 0, limit = Math.min(16, orderedQueries.size()); i < limit; i++)
+                {
+                    Object query = orderedQueries.get(i);
+                    if (!(query instanceof String))
+                    {
+                        return Iterate.allSatisfy(collection, Predicates.in(this));
+                    }
+                    if (!this.contains(query))
+                    {
+                        return false;
+                    }
+                }
                 for (Object query : collection)
                 {
                     if (!(query instanceof String))
