@@ -21,6 +21,7 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.Comparator;
 import java.util.DoubleSummaryStatistics;
+import java.util.HashSet;
 import java.util.IntSummaryStatistics;
 import java.util.List;
 import java.util.LongSummaryStatistics;
@@ -699,6 +700,54 @@ public class FastList<T>
     public <S> FastList<S> selectInstancesOf(Class<S> clazz)
     {
         return InternalArrayIterate.selectInstancesOf(this.items, this.size, clazz);
+    }
+
+    /** Stable built-in equality allows reordering membership probes. */
+    private static boolean isStableBulkValue(Object value)
+    {
+        return value == null || value.getClass() == String.class
+                || value.getClass() == Integer.class || value.getClass() == Long.class;
+    }
+
+    /**
+     * Fast path for large exact-array collections. The superclass fallback
+     * preserves comparator callbacks and custom-equality call order.
+     */
+    @Override
+    public boolean removeAll(Collection<?> collection)
+    {
+        if (getClass() == FastList.class && collection.getClass() == ArrayList.class
+                && this.size >= 8192 && collection.size() >= 512
+                && collection.size() <= 65536
+                && (long) this.size * collection.size() >= 4_000_000L)
+        {
+            boolean safe = true;
+            for (int i = 0; i < this.size; i++)
+            {
+                if (!isStableBulkValue(this.items[i]))
+                {
+                    safe = false;
+                    break;
+                }
+            }
+            if (safe)
+            {
+                for (Object member : collection)
+                {
+                    if (!isStableBulkValue(member))
+                    {
+                        safe = false;
+                        break;
+                    }
+                }
+            }
+            if (safe)
+            {
+                HashSet<Object> membership = new HashSet<>(collection);
+                return this.removeIf((java.util.function.Predicate<? super T>) membership::contains);
+            }
+        }
+        return super.removeAll(collection);
     }
 
     @Override
