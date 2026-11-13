@@ -2,19 +2,21 @@
 stage	status	evidence	next
 fork_exact_base	PASS	hsoliwal/eclipse-collections master 0094cc5ca858fef12a8bfa576249f8d582334d6f	refuse base drift
 source_pre_git_blob	PASS	ca40e87c811ce56e6f2c658a3467482942966c52	readback baseline
-source_post_git_blob	PASS	0c579d7732e7b538a06f47691a81eae7ffc14bfb	readback branch
+source_post_git_blob	PASS	c9a2401ad947d416688fa628ed84fab4d010ae1c	readback branch
 source_pre_sha256	PASS	5f2ec4bed18d26cf771c83e60c90db2cd677cd93643f9d91643fe1ecdd46ba0c	complete original
-source_post_sha256	PASS	7f1d35df0d044c070d0ee70956716059353898ba713221c6b84970f3470817d1	complete candidate
+source_post_sha256	PASS	b9e06c1f4c647fcd38a562842ff4f4164d3a8c6bcb8e3b1db19a694ebc7d295c	complete candidate
 scope_diff	PASS	exact one nested ValuesCollection.containsAll replacement; no other production code	full project compiler
-contract_guard	PASS	exact map+ArrayList, nonnull String, size >= 128, max 65536; original fallback text retained	integration tests
+contract_guard	PASS	exact map+ArrayList, nonnull String, size >= 128, max 65536, up to first 16 original lookups before sorting; fallback text retained	integration tests
 local_patch_lint_compile	PASS	javac --release 21 -Xlint:all -Werror standalone exact semantic method-atom probe	full UnifiedMap compile missing
 jit_reference_oracle	PASS	10648 deterministic parity checks with string, mixed, null, subclass, duplicate and absent values	fork-owned JUnit pending
 interpreted_reference_oracle	PASS	10648 checks with -Xint	fork-owned JUnit pending
-large_batch_benchmarks	SAMPLED_PASS	3 JVMs x seven warmed alternating samples; 2048 candidate/baseline ratios 0.0383 0.0379 0.0429	full JMH and GC
+large_batch_benchmarks	SAMPLED_PASS	V2 3 JVMs x seven warmed alternating samples; 2048 candidate/baseline ratios 0.0481 0.0558 0.0551	full JMH and GC
 small_batch_nonregression	PASS_BY_DISPATCH	below size 128 old branch retained; 64 candidate benchmark can regress, so guard remains	actual target profile
-real_unit_test_source	COMMITTED	unit-tests UnifiedMapStringBatchValuesTest.java Git blob e9852b26adb8b183d0bc739f7985a148abc42b70	full JUnit execution needed
+real_unit_test_source	COMMITTED	unit-tests UnifiedMapStringBatchValuesTest.java seven methods Git blob 73451faeae19a08dd1b2b6c37b829ef7833f9f0c	full JUnit execution needed
 full_eclipse_maven_reactor	NOT_RUN	no installed Maven/dependency closure in isolated environment	mvn test or authorized CI
 full_project_javap_abi	NOT_RUN	public/protected source unchanged, no module compile receipt	actual build required
 runtime_memory_and_gc	NOT_RUN	temporary String[] peak allocation; retained map unchanged	JMH+GC qualification
 fork_default_branch	UNCHANGED	review branch only, no merge	independent acceptance
 m3jdk_receiver	NOT_REQUESTED	no M3JDK code touched	separate user-directed receiving after fork qualification
+v1_early_miss	REJECTED	first absent query baseline/candidate ratios v1 4.61 3.83 10.11 5.77 for 128/512/2048/4096	V2 precheck replaces
+v2_early_miss	SAMPLED_PASS	3 JVMs x 10000 calls/sample: n4096 candidate/base ratios 0.71 0.70 0.69; n2048 ratios 0.70 0.68 0.66	full Eclipse JMH pending
