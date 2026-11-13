@@ -2,10 +2,10 @@
 stage	status	evidence	next
 fork_exact_base	PASS	hsoliwal/eclipse-collections master 0094cc5ca858fef12a8bfa576249f8d582334d6f	refuse base drift
 source_pre_git_blob	PASS	ca40e87c811ce56e6f2c658a3467482942966c52	readback baseline
-source_post_git_blob	PASS	c9a2401ad947d416688fa628ed84fab4d010ae1c	readback branch
+source_post_git_blob	PASS	64c1e0163f334c7716db1477213120910f87fe81	current three-operation branch readback
 source_pre_sha256	PASS	5f2ec4bed18d26cf771c83e60c90db2cd677cd93643f9d91643fe1ecdd46ba0c	complete original
-source_post_sha256	PASS	b9e06c1f4c647fcd38a562842ff4f4164d3a8c6bcb8e3b1db19a694ebc7d295c	complete candidate
-scope_diff	PASS	exact one nested ValuesCollection.containsAll replacement; no other production code	full project compiler
+source_post_sha256	PASS	44214ec1bb91ea9f705fe9632c33684f13d4da7c70c3918002e64d72a003f4e1	complete three-operation candidate
+scope_diff	PASS	only ValuesCollection nested owner changed; containsAll/removeAll/retainAll; all outer source bytes unchanged	full project compiler
 contract_guard	PASS	exact map+ArrayList, nonnull String, size >= 128, max 65536, up to first 16 original lookups before sorting; fallback text retained	integration tests
 local_patch_lint_compile	PASS	javac --release 21 -Xlint:all -Werror standalone exact semantic method-atom probe	full UnifiedMap compile missing
 jit_reference_oracle	PASS	10648 deterministic parity checks with string, mixed, null, subclass, duplicate and absent values	fork-owned JUnit pending
