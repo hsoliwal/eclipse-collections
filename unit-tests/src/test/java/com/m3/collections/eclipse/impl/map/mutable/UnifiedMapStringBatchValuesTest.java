@@ -175,4 +175,28 @@ public class UnifiedMapStringBatchValuesTest
         assertTrue(map.values().containsAll(List.of(value(0), value(100))));
         assertFalse(map.values().containsAll(List.of("absent")));
     }
+
+    @Test
+    public void missingEarlyQueriesRetainOriginalShortCircuitSemantics()
+    {
+        UnifiedMap<Integer, String> map = new UnifiedMap<>();
+        for (int i = 0; i < 1024; i++)
+        {
+            map.put(i, value(i));
+        }
+        ArrayList<String> queries = new ArrayList<>();
+        for (int i = 0; i < 512; i++)
+        {
+            queries.add(value(i));
+        }
+        assertTrue(map.values().containsAll(queries));
+        queries.set(0, "early-unavailable");
+        assertFalse(map.values().containsAll(queries));
+        queries.set(0, value(0));
+        queries.set(15, "late-prefix-unavailable");
+        assertFalse(map.values().containsAll(queries));
+        queries.set(15, value(15));
+        assertTrue(map.values().containsAll(queries));
+        assertEquals(1024, map.size());
+    }
 }
