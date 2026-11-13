@@ -3565,9 +3565,59 @@ public class UnifiedMap<K, V> extends AbstractMutableMap<K, V>
             return this.removeByValueCondition(collection, false);
         }
 
+        /**
+         * Returns a transient indexed membership array only for exact, immutable String inputs.
+         * All other inputs retain their original Collection.contains call path.
+         */
+        private String[] sortedStringMembership(Collection<?> collection)
+        {
+            if (collection == null
+                    || UnifiedMap.this.getClass() != UnifiedMap.class
+                    || collection.getClass() != java.util.ArrayList.class
+                    || collection.size() < 128 || collection.size() > 8192
+                    || UnifiedMap.this.occupied < 128 || UnifiedMap.this.occupied > 65536)
+            {
+                return null;
+            }
+            String[] queries = new String[collection.size()];
+            int index = 0;
+            for (Object query : collection)
+            {
+                if (!(query instanceof String))
+                {
+                    return null;
+                }
+                queries[index++] = (String) query;
+            }
+            Object[] entries = UnifiedMap.this.table;
+            for (int i = 0; i < entries.length; i += 2)
+            {
+                Object key = entries[i];
+                if (key == CHAINED_KEY)
+                {
+                    Object[] chain = (Object[]) entries[i + 1];
+                    for (int j = 0; j < chain.length && chain[j] != null; j += 2)
+                    {
+                        if (!(chain[j + 1] instanceof String))
+                        {
+                            return null;
+                        }
+                    }
+                }
+                else if (key != null && !(entries[i + 1] instanceof String))
+                {
+                    return null;
+                }
+            }
+            java.util.Arrays.sort(queries);
+            return queries;
+        }
+
         private boolean removeByValueCondition(Collection<?> collection, boolean removeIfContained)
         {
-            // todo: this is N^2. if c is large, we should copy the values to a set.
+            // Build a bounded immutable membership index only when every existing value qualifies.
+            // The normal Collection.contains and mutation order are retained on generic inputs.
+            String[] sortedQueries = this.sortedStringMembership(collection);
             boolean modified = false;
             Object[] table = UnifiedMap.this.table;
             for (int i = 0; i < table.length; i += 2)
@@ -3575,11 +3625,15 @@ public class UnifiedMap<K, V> extends AbstractMutableMap<K, V>
                 Object cur = table[i];
                 if (cur == CHAINED_KEY)
                 {
-                    modified |= this.removeFromChainByValue((Object[]) table[i + 1], i, collection, removeIfContained);
+                    modified |= this.removeFromChainByValue((Object[]) table[i + 1], i,
+                            collection, sortedQueries, removeIfContained);
                 }
                 else if (cur != null)
                 {
-                    if (collection.contains(table[i + 1]) == removeIfContained)
+                    if ((sortedQueries == null
+                            ? collection.contains(table[i + 1])
+                            : java.util.Arrays.binarySearch(sortedQueries, (String) table[i + 1]) >= 0)
+                            == removeIfContained)
                     {
                         table[i] = null;
                         table[i + 1] = null;
@@ -3595,6 +3649,7 @@ public class UnifiedMap<K, V> extends AbstractMutableMap<K, V>
                 Object[] chain,
                 int tableIndex,
                 Collection<?> collection,
+                String[] sortedQueries,
                 boolean removeIfContained)
         {
             boolean modified = false;
@@ -3605,7 +3660,10 @@ public class UnifiedMap<K, V> extends AbstractMutableMap<K, V>
                 {
                     break;
                 }
-                if (collection.contains(chain[readIndex + 1]) == removeIfContained)
+                if ((sortedQueries == null
+                        ? collection.contains(chain[readIndex + 1])
+                        : java.util.Arrays.binarySearch(sortedQueries, (String) chain[readIndex + 1]) >= 0)
+                        == removeIfContained)
                 {
                     UnifiedMap.this.occupied--;
                     modified = true;
