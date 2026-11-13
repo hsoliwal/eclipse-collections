@@ -368,6 +368,26 @@ public class UnifiedMap<K, V> extends AbstractMutableMap<K, V>
         return this.chainedPut(key, index, value);
     }
 
+    /**
+     * Modified 2026 by Hitesh Soliwal and contributors.
+     * Grows the existing interleaved key/value lane geometrically. An even
+     * length retains complete pairs; long arithmetic cannot wrap at the array
+     * limit. This changes spare capacity only, never the occupied prefix.
+     */
+    private static int expandedChainCapacity(int oldCapacity)
+    {
+        int maximum = Integer.MAX_VALUE - 1;
+        long minimum = (long) oldCapacity + 4L;
+        if (minimum > maximum)
+        {
+            // Preserve the original +4 allocation's exception and wrapped length.
+            throw new NegativeArraySizeException(Integer.toString((int) minimum));
+        }
+        long preferred = (long) oldCapacity + Math.max(4, oldCapacity >>> 1);
+        long evenCapacity = (preferred + 1L) & ~1L;
+        return (int) Math.min(evenCapacity, maximum);
+    }
+
     private V chainedPut(K key, int index, V value)
     {
         if (this.table[index] == CHAINED_KEY)
@@ -392,7 +412,7 @@ public class UnifiedMap<K, V> extends AbstractMutableMap<K, V>
                     return result;
                 }
             }
-            Object[] newChain = new Object[chain.length + 4];
+            Object[] newChain = new Object[UnifiedMap.expandedChainCapacity(chain.length)];
             System.arraycopy(chain, 0, newChain, 0, chain.length);
             this.table[index + 1] = newChain;
             newChain[chain.length] = UnifiedMap.toSentinelIfNull(key);
@@ -466,7 +486,7 @@ public class UnifiedMap<K, V> extends AbstractMutableMap<K, V>
                     return result;
                 }
             }
-            Object[] newChain = new Object[chain.length + 4];
+            Object[] newChain = new Object[UnifiedMap.expandedChainCapacity(chain.length)];
             System.arraycopy(chain, 0, newChain, 0, chain.length);
             V result = function.valueOf(factory.value());
             this.table[index + 1] = newChain;
@@ -547,7 +567,7 @@ public class UnifiedMap<K, V> extends AbstractMutableMap<K, V>
                     return result;
                 }
             }
-            Object[] newChain = new Object[chain.length + 4];
+            Object[] newChain = new Object[UnifiedMap.expandedChainCapacity(chain.length)];
             System.arraycopy(chain, 0, newChain, 0, chain.length);
             V result = function.value(factory.value(), parameter);
             this.table[index + 1] = newChain;
@@ -636,7 +656,7 @@ public class UnifiedMap<K, V> extends AbstractMutableMap<K, V>
                     return newValue;
                 }
             }
-            Object[] newChain = new Object[chain.length + 4];
+            Object[] newChain = new Object[UnifiedMap.expandedChainCapacity(chain.length)];
             System.arraycopy(chain, 0, newChain, 0, chain.length);
             this.table[index + 1] = newChain;
             newChain[chain.length] = UnifiedMap.toSentinelIfNull(key);
@@ -737,7 +757,7 @@ public class UnifiedMap<K, V> extends AbstractMutableMap<K, V>
             V newValue = mappingFunction.apply(key);
             if (newValue != null)
             {
-                Object[] newChain = new Object[chain.length + 4];
+                Object[] newChain = new Object[UnifiedMap.expandedChainCapacity(chain.length)];
                 System.arraycopy(chain, 0, newChain, 0, chain.length);
                 this.table[index + 1] = newChain;
                 newChain[chain.length] = UnifiedMap.toSentinelIfNull(key);
@@ -910,7 +930,7 @@ public class UnifiedMap<K, V> extends AbstractMutableMap<K, V>
             V newValue = remappingFunction.apply(key, null);
             if (newValue != null)
             {
-                Object[] newChain = new Object[chain.length + 4];
+                Object[] newChain = new Object[UnifiedMap.expandedChainCapacity(chain.length)];
                 System.arraycopy(chain, 0, newChain, 0, chain.length);
                 this.table[index + 1] = newChain;
                 newChain[chain.length] = UnifiedMap.toSentinelIfNull(key);
@@ -993,7 +1013,7 @@ public class UnifiedMap<K, V> extends AbstractMutableMap<K, V>
             if (i == chain.length)
             {
                 result = function.value();
-                Object[] newChain = new Object[chain.length + 4];
+                Object[] newChain = new Object[UnifiedMap.expandedChainCapacity(chain.length)];
                 System.arraycopy(chain, 0, newChain, 0, chain.length);
                 newChain[i] = UnifiedMap.toSentinelIfNull(key);
                 newChain[i + 1] = result;
@@ -1072,7 +1092,7 @@ public class UnifiedMap<K, V> extends AbstractMutableMap<K, V>
             }
             if (i == chain.length)
             {
-                Object[] newChain = new Object[chain.length + 4];
+                Object[] newChain = new Object[UnifiedMap.expandedChainCapacity(chain.length)];
                 System.arraycopy(chain, 0, newChain, 0, chain.length);
                 newChain[i] = UnifiedMap.toSentinelIfNull(key);
                 newChain[i + 1] = value;
@@ -1153,7 +1173,7 @@ public class UnifiedMap<K, V> extends AbstractMutableMap<K, V>
             if (i == chain.length)
             {
                 result = function.valueOf(parameter);
-                Object[] newChain = new Object[chain.length + 4];
+                Object[] newChain = new Object[UnifiedMap.expandedChainCapacity(chain.length)];
                 System.arraycopy(chain, 0, newChain, 0, chain.length);
                 newChain[i] = UnifiedMap.toSentinelIfNull(key);
                 newChain[i + 1] = result;
@@ -1913,7 +1933,7 @@ public class UnifiedMap<K, V> extends AbstractMutableMap<K, V>
                     return;
                 }
             }
-            Object[] newChain = new Object[chain.length + 4];
+            Object[] newChain = new Object[UnifiedMap.expandedChainCapacity(chain.length)];
             System.arraycopy(chain, 0, newChain, 0, chain.length);
             this.table[index + 1] = newChain;
             newChain[chain.length] = UnifiedMap.toSentinelIfNull(key);
