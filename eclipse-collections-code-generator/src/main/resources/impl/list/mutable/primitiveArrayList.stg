@@ -13,6 +13,8 @@ class(primitive) ::= <<
 
 body(type, name, wrapperName) ::= <<
 <copyrightAndOthers()>
+// Modified 2026 by Hitesh Soliwal and Contributors to the Synexia Project:
+// avoid an intermediate primitive snapshot for independent array-list insertion.
 
 package com.m3.collections.eclipse.impl.list.mutable.primitive;
 
@@ -365,19 +367,43 @@ public class <name>ArrayList extends Abstract<name>Iterable
         {
             return false;
         }
-        int sourceSize = source.length;
-        int newSize = this.size + sourceSize;
-        this.ensureCapacity(newSize);
-        this.shiftElementsAtIndex(index, sourceSize);
-        System.arraycopy(source, 0, this.items, index, sourceSize);
-        this.size = newSize;
+        this.copyItemsAtIndex(index, source.length, source);
         return true;
     }
 
     @Override
     public boolean addAllAtIndex(int index, <name>Iterable source)
     {
+        if (this.getClass() == <name>ArrayList.class
+                && source != null && source.getClass() == <name>ArrayList.class)
+        {
+            <name>ArrayList other = (<name>ArrayList) source;
+            // Wrapped arrays may be shared by distinct lists. Retain the snapshot
+            // path for aliases and for subclasses with observable export overrides.
+            if (other.items != this.items)
+            {
+                if (index > this.size || index \< 0)
+                {
+                    this.throwOutOfBounds(index);
+                }
+                if (other.size == 0)
+                {
+                    return false;
+                }
+                this.copyItemsAtIndex(index, other.size, other.items);
+                return true;
+            }
+        }
         return this.addAllAtIndex(index, source.toArray());
+    }
+
+    private void copyItemsAtIndex(int index, int sourceSize, <type>[] source)
+    {
+        int newSize = this.size + sourceSize;
+        this.ensureCapacity(newSize);
+        this.shiftElementsAtIndex(index, sourceSize);
+        System.arraycopy(source, 0, this.items, index, sourceSize);
+        this.size = newSize;
     }
 
     private void shiftElementsAtIndex(int index, int sourceSize)

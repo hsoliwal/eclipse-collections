@@ -1,0 +1,33 @@
+{
+  "schema": "M3_COLLECTION_FORK_PASSIVE_RESULT_RECEIPT_V1",
+  "repository": "hsoliwal/eclipse-collections",
+  "receiving_base": "0094cc5ca858fef12a8bfa576249f8d582334d6f",
+  "canonical_repository": "hsoliwal/com.synexia",
+  "source_qualification_commit": "2264d3dc3a5581b5aef650ab9827e7b342edb11d",
+  "source_dataset": "eclipse-list-insert-20261113",
+  "recipe_identity": "com.synexia.m3jdk.CollectionsContractRefinement20261017",
+  "sdk_inputs_sha256": "722eca866e093c2b96ead436058a38b3e83e140134ce5013718704a4d40a6769",
+  "sdk_results_sha256": "9ea911e22e944d3767779189a813402bfa845a0c2529a39dca90085cb5b66e1e",
+  "sdk_tests": {
+    "tests": 48,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "fixed_point": "PASS",
+  "drift_refusal": "PASS",
+  "outputs": [
+    {
+      "path": "eclipse-collections-code-generator/src/main/resources/impl/list/mutable/primitiveArrayList.stg",
+      "before_sha256": "f93ad0ff8b0015243d573a95f0ced99ebfe880b5e15f7936c8992f5fd9259ce2",
+      "after_sha256": "ed579b6169c56a4397a3593aecbf988cc771ec2067aeef119fa5a33dde97a3ae"
+    },
+    {
+      "path": "eclipse-collections-code-generator/src/main/resources/test/list/mutable/primitiveArrayListBulkInsertTest.stg",
+      "before_sha256": "ABSENT",
+      "after_sha256": "ea56a267734f3842b8d45813caeb29f5be8b7e0388ba895541d5ac4d4bc4874c"
+    }
+  ],
+  "scope": "Passive source/test provenance; target-native gates remain independent.",
+  "license": "Apache-2.0; existing source licenses and attribution remain in their owners."
+}
