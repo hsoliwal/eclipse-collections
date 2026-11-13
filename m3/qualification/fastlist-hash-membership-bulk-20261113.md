@@ -18,8 +18,8 @@ A strictly bounded **FastList-only override of the existing inherited public
 signature** `removeAll(Collection<?>)` can use HashSet membership for
 array compaction without changing the effective public interface. Admit the
 optimized path only for exact runtime `FastList.class`, exact input
-`java.util.ArrayList.class`, `size>=8192`, `512<=candidateSize<=65536`,
-and estimated pair work at least four million. Every input and stored item
+`java.util.ArrayList.class`, `size>=16384`, `512<=candidateSize<=65536`,
+and estimated pair work at least eight million. Every input and stored item
 must have stable, final built-in equality: `null`, `String`, `Integer`,
 or `Long`. Then construct one bounded HashSet from candidate values and
 call the existing `removeIf(HashSet::contains)` array-compaction owner.
@@ -32,6 +32,20 @@ call direction and order for objects with side effects, null behavior and
 subclass dispatch. There is no additional list storage, JNI symbol,
 serialization field or new public API contract; the new explicit override
 merely specializes an already inherited Java Collection operation.
+
+## Measured admission correction
+
+An isolated Java21 method-level baseline of the existing
+`removeIfWith(Predicates2.in(), collection)` membership strategy and the
+HashSet-prepared array compaction exposed little benefit at `n=8192,m=512`
+(2,579,183 ns original vs 2,455,299 ns candidate). The same isolated
+workload at `n=16384,m=512` measured 3,904,558 ns vs 428,865 ns,
+and at `n=16384,m=1024` measured 7,000,561 ns vs 390,098 ns.
+These are exploratory `-Xbatch` samples, **not** the full Eclipse FastList
+JMH benchmark. The gate is narrowed to `size>=16384`,
+`512<=collection.size()<=65536` and a 64-bit estimated pair-work product
+at least **8,000,000**. This preserves the original inherited method for
+the marginal small region and caps temporary HashSet memory.
 
 ## Qualification
 
