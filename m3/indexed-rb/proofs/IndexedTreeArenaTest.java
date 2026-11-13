@@ -53,7 +53,8 @@ public final class IndexedTreeArenaTest {
             check(arena.allocate(i, "v" + i, -1) == i, "fresh sequential slot");
             check(arena.left[i] == -1 && arena.right[i] == -1 && arena.parent[i] == -1,
                     "fresh null links");
-            check(arena.entryViews[i] == null, "allocate does not create a projection");
+            check(i >= arena.entryViews.length || arena.entryViews[i] == null,
+                    "allocate does not create a projection");
             check(!arena.black(i), "new allocation is red");
             arena.setBlack(i, (i & 1) != 0);
             if (i == 62 || i == 63 || i == 64 || i == 126 || i == 127 || i == 128) {
