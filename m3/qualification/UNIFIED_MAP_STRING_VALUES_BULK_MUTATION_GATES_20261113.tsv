@@ -1,0 +1,17 @@
+# SPDX-License-Identifier: EPL-1.0 OR BSD-3-Clause
+gate	status	evidence	next
+canonical_fork_base	PASS	hsoliwal/eclipse-collections master 0094cc5ca858fef12a8bfa576249f8d582334d6f	refuse drift
+original_full_blob	PASS	ca40e87c811ce56e6f2c658a3467482942966c52	GitHub source
+current_full_blob	PASS	64c1e0163f334c7716db1477213120910f87fe81	GitHub source readback
+current_full_sha256	PASS	44214ec1bb91ea9f705fe9632c33684f13d4da7c70c3918002e64d72a003f4e1	UTF-8 source
+class_scope	PASS	Only UnifiedMap.ValuesCollection segment changed, original prefix and suffix identical	no other storage
+api_behavior	STATIC_REVIEW	containsAll/removeAll/retainAll remain same public signatures; generic path evaluates collection.contains as before	actual Eclipse native JUnit pending
+active_bulk_owner	PASS	original table/chain Object[] layout and occupied decrements retained, one ephemeral String[] for exact batch	full integration
+java21_standalone_lint_compile	PASS	javac -Xlint:all -Werror UnifiedMapBulkValuesProbe.java	whole class compile pending
+java21_standalone_oracle	PASS	2139648 deterministic table/chain result checks across map size 0..8191 and input size 0..1024	actual fork JUnit pending
+removeAll_timing	SAMPLED	7 warmed 2048-value/query model repeats candidate/base ratios 0.0317..0.0534	JMH/cross platform pending
+retainAll_timing	SAMPLED	7 warmed 2048-value/query model repeats candidate/base ratios 0.0301..0.0718	JMH/cross platform pending
+fork_test_source	COMMITTED	UnifiedMapBulkStringMutationTest.java; five JUnit5 methods	full fork unit-tests
+fork_maven_tests	NOT_RUN	Maven and full Eclipse dependencies unavailable offline	CI
+serialization_and_gc	NOT_RUN	no real Eclipse integration/JMH test	CI
+default_branch	UNCHANGED	branch-only review candidate	no automatic merge
