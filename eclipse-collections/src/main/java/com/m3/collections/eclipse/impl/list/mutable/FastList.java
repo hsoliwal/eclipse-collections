@@ -1250,8 +1250,23 @@ public class FastList<T>
     {
         int sourceSize = source.size();
         int newSize = this.size + sourceSize;
-        this.ensureCapacity(newSize);
-        this.shiftElementsAtIndex(index, sourceSize);
+        // Modified 2026 by Hitesh Soliwal and contributors to the Synexia Project.
+        // Copy the small insertion gap, rather than copying the larger suffix twice.
+        // Publish the same shifted backing state before conversion, preserving its
+        // exceptional completion. Subclasses retain ensureCapacity dispatch.
+        if (this.getClass() == FastList.class && newSize > this.items.length && sourceSize < this.size - index)
+        {
+            int newCapacity = Math.max(this.sizePlusFiftyPercent(this.items.length), newSize);
+            T[] newItems = (T[]) new Object[newCapacity];
+            System.arraycopy(this.items, 0, newItems, 0, index + sourceSize);
+            System.arraycopy(this.items, index, newItems, index + sourceSize, this.size - index);
+            this.items = newItems;
+        }
+        else
+        {
+            this.ensureCapacity(newSize);
+            this.shiftElementsAtIndex(index, sourceSize);
+        }
         ArrayListIterate.toArray(source, this.items, index, sourceSize);
         this.size = newSize;
     }
