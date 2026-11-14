@@ -426,11 +426,20 @@ public class FastList<T>
         return Spliterators.spliterator(this.items, 0, this.size, Spliterator.ORDERED);
     }
 
+    @SuppressWarnings("unchecked")
     public void trimToSize()
     {
         if (this.size < this.items.length)
         {
-            this.transferItemsToNewArrayWithCapacity(this.size);
+            if (this.size == 0 && this.getClass() == FastList.class)
+            {
+                // Preserve the explicit-zero constructor's subsequent growth to one.
+                this.items = (T[]) ZERO_SIZED_ARRAY;
+            }
+            else
+            {
+                this.transferItemsToNewArrayWithCapacity(this.size);
+            }
         }
     }
 
