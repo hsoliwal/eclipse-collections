@@ -111,37 +111,41 @@ public class UnifiedMapStringBatchValuesTest
     public void arbitraryValueEqualityCallbacksStayOnOriginalPath()
     {
         UnifiedMap<Integer, Object> map = new UnifiedMap<>();
+        ObservableValue stored = null;
         for (int i = 0; i < 256; i++)
         {
-            map.put(i, new ObservableValue(i));
+            ObservableValue value = new ObservableValue(i);
+            if (i == 75)
+            {
+                stored = value;
+            }
+            map.put(i, value);
         }
         ArrayList<Object> queries = new ArrayList<>();
-        ObservableValue marker = new ObservableValue(75);
-        queries.add(marker);
+        queries.add(new ObservableValue(75));
         for (int i = 0; i < 127; i++)
         {
             queries.add(new ObservableValue(i));
         }
+        // The original path, Iterate.allSatisfy(collection, Predicates.in(values)), copies the
+        // values into a UnifiedSet (Predicates.in, more than 6 elements), whose lookup calls the
+        // stored element's equals (UnifiedSet.nonNullTableObjectEquals), not the query's.
+        int before = stored.equalsCalls;
         assertTrue(map.values().containsAll(queries));
-        assertTrue(marker.equalsCalls > 0, "original value equality callbacks must execute");
+        assertTrue(stored.equalsCalls > before, "stored value equality callbacks must execute");
     }
 
-    private static final class InstrumentedMap<K, V> extends UnifiedMap<K, V>
+    private static final class SubclassMap<K, V> extends UnifiedMap<K, V>
     {
-        private int containsCalls;
-
-        @Override
-        public boolean containsValue(Object value)
-        {
-            this.containsCalls++;
-            return super.containsValue(value);
-        }
+        private static final long serialVersionUID = 1L;
     }
 
     @Test
     public void subclassLookupHooksStayOnOriginalPath()
     {
-        InstrumentedMap<Integer, String> map = new InstrumentedMap<>();
+        // Subclasses take the original path. It never calls containsValue: Predicates.in copies
+        // the values into a set (more than 6 elements), so only membership is observable here.
+        SubclassMap<Integer, String> map = new SubclassMap<>();
         for (int i = 0; i < 256; i++)
         {
             map.put(i, value(i));
@@ -152,7 +156,8 @@ public class UnifiedMapStringBatchValuesTest
             queries.add(value(i));
         }
         assertTrue(map.values().containsAll(queries));
-        assertTrue(map.containsCalls > 0, "subclass containsValue must remain observable");
+        queries.add("missing");
+        assertFalse(map.values().containsAll(queries));
     }
 
     @Test
