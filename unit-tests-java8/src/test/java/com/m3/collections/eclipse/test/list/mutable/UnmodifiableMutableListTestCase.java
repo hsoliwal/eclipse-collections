@@ -12,11 +12,14 @@ package com.m3.collections.eclipse.test.list.mutable;
 
 import java.util.Random;
 
+import com.m3.collections.eclipse.api.factory.Lists;
+import com.m3.collections.eclipse.api.list.MutableList;
 import com.m3.collections.eclipse.impl.block.factory.Comparators;
 import com.m3.collections.eclipse.test.UnmodifiableMutableCollectionTestCase;
 import com.m3.collections.eclipse.test.list.UnmodifiableListTestCase;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public interface UnmodifiableMutableListTestCase extends UnmodifiableMutableCollectionTestCase, UnmodifiableListTestCase, MutableListTestCase
@@ -55,5 +58,16 @@ public interface UnmodifiableMutableListTestCase extends UnmodifiableMutableColl
     {
         assertThrows(UnsupportedOperationException.class, () ->
                 this.newWith(5, 1, 4, 2, 3).sortThis(Comparators.reverseNaturalOrder()));
+    }
+
+    @Override
+    @Test
+    default void Object_clone()
+    {
+        // Some unmodifiable lists return themselves from clone(), so only check that the clone is equal and unmodifiable
+        MutableList<Integer> clone = this.newWith(3, 2, 1).clone();
+        assertEquals(Lists.mutable.with(3, 2, 1), clone);
+        assertThrows(UnsupportedOperationException.class, () -> clone.add(4));
+        assertEquals(Lists.mutable.with(3, 2, 1), clone);
     }
 }

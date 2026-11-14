@@ -19,9 +19,11 @@ import com.m3.collections.eclipse.api.set.MutableSet;
 import com.m3.collections.eclipse.impl.block.factory.HashingStrategies;
 import com.m3.collections.eclipse.impl.lazy.AbstractLazyIterableTestCase;
 import com.m3.collections.eclipse.impl.set.mutable.UnifiedSet;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -74,5 +76,12 @@ public class ObjectBooleanHashMapWithHashingStrategyKeysViewTest extends Abstrac
 
         assertEquals(expected, actual);
         assertThrows(NoSuchElementException.class, iterator::next);
+    }
+
+    @Test
+    public void iteratorWithNullKey()
+    {
+        Iterator<String> iterator = ObjectBooleanHashMapWithHashingStrategy.newWithKeysValues(STRING_HASHING_STRATEGY, (String) null, false).keysView().iterator();
+        assertNull(iterator.next());
     }
 }

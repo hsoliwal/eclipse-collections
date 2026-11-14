@@ -14,9 +14,9 @@ import java.util.Collection;
 import java.util.Random;
 import java.util.Set;
 
-import com.m3.collections.eclipse.api.map.ImmutableMap;
 import com.m3.collections.eclipse.api.map.MapIterable;
 import com.m3.collections.eclipse.api.map.MutableMap;
+import com.m3.collections.eclipse.impl.map.immutable.AbstractImmutableMap;
 import com.m3.collections.eclipse.impl.map.mutable.UnifiedMap;
 import com.m3.collections.eclipse.test.map.UnmodifiableMapKeySetTestCase;
 import com.m3.collections.eclipse.test.map.UnmodifiableMapValuesCollectionTestCase;
@@ -33,7 +33,7 @@ public class ImmutableUnifiedMapTest implements ImmutableMapTestCase
     private static final long CURRENT_TIME_MILLIS = System.currentTimeMillis();
 
     @Override
-    public final <T> ImmutableMap<Object, T> newWith(T... elements)
+    public final <T> AbstractImmutableMap<Object, T> newWith(T... elements)
     {
         Random random = new Random(CURRENT_TIME_MILLIS);
 
@@ -42,11 +42,11 @@ public class ImmutableUnifiedMapTest implements ImmutableMapTestCase
         {
             assertNull(result.put(random.nextDouble(), each));
         }
-        return result.toImmutable();
+        return (AbstractImmutableMap<Object, T>) result.toImmutable();
     }
 
     @Override
-    public <K, V> ImmutableMap<K, V> newWithKeysValues(Object... elements)
+    public <K, V> AbstractImmutableMap<K, V> newWithKeysValues(Object... elements)
     {
         if (elements.length % 2 != 0)
         {
@@ -58,7 +58,7 @@ public class ImmutableUnifiedMapTest implements ImmutableMapTestCase
         {
             assertNull(result.put((K) elements[i], (V) elements[i + 1]));
         }
-        return result.toImmutable();
+        return (AbstractImmutableMap<K, V>) result.toImmutable();
     }
 
     @Override
