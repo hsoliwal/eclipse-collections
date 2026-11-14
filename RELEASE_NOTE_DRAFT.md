@@ -5,6 +5,7 @@
 * Fixed `ObjectBooleanHashMap` and `ObjectBooleanHashMapWithHashingStrategy` so that their `keysView()` iterators return `null` instead of an internal sentinel object for a null key. ([#2001](https://github.com/eclipse-collections/eclipse-collections/pull/2001))
 
 ## Performance Improvements
+* Exact `FastList` receivers reduce repeated reference copying for growing indexed insertion from exact `ArrayList` sources when the source is shorter than the suffix. Capacity, subclass callbacks and conversion-failure behavior remain unchanged.
 * `FastList.addAll(index, FastList)` copies existing elements directly to their final positions when an indexed insertion grows the backing array, while preserving the existing subclass capacity callback.
 * `UnifiedMap` and `UnifiedMapWithHashingStrategy` now provide single-lookup overrides for `computeIfAbsent`, `computeIfPresent`, and `compute`, reducing hash lookups from 2–3 (Java default) to 1. ([#147](https://github.com/eclipse-collections/eclipse-collections/issues/147), [#500](https://github.com/eclipse-collections/eclipse-collections/issues/500))
 
