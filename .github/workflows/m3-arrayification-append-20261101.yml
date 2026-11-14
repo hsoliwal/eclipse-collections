@@ -26,7 +26,9 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          printf 'ba5a3c86c385e90db5d499d619408a6c494c05d125de5b3d8f7e6e57021cc34b  %s\n' 'eclipse-collections/src/main/java/com/m3/collections/eclipse/impl/list/fixed/ArrayAdapter.java' | sha256sum -c -
+          # Historical source receipt (2026-11-01): ba5a3c86c385e90db5d499d619408a6c494c05d125de5b3d8f7e6e57021cc34b
+          # Additive exact FastList one-array successor (2026-11-13): 5ca554c625b25c12f9d780f116497d84261c828efdc8d033d0bf6bfd33f064ec
+          printf '5ca554c625b25c12f9d780f116497d84261c828efdc8d033d0bf6bfd33f064ec  %s\n' 'eclipse-collections/src/main/java/com/m3/collections/eclipse/impl/list/fixed/ArrayAdapter.java' | sha256sum -c -
           printf 'a7186d80f6c60ba526e64b25135b70447d730040a381485f5121c4308c0ffc7d  %s\n' 'unit-tests/src/test/java/com/m3/collections/eclipse/impl/list/fixed/M3ArrayAdapterAppendContractTest.java' | sha256sum -c -
           printf '3d99e801a791833bae26efb7bdcc6375ddc9d60ec275816f856a86e541b3ca60  %s\n' 'unit-tests/src/test/java/com/m3/collections/eclipse/impl/list/fixed/M3ArrayAdapterFactoryContractTest.java' | sha256sum -c -
       - name: Execute real Eclipse array-append JUnit tests

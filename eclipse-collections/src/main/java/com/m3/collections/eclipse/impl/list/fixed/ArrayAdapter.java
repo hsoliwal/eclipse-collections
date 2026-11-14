@@ -25,6 +25,7 @@ import java.util.Spliterators;
 import com.m3.collections.eclipse.api.block.procedure.Procedure;
 import com.m3.collections.eclipse.api.list.FixedSizeList;
 import com.m3.collections.eclipse.impl.block.factory.Predicates2;
+import com.m3.collections.eclipse.impl.list.mutable.FastList;
 import com.m3.collections.eclipse.impl.utility.Iterate;
 
 /**
@@ -179,6 +180,22 @@ public final class ArrayAdapter<T>
             System.arraycopy(this.items, 0, joined, 0, oldSize);
             System.arraycopy(arrayAdapter.items, 0, joined, oldSize, arrayAdapter.items.length);
             return new ArrayAdapter<>(joined);
+        }
+        if (elements.getClass() == FastList.class)
+        {
+            // An exact FastList owns an indexed Object[] and supplies a direct
+            // range-copy operation. Join into the final array without creating
+            // the intermediate mutable list and its backing array.
+            FastList<?> source = (FastList<?>) elements;
+            int appended = source.size();
+            int oldSize = this.items.length;
+            if (oldSize <= Integer.MAX_VALUE - appended)
+            {
+                T[] joined = (T[]) new Object[oldSize + appended];
+                System.arraycopy(this.items, 0, joined, 0, oldSize);
+                source.toArray(joined, 0, appended - 1, oldSize);
+                return new ArrayAdapter<>(joined);
+            }
         }
         return ArrayAdapter.newArray(this.toList().withAll(elements));
     }
