@@ -1,8 +1,0 @@
-# SPDX-License-Identifier: Apache-2.0
-# Category crosswalk only. Canonical catalogue: hsoliwal/com.synexia PR 15080.
-# Challenge IDs are problem shapes, not copied algorithms. Tests and relevant licences required.
-fork	owner	category	technique_atom	leetcode	hackerrank	state
-eclipse-collections	ArrayAdapter.with	ARRAY	ARRAY_AMORTIZED_APPEND	LC189	HR_DYNAMIC_ARRAY	DRAFT_NATIVE_JUNIT_PENDING
-eclipse-collections	ArrayAdapter.newArrayWithItem	ARRAY	ARRAY_AMORTIZED_APPEND	LC189	HR_DYNAMIC_ARRAY	DRAFT_NATIVE_JUNIT_PENDING
-eclipse-collections	UnifiedMap	HASH	HASH_PROBE_INSERT	LC1	HR_FREQUENCY_QUERIES	INVENTORY_UNPROVEN
-eclipse-collections	TreeSortedMap	TREE	INDEXED_TREE_ROTATION	LC98	HR_SELF_BALANCING_TREE	INVENTORY_UNPROVEN
