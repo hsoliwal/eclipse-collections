@@ -142,14 +142,7 @@ public final class BooleanArrayList
     @Override
     public boolean contains(boolean value)
     {
-        for (int i = 0; i < this.size; i++)
-        {
-            if (this.items.get(i) == value)
-            {
-                return true;
-            }
-        }
-        return false;
+        return this.indexOf(value) >= 0;
     }
 
     @Override
@@ -218,27 +211,23 @@ public final class BooleanArrayList
     @Override
     public int indexOf(boolean object)
     {
-        for (int i = 0; i < this.size; i++)
+        if (this.size == 0)
         {
-            if (this.items.get(i) == object)
-            {
-                return i;
-            }
+            return -1;
         }
-        return -1;
+        int index = object ? this.items.nextSetBit(0) : this.items.nextClearBit(0);
+        return index < this.size ? index : -1;
     }
 
     @Override
     public int lastIndexOf(boolean object)
     {
-        for (int i = this.size - 1; i >= 0; i--)
+        if (this.size == 0)
         {
-            if (this.items.get(i) == object)
-            {
-                return i;
-            }
+            return -1;
         }
-        return -1;
+        return object ? this.items.previousSetBit(this.size - 1)
+                : this.items.previousClearBit(this.size - 1);
     }
 
     @Override
@@ -381,6 +370,12 @@ public final class BooleanArrayList
     @Override
     public boolean removeAll(BooleanIterable source)
     {
+        if (source instanceof BooleanArrayList
+                || source != null && source.getClass() == BooleanHashSet.class)
+        {
+            return this.removeAllValues((source.contains(false) ? 1 : 0)
+                    | (source.contains(true) ? 2 : 0));
+        }
         boolean modified = false;
         for (int i = 0; i < this.size; i++)
         {
@@ -401,31 +396,54 @@ public final class BooleanArrayList
         {
             return false;
         }
-        BooleanHashSet set = BooleanHashSet.newSetWith(source);
-        if (set.size() == 2)
+        return this.removeAllValues(this.membershipMask(source));
+    }
+
+    private int membershipMask(boolean[] source)
+    {
+        int mask = 0;
+        for (boolean value : source)
         {
-            this.items = null;
-            this.size = 0;
-            return true;
+            mask |= value ? 2 : 1;
+            if (mask == 3)
+            {
+                break;
+            }
+        }
+        return mask;
+    }
+
+    private boolean removeAllValues(int mask)
+    {
+        if (this.size == 0 || mask == 0)
+        {
+            return false;
         }
         int oldSize = this.size;
-        int trueCount = this.getTrueCount();
-        if (set.contains(true))
+        int retainedSize = mask == 3 ? 0
+                : mask == 2 ? oldSize - this.getTrueCount() : this.getTrueCount();
+        if (retainedSize == oldSize)
         {
-            this.size -= trueCount;
-            this.items.set(0, this.size, false);
+            return false;
         }
-        else
+        this.items.clear();
+        if (mask == 1)
         {
-            this.size = trueCount;
-            this.items.set(0, this.size, true);
+            this.items.set(0, retainedSize);
         }
-        return oldSize != this.size;
+        this.size = retainedSize;
+        return true;
     }
 
     @Override
     public boolean retainAll(BooleanIterable source)
     {
+        if (source instanceof BooleanArrayList
+                || source != null && source.getClass() == BooleanHashSet.class)
+        {
+            return this.removeAllValues((source.contains(false) ? 0 : 1)
+                    | (source.contains(true) ? 0 : 2));
+        }
         int oldSize = this.size();
         BooleanSet sourceSet = source instanceof BooleanSet booleanSet ? booleanSet : source.toSet();
         BooleanArrayList retained = this.select(sourceSet::contains);
@@ -438,18 +456,25 @@ public final class BooleanArrayList
     @Override
     public boolean retainAll(boolean... source)
     {
-        return this.retainAll(BooleanHashSet.newSetWith(source));
+        return this.removeAllValues(this.membershipMask(source) ^ 3);
     }
 
     private int getTrueCount()
     {
-        int count = 0;
-        for (int i = 0; i < this.size; i++)
+        if (this.size == 0)
         {
-            if (this.items.get(i))
-            {
-                count++;
-            }
+            return 0;
+        }
+        if (this.items.nextSetBit(this.size) == -1)
+        {
+            return this.items.cardinality();
+        }
+        // Some older mutation paths retain bits beyond the logical end.
+        int count = 0;
+        for (int index = this.items.nextSetBit(0); index >= 0 && index < this.size;
+                index = this.items.nextSetBit(index + 1))
+        {
+            count++;
         }
         return count;
     }
