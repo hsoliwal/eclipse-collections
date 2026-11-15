@@ -25,11 +25,13 @@ import java.util.List;
 import java.util.Random;
 
 import com.m3.collections.eclipse.api.<name>Iterable;
+import com.m3.collections.eclipse.api.iterator.Mutable<name>Iterator;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertSame;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -107,6 +109,145 @@ public class <name>ArrayListBulkInsertTest
                 }
             }
         }
+    }
+
+    @Test
+    public void directArraysPreserveContentsAndOwnershipAcrossGrowthBoundaries()
+    {
+        for (int count = 0; count \< 20; count++)
+        {
+            for (int added : new int[]{1, 2, 7, 31})
+            {
+                for (int index = 0; index \<= count; index++)
+                {
+                    for (int spare : new int[]{0, 1, 8, 32})
+                    {
+                        <type>[] before = values(count, 10);
+                        <type>[] incoming = values(added, 50);
+                        <name>ArrayList target = new <name>ArrayList(count + spare);
+                        target.addAll(before);
+                        <type>[] oldItems = target.items;
+                        <type>[] oldContents = oldItems.clone();
+                        assertTrue(target.addAllAtIndex(index, incoming));
+                        assertArrayEquals(expected(before, index, incoming), target.toArray());
+                        assertArrayEquals(values(added, 50), incoming);
+                        if (count + added \<= oldItems.length)
+                        {
+                            assertSame(oldItems, target.items);
+                        }
+                        else
+                        {
+                            assertArrayEquals(oldContents, oldItems);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @Test
+    public void directBackingArrayAliasPreservesTheOriginalArrayDuringGrowth()
+    {
+        for (int count = 1; count \< 20; count++)
+        {
+            for (int index = 0; index \<= count; index++)
+            {
+                for (int spare : new int[]{0, 7})
+                {
+                    <type>[] shared = values(count + spare, 1);
+                    <name>ArrayList target = new <name>ArrayList(shared);
+                    while (target.size() > count)
+                    {
+                        target.removeAtIndex(target.size() - 1);
+                    }
+                    <type>[] before = target.toArray();
+                    <type>[] incoming = shared.clone();
+                    assertTrue(target.addAllAtIndex(index, shared));
+                    assertArrayEquals(expected(before, index, incoming), target.toArray());
+                    assertArrayEquals(incoming, shared);
+                }
+            }
+        }
+    }
+
+    @Test
+    public void subclassCapacityCallbackKeepsItsOrderAndAbruptCompletion()
+    {
+        class ObservedList extends <name>ArrayList
+        {
+            private int calls;
+            private RuntimeException failure;
+
+            ObservedList()
+            {
+                super(2);
+            }
+
+            @Override
+            public void ensureCapacity(int capacity)
+            {
+                this.calls++;
+                assertEquals(4, capacity);
+                assertArrayEquals(values(2, 10), this.toArray());
+                if (this.failure != null)
+                {
+                    throw this.failure;
+                }
+                super.ensureCapacity(capacity);
+            }
+        }
+        ObservedList target = new ObservedList();
+        target.add((<type>) 10);
+        target.add((<type>) 11);
+        <name>ArrayList source = <name>ArrayList.newListWith(values(2, 50));
+        RuntimeException failure = new IllegalStateException("capacity callback");
+        target.failure = failure;
+        assertSame(failure, assertThrows(IllegalStateException.class,
+                () -> target.addAllAtIndex(1, (<name>Iterable) source)));
+        assertArrayEquals(values(2, 10), target.toArray());
+        target.failure = null;
+        assertTrue(target.addAllAtIndex(1, (<name>Iterable) source));
+        assertArrayEquals(expected(values(2, 10), 1, values(2, 50)), target.toArray());
+        assertEquals(2, target.calls);
+    }
+
+    @Test
+    public void subclassCapacityCallbackCanRestoreProtectedStorage()
+    {
+        class RepairingList extends <name>ArrayList
+        {
+            RepairingList()
+            {
+                this.size = 2;
+                this.items = null;
+            }
+
+            @Override
+            public void ensureCapacity(int capacity)
+            {
+                assertEquals(4, capacity);
+                this.items = new <type>[]{(<type>) 10, (<type>) 11, (<type>) 0, (<type>) 0};
+            }
+        }
+        RepairingList target = new RepairingList();
+        assertTrue(target.addAllAtIndex(1, values(2, 50)));
+        assertArrayEquals(expected(values(2, 10), 1, values(2, 50)), target.toArray());
+    }
+
+    @Test
+    public void existingIteratorReadsTheGrownStorageAndCanRemoveInsertedValues()
+    {
+        <name>ArrayList target = <name>ArrayList.newListWith(values(3, 10));
+        Mutable<name>Iterator cursor = target.<type>Iterator();
+        assertEquals((<type>) 10, cursor.next());
+        assertTrue(target.addAllAtIndex(1, values(2, 50)));
+        assertEquals((<type>) 50, cursor.next());
+        cursor.remove();
+        assertEquals((<type>) 51, cursor.next());
+        assertEquals((<type>) 11, cursor.next());
+        assertEquals((<type>) 12, cursor.next());
+        assertFalse(cursor.hasNext());
+        assertArrayEquals(new <type>[]{(<type>) 10, (<type>) 51, (<type>) 11, (<type>) 12}, target.toArray());
     }
 
     @Test
