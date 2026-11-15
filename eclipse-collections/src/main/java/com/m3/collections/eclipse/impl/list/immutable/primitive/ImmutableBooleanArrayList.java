@@ -125,27 +125,15 @@ final class ImmutableBooleanArrayList
     @Override
     public int indexOf(boolean value)
     {
-        for (int i = 0; i < this.size; i++)
-        {
-            if (this.items.get(i) == value)
-            {
-                return i;
-            }
-        }
-        return -1;
+        int index = value ? this.items.nextSetBit(0) : this.items.nextClearBit(0);
+        return index < this.size ? index : -1;
     }
 
     @Override
     public int lastIndexOf(boolean value)
     {
-        for (int i = this.size - 1; i >= 0; i--)
-        {
-            if (this.items.get(i) == value)
-            {
-                return i;
-            }
-        }
-        return -1;
+        return value ? this.items.previousSetBit(this.size - 1)
+                : this.items.previousClearBit(this.size - 1);
     }
 
     @Override
@@ -317,14 +305,7 @@ final class ImmutableBooleanArrayList
     @Override
     public boolean contains(boolean value)
     {
-        for (int i = 0; i < this.size; i++)
-        {
-            if (this.items.get(i) == value)
-            {
-                return true;
-            }
-        }
-        return false;
+        return this.indexOf(value) >= 0;
     }
 
     @Override
