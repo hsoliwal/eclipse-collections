@@ -16,7 +16,7 @@ import java.util.Random;
 import org.junit.jupiter.api.Test;
 
 /** Compares the exact-adapter factory fast path against its untouched Iterable path. */
-public class M3ArrayAdapterFactoryContractTest
+public class ArrayAdapterFactoryContractTest
 {
     @Test
     public void exactAdapterMatchesGeneralIterableAndPreservesOriginal()

@@ -1,12 +1,12 @@
 # SPDX-License-Identifier: Apache-2.0
-name: M3 Eclipse exact array-append differential
+name: Eclipse exact array-append differential
 on:
   pull_request:
     paths:
       - 'eclipse-collections/src/main/java/org/eclipse/collections/impl/list/fixed/ArrayAdapter.java'
-      - 'unit-tests/src/test/java/org/eclipse/collections/impl/list/fixed/M3ArrayAdapterAppendContractTest.java'
-      - 'unit-tests/src/test/java/org/eclipse/collections/impl/list/fixed/M3ArrayAdapterFactoryContractTest.java'
-      - '.github/workflows/m3-arrayification-append-20261101.yml'
+      - 'unit-tests/src/test/java/org/eclipse/collections/impl/list/fixed/ArrayAdapterAppendContractTest.java'
+      - 'unit-tests/src/test/java/org/eclipse/collections/impl/list/fixed/ArrayAdapterFactoryContractTest.java'
+      - '.github/workflows/arrayification-append-20261101.yml'
   workflow_dispatch:
 permissions:
   contents: read
@@ -29,15 +29,15 @@ jobs:
           # Historical source receipt (2026-11-01): ba5a3c86c385e90db5d499d619408a6c494c05d125de5b3d8f7e6e57021cc34b
           # Additive exact FastList one-array successor (2026-11-13): 5ca554c625b25c12f9d780f116497d84261c828efdc8d033d0bf6bfd33f064ec
           printf 'da2128d3fe890de1f667fa2007a57efc181915c51d259f4d06835e739fe3cfab  %s\n' 'eclipse-collections/src/main/java/org/eclipse/collections/impl/list/fixed/ArrayAdapter.java' | sha256sum -c -
-          printf 'cfa2fd0bf1cbc2fb04b95145afb817536373dbe16d9cd8d3b6fbf13a1974a865  %s\n' 'unit-tests/src/test/java/org/eclipse/collections/impl/list/fixed/M3ArrayAdapterAppendContractTest.java' | sha256sum -c -
-          printf '94a10674587640e36d0b5f7bc70355c4deb51e79105f52b012d777283d331a72  %s\n' 'unit-tests/src/test/java/org/eclipse/collections/impl/list/fixed/M3ArrayAdapterFactoryContractTest.java' | sha256sum -c -
+          printf 'a1a5383e49f1cf97e6f6b0156fee6e751f90d8799d74f46d693f29b23221d575  %s\n' 'unit-tests/src/test/java/org/eclipse/collections/impl/list/fixed/ArrayAdapterAppendContractTest.java' | sha256sum -c -
+          printf '65b0b59a4adabf581a8fc7415cdfae11b2cf1c70cc0f78f933bd7ac43a26d649  %s\n' 'unit-tests/src/test/java/org/eclipse/collections/impl/list/fixed/ArrayAdapterFactoryContractTest.java' | sha256sum -c -
       - name: Execute real Eclipse array-append JUnit tests
         shell: bash
         run: |
           set -euo pipefail
           mvn -B -ntp -pl eclipse-collections-api,eclipse-collections,eclipse-collections-testutils,unit-tests -am \
             -Dcheckstyle.skip=true \
-            -Dtest=M3ArrayAdapterAppendContractTest,M3ArrayAdapterFactoryContractTest \
+            -Dtest=ArrayAdapterAppendContractTest,ArrayAdapterFactoryContractTest \
             -Dsurefire.failIfNoSpecifiedTests=false test
       - name: Require executed non-skipped JUnit tests
         shell: bash
@@ -45,7 +45,7 @@ jobs:
           python3 - <<'PY'
           from pathlib import Path
           import xml.etree.ElementTree as ET
-          reports=list(Path('unit-tests/target/surefire-reports').glob('TEST-*M3ArrayAdapter*ContractTest*.xml'))
+          reports=list(Path('unit-tests/target/surefire-reports').glob('TEST-*ArrayAdapter*ContractTest*.xml'))
           assert reports, 'NO_REAL_JUNIT_REPORTS'
           totals=[0,0,0,0]
           for f in reports:
@@ -58,6 +58,6 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: m3-eclipse-array-append
+          name: eclipse-array-append
           if-no-files-found: warn
           path: unit-tests/target/surefire-reports/

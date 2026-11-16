@@ -1,11 +1,11 @@
 # SPDX-License-Identifier: Apache-2.0
-name: M3 Eclipse ArrayAdapter FastList single-array join
+name: Eclipse ArrayAdapter FastList single-array join
 on:
   pull_request:
     paths:
       - 'eclipse-collections/src/main/java/org/eclipse/collections/impl/list/fixed/ArrayAdapter.java'
-      - 'unit-tests/src/test/java/org/eclipse/collections/impl/list/fixed/M3ArrayAdapterFastListJoinTest.java'
-      - '.github/workflows/m3-eclipse-fastlist-onearray-20261113.yml'
+      - 'unit-tests/src/test/java/org/eclipse/collections/impl/list/fixed/ArrayAdapterFastListJoinTest.java'
+      - '.github/workflows/eclipse-fastlist-onearray-20261113.yml'
   workflow_dispatch:
 permissions:
   contents: read
@@ -27,7 +27,7 @@ jobs:
           set -euo pipefail
           git diff --check
           test -s eclipse-collections/src/main/java/org/eclipse/collections/impl/list/fixed/ArrayAdapter.java
-          test -s unit-tests/src/test/java/org/eclipse/collections/impl/list/fixed/M3ArrayAdapterFastListJoinTest.java
+          test -s unit-tests/src/test/java/org/eclipse/collections/impl/list/fixed/ArrayAdapterFastListJoinTest.java
           grep -Fq 'source.toArray(joined, 0, appended - 1, oldSize)' \
             eclipse-collections/src/main/java/org/eclipse/collections/impl/list/fixed/ArrayAdapter.java
       - name: Real Eclipse Collections Maven JUnit tests
@@ -37,7 +37,7 @@ jobs:
           mvn -B -ntp \
             -pl eclipse-collections-api,eclipse-collections,eclipse-collections-testutils,unit-tests -am \
             -Dcheckstyle.skip=true \
-            -Dtest=M3ArrayAdapterFastListJoinTest,M3ArrayAdapterAppendContractTest,M3ArrayAdapterFactoryContractTest \
+            -Dtest=ArrayAdapterFastListJoinTest,ArrayAdapterAppendContractTest,ArrayAdapterFactoryContractTest \
             -Dsurefire.failIfNoSpecifiedTests=false test
       - name: Require non-skipped real JUnit reports
         shell: bash
@@ -46,7 +46,7 @@ jobs:
           from pathlib import Path
           import xml.etree.ElementTree as ET
           reportdir=Path('unit-tests/target/surefire-reports')
-          names=('M3ArrayAdapterFastListJoinTest','M3ArrayAdapterAppendContractTest','M3ArrayAdapterFactoryContractTest')
+          names=('ArrayAdapterFastListJoinTest','ArrayAdapterAppendContractTest','ArrayAdapterFactoryContractTest')
           reports=[p for p in reportdir.glob('TEST-*.xml') if any(n in p.name for n in names)]
           if len(reports)<3:
               raise SystemExit('MISSING_REAL_ECLIPSE_JUNIT_REPORT')
@@ -54,7 +54,7 @@ jobs:
           for p in reports:
               e=ET.parse(p).getroot()
               stats=[x+int(e.attrib.get(k,'0')) for x,k in zip(stats,('tests','failures','errors','skipped'))]
-          print('M3_ECLIPSE_FASTLIST_JOIN_JUNIT',stats)
+          print('ECLIPSE_FASTLIST_JOIN_JUNIT',stats)
           if stats[0]<6 or stats[1] or stats[2] or stats[3]:
               raise SystemExit('ECLIPSE_JOIN_CONTRACT_FAILED')
           PY
@@ -62,6 +62,6 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: m3-eclipse-fastlist-one-array
+          name: eclipse-fastlist-one-array
           path: unit-tests/target/surefire-reports/
           if-no-files-found: warn

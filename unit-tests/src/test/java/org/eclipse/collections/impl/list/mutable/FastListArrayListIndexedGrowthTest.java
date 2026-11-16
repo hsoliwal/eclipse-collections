@@ -323,7 +323,7 @@ class FastListArrayListIndexedGrowthTest
     @Test
     void declaredArrayListConversionModeIsActuallyExercised() throws Exception
     {
-        String expected = System.getProperty("m3.arraylist.direct");
+        String expected = System.getProperty("arraylist.direct");
         if (expected != null)
         {
             Field field = ArrayListIterate.class.getDeclaredField("ELEMENT_DATA_FIELD");

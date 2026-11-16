@@ -20,7 +20,7 @@ import static org.junit.jupiter.api.Assertions.assertSame;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 /** The oracle is the previous entry-iterator protocol, independent of slot traversal. */
-class M3IndexedEntryFreeTest
+class IndexedEntryFreeTest
 {
     @Test
     void traversalPreservesOrderingNullsAndValues() throws Exception

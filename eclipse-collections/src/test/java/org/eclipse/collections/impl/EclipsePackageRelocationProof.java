@@ -22,11 +22,11 @@ import java.util.Random;
  * Complete Eclipse source package-only interval/iterator differential on JDK 21.
  * The immutable original donor oracle is compiled separately by the qualification workflow.
  */
-public final class M3EclipsePackageRelocationProof
+public final class EclipsePackageRelocationProof
 {
     private static long checks;
 
-    private M3EclipsePackageRelocationProof()
+    private EclipsePackageRelocationProof()
     {
     }
 
@@ -147,6 +147,6 @@ public final class M3EclipsePackageRelocationProof
             long point = rng.nextInt(6000) - 3000;
             interval(from, to, step, point, rng.nextInt(256));
         }
-        System.out.println("PASS M3_ECLIPSE_PACKAGE_RELOCATION checks=" + checks);
+        System.out.println("PASS ECLIPSE_PACKAGE_RELOCATION checks=" + checks);
     }
 }

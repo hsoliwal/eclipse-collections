@@ -32,7 +32,7 @@ import java.util.TreeMap;
 
 import org.junit.jupiter.api.Test;
 
-class M3IndexedSortedMapClearProjectionTest
+class IndexedSortedMapClearProjectionTest
 {
     @Test
     void boundedClearDoesNotAllocateAnEntryForEveryRemovedKey()

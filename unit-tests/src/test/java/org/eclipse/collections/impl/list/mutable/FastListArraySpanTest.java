@@ -38,7 +38,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-class M3FastListArraySpanTest
+class FastListArraySpanTest
 {
     @TempDir
     Path temporary;
@@ -48,7 +48,7 @@ class M3FastListArraySpanTest
     {
         byte[] original;
         try (InputStream resource = this.getClass().getResourceAsStream(
-                "/m3/array-spans-20261019/original/FastList.java.txt"))
+                "/array-spans-20261019/original/FastList.java.txt"))
         {
             assertNotNull(resource);
             original = resource.readAllBytes();
@@ -72,7 +72,7 @@ class M3FastListArraySpanTest
             assertTrue(compiler.getTask(null, files, diagnostics, options, null,
                     files.getJavaFileObjects(source.toFile())).call(), diagnostics.getDiagnostics().toString());
         }
-        long observations = M3FastListArraySpanProof.run(
+        long observations = FastListArraySpanProof.run(
                 new URL[] {output.toUri().toURL(), implementation, api},
                 new URL[] {implementation, api});
         assertEquals(71676L, observations, "all original-source contract observations executed");

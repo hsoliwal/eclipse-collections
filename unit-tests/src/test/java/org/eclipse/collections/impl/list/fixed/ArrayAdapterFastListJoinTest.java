@@ -17,7 +17,7 @@ import java.util.Random;
 import org.junit.jupiter.api.Test;
 
 /** Native Eclipse Collections oracle for the exact FastList one-array join path. */
-public class M3ArrayAdapterFastListJoinTest
+public class ArrayAdapterFastListJoinTest
 {
     @Test
     public void exactFastListMatchesOriginalMutableListComposition()

@@ -35,11 +35,11 @@ import java.util.Objects;
 import java.util.function.Predicate;
 
 /** Independent original-source oracle for intrinsic FastList span clearing. */
-public final class M3FastListArraySpanProof
+public final class FastListArraySpanProof
 {
     private static long observations;
 
-    private M3FastListArraySpanProof()
+    private FastListArraySpanProof()
     {
     }
 
@@ -332,7 +332,7 @@ public final class M3FastListArraySpanProof
         URL implementation = Path.of(args[2]).toUri().toURL();
         URL api = Path.of(args[3]).toUri().toURL();
         long count = run(new URL[] {original, implementation, api}, new URL[] {generated, implementation, api});
-        System.getLogger(M3FastListArraySpanProof.class.getName()).log(System.Logger.Level.INFO,
-                "M3_ECLIPSE_FASTLIST_ORIGINAL_DIFFERENTIAL_PASS observations=" + count);
+        System.getLogger(FastListArraySpanProof.class.getName()).log(System.Logger.Level.INFO,
+                "ECLIPSE_FASTLIST_ORIGINAL_DIFFERENTIAL_PASS observations=" + count);
     }
 }

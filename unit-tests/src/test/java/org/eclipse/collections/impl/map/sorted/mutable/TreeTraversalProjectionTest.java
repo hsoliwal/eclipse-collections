@@ -24,7 +24,7 @@ import org.eclipse.collections.api.partition.list.PartitionMutableList;
 import org.junit.jupiter.api.Test;
 
 /** The original iterator/callback protocol is the oracle; physical projections are unnecessary. */
-final class M3TreeTraversalProjectionTest
+final class TreeTraversalProjectionTest
 {
     @Test
     void javaMapKeyValueTraversalDoesNotPopulateTheEntryCache() throws Exception

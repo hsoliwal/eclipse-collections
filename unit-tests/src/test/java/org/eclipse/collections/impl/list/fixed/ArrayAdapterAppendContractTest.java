@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertSame;
 import org.junit.jupiter.api.Test;
 
 /** Array-only append candidate versus the unchanged public iterable factory. */
-public class M3ArrayAdapterAppendContractTest
+public class ArrayAdapterAppendContractTest
 {
     @Test
     public void appendMatchesGeneralFactoryAndDoesNotAlias()

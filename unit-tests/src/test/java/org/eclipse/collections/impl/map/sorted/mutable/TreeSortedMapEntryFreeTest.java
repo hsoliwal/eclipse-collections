@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertSame;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-class M3TreeSortedMapEntryFreeTest
+class TreeSortedMapEntryFreeTest
 {
     @Test
     void publicForEachUsesKeyValueLanesWithoutCreatingEntries() throws Exception
@@ -30,7 +30,7 @@ class M3TreeSortedMapEntryFreeTest
         List<Object> actual = new ArrayList<>();
         map.forEachKeyValue((key, value) -> actual.add(Arrays.asList(key, value)));
         assertEquals(expected, actual);
-        M3IndexedEntryFreeTest.assertNoEntries(storage(map));
+        IndexedEntryFreeTest.assertNoEntries(storage(map));
         new TreeSortedMap<>().forEachKeyValue(null);
         assertThrows(NullPointerException.class, () -> map.forEachKeyValue(null));
     }
@@ -63,7 +63,7 @@ class M3TreeSortedMapEntryFreeTest
                 assertEquals(selected, result.getSelected());
                 assertEquals(rejected, result.getRejected());
                 assertEquals(Math.min(count, stop + 1), calls[0]);
-                M3IndexedEntryFreeTest.assertNoEntries(storage(map));
+                IndexedEntryFreeTest.assertNoEntries(storage(map));
             }
         }
     }
