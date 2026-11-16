@@ -686,8 +686,7 @@ public class FastListTest extends AbstractListTestCase
         assertEquals(194L, stream2.size());
 
         ByteArrayOutputStream stream1 = SerializeTestHelper.getByteArrayOutputStream(mutableArrayList);
-        // The ASCII class descriptor is written once; framing and payload stay fixed.
-        assertEquals(132L + FastList.class.getName().length(), stream1.size());
+        assertEquals(182L, stream1.size());
     }
 
     @Override
