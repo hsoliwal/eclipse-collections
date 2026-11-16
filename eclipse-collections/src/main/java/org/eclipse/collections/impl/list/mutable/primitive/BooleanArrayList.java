@@ -620,15 +620,16 @@ public final class BooleanArrayList
             }
             else
             {
-                BooleanIterator iterator = this.booleanIterator();
-                while (iterator.hasNext())
+                // Each batch is one word-level slice of the bit lane, not one iterator step and one bit store per element.
+                int from = 0;
+                while (from < this.size)
                 {
-                    MutableBooleanList batch = BooleanLists.mutable.empty();
-                    for (int i = 0; i < size && iterator.hasNext(); i++)
-                    {
-                        batch.add(iterator.next());
-                    }
+                    int to = (int) Math.min((long) from + size, this.size);
+                    BooleanArrayList batch = new BooleanArrayList();
+                    batch.items = this.items.get(from, to);
+                    batch.size = to - from;
                     result.add(batch);
+                    from = to;
                 }
             }
         }
