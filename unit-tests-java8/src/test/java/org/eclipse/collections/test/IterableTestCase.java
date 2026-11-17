@@ -69,7 +69,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
 
-public interface IterableTestCase
+public interface IterableTestCase extends OrderingTypeTrait
 {
     <T> Iterable<T> newWith(T... elements);
 
@@ -106,11 +106,6 @@ public interface IterableTestCase
         INSERTION_ORDER,
         SORTED_NATURAL,
         SORTED_REVERSE_NATURAL,
-    }
-
-    default OrderingType getOrderingType()
-    {
-        return OrderingType.INSERTION_ORDER;
     }
 
     static void assertIterablesEqual(Object o1, Object o2)
@@ -408,7 +403,7 @@ public interface IterableTestCase
     }
 
     @Test
-    default void Object_equalsAndHashCode()
+    default void Object_equals_hashCode()
     {
         Iterable<Integer> iterable = this.newWith(3, 2, 1);
 
@@ -491,7 +486,7 @@ public interface IterableTestCase
     }
 
     @Test
-    default void Iterable_hasNext()
+    default void Iterable_iterator_hasNext()
     {
         if (!this.allowsIterator())
         {
@@ -503,7 +498,7 @@ public interface IterableTestCase
     }
 
     @Test
-    default void Iterable_next()
+    default void Iterable_iterator_next()
     {
         if (!this.allowsIterator())
         {
@@ -570,7 +565,7 @@ public interface IterableTestCase
     }
 
     @Test
-    default void Iterable_toString()
+    default void Object_toString()
     {
         assertThat(this.newWith(2, 1).toString(), isOneOf("[1, 2]", "[2, 1]"));
         assertThat(this.newWith(3, 2, 1).toString(), isOneOf(

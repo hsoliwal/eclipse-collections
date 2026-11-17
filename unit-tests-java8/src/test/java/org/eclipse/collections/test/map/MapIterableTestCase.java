@@ -23,17 +23,15 @@ import org.eclipse.collections.api.factory.Bags;
 import org.eclipse.collections.api.factory.Lists;
 import org.eclipse.collections.api.factory.Maps;
 import org.eclipse.collections.api.factory.Sets;
+import org.eclipse.collections.api.list.MutableList;
 import org.eclipse.collections.api.map.MapIterable;
 import org.eclipse.collections.api.map.MutableMap;
 import org.eclipse.collections.api.multimap.Multimap;
 import org.eclipse.collections.api.set.MutableSet;
 import org.eclipse.collections.api.tuple.Pair;
-import org.eclipse.collections.impl.block.procedure.CollectionAddProcedure;
 import org.eclipse.collections.impl.list.Interval;
 import org.eclipse.collections.impl.map.mutable.UnifiedMap;
-import org.eclipse.collections.impl.set.mutable.UnifiedSet;
 import org.eclipse.collections.impl.test.SerializeTestHelper;
-import org.eclipse.collections.impl.test.Verify;
 import org.eclipse.collections.impl.tuple.ImmutableEntry;
 import org.eclipse.collections.impl.tuple.Tuples;
 import org.eclipse.collections.impl.utility.Iterate;
@@ -50,6 +48,7 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertSame;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.fail;
 
 public interface MapIterableTestCase extends RichIterableWithDuplicatesTestCase
 {
@@ -78,6 +77,11 @@ public interface MapIterableTestCase extends RichIterableWithDuplicatesTestCase
         return true;
     }
 
+    default boolean supportsEntrySetSerialization()
+    {
+        return true;
+    }
+
     default boolean allowsPut()
     {
         return true;
@@ -99,6 +103,37 @@ public interface MapIterableTestCase extends RichIterableWithDuplicatesTestCase
         MapIterable<Object, String> original = this.newWith("Three", "Two", "One");
         MapIterable<Object, String> copy = SerializeTestHelper.serializeDeserialize(original);
         assertIterablesEqual(copy, original);
+
+        // entrySet() round-trips to an equal set that iterates in the map's order
+        Map<Integer, String> map = (Map<Integer, String>) this.newWithKeysValues(3, "Three", 2, "Two", 1, "One");
+        if (!this.supportsEntrySetSerialization())
+        {
+            assertThrows(AssertionError.class, () -> SerializeTestHelper.serializeDeserialize(map.entrySet()));
+            return;
+        }
+        Set<Map.Entry<Integer, String>> entrySetCopy = SerializeTestHelper.serializeDeserialize(map.entrySet());
+        switch (this.getOrderingType())
+        {
+            case UNORDERED -> assertEquals(
+                    Sets.immutable.with(
+                            ImmutableEntry.of(3, "Three"),
+                            ImmutableEntry.of(2, "Two"),
+                            ImmutableEntry.of(1, "One")),
+                    entrySetCopy);
+            case INSERTION_ORDER, SORTED_REVERSE_NATURAL -> assertEquals(
+                    Lists.immutable.with(
+                            ImmutableEntry.of(3, "Three"),
+                            ImmutableEntry.of(2, "Two"),
+                            ImmutableEntry.of(1, "One")),
+                    Lists.immutable.withAll(entrySetCopy));
+            case SORTED_NATURAL -> assertEquals(
+                    Lists.immutable.with(
+                            ImmutableEntry.of(1, "One"),
+                            ImmutableEntry.of(2, "Two"),
+                            ImmutableEntry.of(3, "Three")),
+                    Lists.immutable.withAll(entrySetCopy));
+            default -> fail("Unexpected value: " + this.getOrderingType());
+        }
     }
 
     @Override
@@ -139,7 +174,7 @@ public interface MapIterableTestCase extends RichIterableWithDuplicatesTestCase
 
     @Override
     @Test
-    default void Iterable_toString()
+    default void Object_toString()
     {
         MapIterable<String, Integer> map = this.newWithKeysValues("Two", 2, "One", 1);
         assertEquals("{Two=2, One=1}", map.toString());
@@ -269,19 +304,31 @@ public interface MapIterableTestCase extends RichIterableWithDuplicatesTestCase
     @Test
     default void MapIterable_forEachKey()
     {
-        UnifiedSet<Integer> result = UnifiedSet.newSet();
-        MapIterable<Integer, String> map = this.newWithKeysValues(3, "3", 2, "2", 1, "1");
-        map.forEachKey(CollectionAddProcedure.on(result));
-        Verify.assertSetsEqual(UnifiedSet.newSetWith(1, 2, 3), result);
+        MapIterable<String, Integer> map = this.newWithKeysValues("A", 1, "B", 2, "C", 3);
+        MutableList<String> keys = Lists.mutable.empty();
+        map.forEachKey(keys::add);
+        switch (this.getOrderingType())
+        {
+            case UNORDERED -> assertEquals(Bags.immutable.with("A", "B", "C"), Bags.immutable.withAll(keys));
+            case INSERTION_ORDER, SORTED_NATURAL -> assertEquals(Lists.immutable.with("A", "B", "C"), keys);
+            case SORTED_REVERSE_NATURAL -> assertEquals(Lists.immutable.with("C", "B", "A"), keys);
+            default -> fail("Unexpected value: " + this.getOrderingType());
+        }
     }
 
     @Test
     default void MapIterable_forEachValue()
     {
-        UnifiedSet<String> result = UnifiedSet.newSet();
-        MapIterable<Integer, String> map = this.newWithKeysValues(3, "3", 2, "2", 1, "1");
-        map.forEachValue(CollectionAddProcedure.on(result));
-        Verify.assertSetsEqual(UnifiedSet.newSetWith("1", "2", "3"), result);
+        MapIterable<String, Integer> map = this.newWithKeysValues("A", 1, "B", 2, "C", 3);
+        MutableList<Integer> values = Lists.mutable.empty();
+        map.forEachValue(values::add);
+        switch (this.getOrderingType())
+        {
+            case UNORDERED -> assertEquals(Bags.immutable.with(1, 2, 3), Bags.immutable.withAll(values));
+            case INSERTION_ORDER, SORTED_NATURAL -> assertEquals(Lists.immutable.with(1, 2, 3), values);
+            case SORTED_REVERSE_NATURAL -> assertEquals(Lists.immutable.with(3, 2, 1), values);
+            default -> fail("Unexpected value: " + this.getOrderingType());
+        }
     }
 
     @Test
