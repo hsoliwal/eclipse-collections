@@ -50,3 +50,7 @@ Converge the strongest compatible correct algorithms into an additive superset; 
 Prefer Apache-2.0 for separately original and legally eligible new work; retain all upstream GPL/EPL/Apache/LLVM exception or other per-file licensing and NOTICE as applicable. A new, independently expressed implementation of an abstract algorithm may be used when permitted; LLM paraphrase cannot erase another author's code copyright or patent rights.
 
 Write exact last-check date, repo/default SHA, root/ref/PR coverage, delivered-source loss findings and test status to `hsoliwal/com.synexia/docs/M3-SCALE/invariants/SYNEXIA-HISTORY-REVIEW-LAST-CHECKED.tsv`. Until complete, mark PARTIAL; do not claim full-history audit from a sampled head.
+
+## MOP SDK cross-repository agent read gate (2026-11-18)
+<!-- MOP-AGENT-2026-11-18-1 -->
+Before any source analysis, refactor, PR, merge, licensing decision, or history checkpoint, also read [AGENT.md](AGENT.md). It governs bidirectional atomization/patternization, documented contract-sealed atoms, additive best-of-best API supersets, complete available-history loss checks, dated last-verified proof, Apache-2.0 eligibility and upstream rights. Existing stronger project-specific and locked-canon constraints remain in force. Installation of this pointer does not establish that a source or historical audit has run.
