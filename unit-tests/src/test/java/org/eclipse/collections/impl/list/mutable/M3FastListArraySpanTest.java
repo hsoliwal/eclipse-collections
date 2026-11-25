@@ -67,7 +67,10 @@ class M3FastListArraySpanTest
         DiagnosticCollector<JavaFileObject> diagnostics = new DiagnosticCollector<>();
         try (StandardJavaFileManager files = compiler.getStandardFileManager(diagnostics, null, null))
         {
-            List<String> options = List.of("--release", "21", "-proc:none", "-d", output.toString(),
+            // The frozen original is Java 17 source, the module baseline. Compile it for the running JDK,
+            // capped at the previously fixed release 21, so the oracle also runs on the Java 17 CI jobs.
+            String release = Integer.toString(Math.min(21, Runtime.version().feature()));
+            List<String> options = List.of("--release", release, "-proc:none", "-d", output.toString(),
                     "-classpath", Path.of(implementation.toURI()) + File.pathSeparator + Path.of(api.toURI()));
             assertTrue(compiler.getTask(null, files, diagnostics, options, null,
                     files.getJavaFileObjects(source.toFile())).call(), diagnostics.getDiagnostics().toString());
