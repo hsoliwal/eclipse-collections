@@ -32,12 +32,19 @@ import javax.tools.ToolProvider;
 
 import org.eclipse.collections.api.RichIterable;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.condition.EnabledForJreRange;
+import org.junit.jupiter.api.condition.JRE;
 import org.junit.jupiter.api.io.TempDir;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+/**
+ * The independent source oracle compiles the frozen original with {@code javac --release 21}, so this test runs on
+ * Java 21 and later.
+ */
+@EnabledForJreRange(min = JRE.JAVA_21)
 class M3FastListArraySpanTest
 {
     @TempDir
